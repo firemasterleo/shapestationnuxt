@@ -1,15 +1,13 @@
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useNuxtApp } from '#app';
 
 export default defineNuxtPlugin((nuxtApp) => {
-  if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-  }
+  if (process.server) return; // Prevents running on the server
 
-  return {
-    provide: {
-      gsap,
-      ScrollTrigger,
-    },
-  };
+  import('gsap').then((gsap) => {
+    import('gsap/ScrollTrigger').then((ScrollTrigger) => {
+      gsap.registerPlugin(ScrollTrigger);
+      nuxtApp.provide('gsap', gsap);
+      nuxtApp.provide('ScrollTrigger', ScrollTrigger);
+    });
+  });
 });
