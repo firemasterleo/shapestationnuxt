@@ -83,7 +83,11 @@ import { ref, onMounted} from 'vue';
 
 
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollTrigger from "gsap/ScrollTrigger"; // Ensure this import is correct
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
 
 const footer = ref(null);
 const isSubmitted = ref(false); // Track if the form has been submitted
@@ -110,34 +114,32 @@ const handleSubmit = async (event) => {
   }
 };
 onMounted(() => {
-  if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
+  if (!footer.value) return; // Ensure the element exists
 
-    let shapeAnimation = gsap.timeline({
-      scrollTrigger: {
-        trigger: footer.value, // Bind Vue ref instead of class selector
-        start: "top bottom",
-        end: "bottom bottom",
-        // scrub: true,
-        // markers: true, // Debugging
-      },
-      defaults: { duration: 5, ease: "power2.out" },
-    });
+  let shapeAnimation = gsap.timeline({
+    scrollTrigger: {
+      trigger: footer.value, // Bind Vue ref instead of class selector
+      start: "top bottom",
+      end: "bottom bottom",
+      scrub: 1, // Smooth animation with scroll
+      markers: true, // Debugging (remove when done)
+    },
+    defaults: { duration: 1, ease: "power2.out" },
+  });
 
-    shapeAnimation
-      .fromTo(".s", { y: -170 }, { y: 0, duration: 0.9 })
-      .fromTo(".h", { y: -170 }, { y: 0, duration: 0.95 }, 0.1)
-      .fromTo(".a", { y: -170 }, { y: 0, duration: 0.98 }, 0.14)
-      .fromTo(".p", { y: -170 }, { y: 0, duration: 0.98 }, 0.14)
-      .fromTo(".e", { y: -170 }, { y: 0, duration: 0.98 }, 0.18)
-      .fromTo(".s2", { y: -170 }, { y: 0, duration: 1 }, 0.2)
-      .fromTo(".t", { y: -170 }, { y: 0, duration: 1.2 }, 0.22)
-      .fromTo(".a2", { y: -170 }, { y: 0, duration: 1.4 }, 0.24)
-      .fromTo(".t2", { y: -170 }, { y: 0, duration: 1.6 }, 0.26)
-      .fromTo(".i", { y: -170 }, { y: 0, duration: 1.8 }, 0.3)
-      .fromTo(".o", { y: -170 }, { y: 0, duration: 2 }, 0.32)
-      .fromTo(".n", { y: -170 }, { y: 0, duration: 2.2 }, 0.38);
-  }
+  shapeAnimation
+    .fromTo(".s", { y: -170 }, { y: 0 })
+    .fromTo(".h", { y: -170 }, { y: 0 }, 0.1)
+    .fromTo(".a", { y: -170 }, { y: 0 }, 0.14)
+    .fromTo(".p", { y: -170 }, { y: 0 }, 0.14)
+    .fromTo(".e", { y: -170 }, { y: 0 }, 0.18)
+    .fromTo(".s2", { y: -170 }, { y: 0 }, 0.2)
+    .fromTo(".t", { y: -170 }, { y: 0 }, 0.22)
+    .fromTo(".a2", { y: -170 }, { y: 0 }, 0.24)
+    .fromTo(".t2", { y: -170 }, { y: 0 }, 0.26)
+    .fromTo(".i", { y: -170 }, { y: 0 }, 0.3)
+    .fromTo(".o", { y: -170 }, { y: 0 }, 0.32)
+    .fromTo(".n", { y: -170 }, { y: 0 }, 0.38);
 });
 </script>
 <style lang="scss" scoped>
