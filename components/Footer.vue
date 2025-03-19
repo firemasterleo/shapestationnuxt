@@ -84,7 +84,6 @@ import { ref, onMounted} from 'vue';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 const footer = ref(null);
 const isSubmitted = ref(false); // Track if the form has been submitted
