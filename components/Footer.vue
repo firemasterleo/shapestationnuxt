@@ -83,7 +83,7 @@ import { ref, onMounted} from 'vue';
 
 
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const footer = ref(null);
@@ -111,50 +111,34 @@ const handleSubmit = async (event) => {
   }
 };
 onMounted(() => {
+  if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
 
-//     gsap.fromTo(
-//   footer.value,
-//   { y: '-30%' }, // Starting value
-//   {
-//     y: '28%', // Ending value
-//     ease: 'none',
-//     scrollTrigger: {
-//       trigger: footer.value,
-//       start: 'top bottom',
-//       end: 'bottom 10%',
-//       scrub: 0.3,
-//     //   markers: true,
-//       invalidateOnRefresh: true, // Recalculate start/end on resize or refresh
+    let shapeAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: footer.value, // Bind Vue ref instead of class selector
+        start: "top bottom",
+        end: "bottom bottom",
+        // scrub: true,
+        // markers: true, // Debugging
+      },
+      defaults: { duration: 5, ease: "power2.out" },
+    });
 
-//     },
-//   }
-// );
-let shapeAnimation = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".shape-footer",  // Element that triggers the animation
-    start: "top bottom ",           // When the top of hero-animation hits 80% of viewport
-    end: "bottom bottom",       // End animation when hero reaches the center
-    // scrub: true,               // Set to `true` if you want it to scrub with scroll
-    // markers: true,              // Debugging (remove when done)
-  },
-  defaults: { duration: 5, ease: "power2.out" }
-});
-
-shapeAnimation
-  .fromTo(".shape-footer .s", { y: -170 }, { y: 0, duration: 0.9 })
-  .fromTo(".shape-footer .h", { y: -170 }, { y: 0, duration: 0.95 }, 0.1)
-  .fromTo(".shape-footer .a", { y: -170 }, { y: 0, duration: 0.98 }, 0.14)
-  .fromTo(".shape-footer .p", { y: -170 }, { y: 0, duration: 0.98 }, 0.14)
-  .fromTo(".shape-footer .e", { y: -170 }, { y: 0, duration: 0.98 }, 0.18)
-  .fromTo(".shape-footer .s2", { y: -170 }, { y: 0, duration: 1 }, 0.2)
-  .fromTo(".shape-footer .t", { y:  -170}, { y: 0, duration: 1.2 }, 0.22)
-  .fromTo(".shape-footer .a2", { y: -170}, { y: 0, duration: 1.4 }, 0.24)
-  .fromTo(".shape-footer .t2", { y: -170}, { y: 0, duration: 1.6 }, 0.26)
-  .fromTo(".shape-footer .i", { y: -170 }, { y: 0, duration: 1.8 }, 0.3)
-  .fromTo(".shape-footer .o", { y: -170 }, { y: 0, duration: 2 }, 0.32)
-  .fromTo(".shape-footer .n", { y: -170 }, { y: 0, duration: 2.2 }, 0.38);
-
-
+    shapeAnimation
+      .fromTo(".s", { y: -170 }, { y: 0, duration: 0.9 })
+      .fromTo(".h", { y: -170 }, { y: 0, duration: 0.95 }, 0.1)
+      .fromTo(".a", { y: -170 }, { y: 0, duration: 0.98 }, 0.14)
+      .fromTo(".p", { y: -170 }, { y: 0, duration: 0.98 }, 0.14)
+      .fromTo(".e", { y: -170 }, { y: 0, duration: 0.98 }, 0.18)
+      .fromTo(".s2", { y: -170 }, { y: 0, duration: 1 }, 0.2)
+      .fromTo(".t", { y: -170 }, { y: 0, duration: 1.2 }, 0.22)
+      .fromTo(".a2", { y: -170 }, { y: 0, duration: 1.4 }, 0.24)
+      .fromTo(".t2", { y: -170 }, { y: 0, duration: 1.6 }, 0.26)
+      .fromTo(".i", { y: -170 }, { y: 0, duration: 1.8 }, 0.3)
+      .fromTo(".o", { y: -170 }, { y: 0, duration: 2 }, 0.32)
+      .fromTo(".n", { y: -170 }, { y: 0, duration: 2.2 }, 0.38);
+  }
 });
 </script>
 <style lang="scss" scoped>
