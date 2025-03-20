@@ -79,18 +79,15 @@
   
 <script setup>
 import { ref, onMounted} from 'vue';
+import { useNuxtApp } from "#app";
 
 
 
-import gsap from 'gsap';
-import ScrollTrigger from "gsap/ScrollTrigger"; // Ensure this import is correct
-
-// Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
 
 
-const footer = ref(null);
 const isSubmitted = ref(false); // Track if the form has been submitted
+const { $gsap, $ScrollTrigger } = useNuxtApp(); // Access GSAP & ScrollTrigger
+
 
 const handleSubmit = async (event) => {
   event.preventDefault(); // Prevent the default form submission
@@ -114,32 +111,38 @@ const handleSubmit = async (event) => {
   }
 };
 onMounted(() => {
-  if (!footer.value) return; // Ensure the element exists
+  // Ensure elements exist before running animation
+  const shapeFooter = document.querySelector(".shape-footer");
+  if (!shapeFooter) return;
 
-  let shapeAnimation = gsap.timeline({
+  // Register ScrollTrigger
+  $gsap.registerPlugin($ScrollTrigger);
+
+  let shapeAnimation = $gsap.timeline({
     scrollTrigger: {
-      trigger: footer.value, // Bind Vue ref instead of class selector
+      trigger: shapeFooter, // Use the element reference
       start: "top bottom",
       end: "bottom bottom",
-      scrub: 1, // Smooth animation with scroll
-      markers: true, // Debugging (remove when done)
+      scrub: false, // Set to true if you want scroll-based animation
+      // markers: true, // Enable for debugging
     },
-    defaults: { duration: 1, ease: "power2.out" },
+    defaults: { duration: 0.9, ease: "power2.out" }
   });
 
+  // Apply animations to individual letters
   shapeAnimation
-    .fromTo(".s", { y: -170 }, { y: 0 })
-    .fromTo(".h", { y: -170 }, { y: 0 }, 0.1)
-    .fromTo(".a", { y: -170 }, { y: 0 }, 0.14)
-    .fromTo(".p", { y: -170 }, { y: 0 }, 0.14)
-    .fromTo(".e", { y: -170 }, { y: 0 }, 0.18)
-    .fromTo(".s2", { y: -170 }, { y: 0 }, 0.2)
-    .fromTo(".t", { y: -170 }, { y: 0 }, 0.22)
-    .fromTo(".a2", { y: -170 }, { y: 0 }, 0.24)
-    .fromTo(".t2", { y: -170 }, { y: 0 }, 0.26)
-    .fromTo(".i", { y: -170 }, { y: 0 }, 0.3)
-    .fromTo(".o", { y: -170 }, { y: 0 }, 0.32)
-    .fromTo(".n", { y: -170 }, { y: 0 }, 0.38);
+    .fromTo(".shape-footer .s", { y: -170 }, { y: 0 })
+    .fromTo(".shape-footer .h", { y: -170 }, { y: 0 }, 0.1)
+    .fromTo(".shape-footer .a", { y: -170 }, { y: 0 }, 0.14)
+    .fromTo(".shape-footer .p", { y: -170 }, { y: 0 }, 0.18)
+    .fromTo(".shape-footer .e", { y: -170 }, { y: 0 }, 0.2)
+    .fromTo(".shape-footer .s2", { y: -170 }, { y: 0 }, 0.22)
+    .fromTo(".shape-footer .t", { y: -170 }, { y: 0 }, 0.24)
+    .fromTo(".shape-footer .a2", { y: -170 }, { y: 0 }, 0.26)
+    .fromTo(".shape-footer .t2", { y: -170 }, { y: 0 }, 0.28)
+    .fromTo(".shape-footer .i", { y: -170 }, { y: 0 }, 0.3)
+    .fromTo(".shape-footer .o", { y: -170 }, { y: 0 }, 0.32)
+    .fromTo(".shape-footer .n", { y: -170 }, { y: 0 }, 0.38);
 });
 </script>
 <style lang="scss" scoped>
@@ -155,7 +158,7 @@ onMounted(() => {
 
    margin-inline: auto;
    // padding-top: 4rem;
-   // border: solid blue;
+   border: solid blue;
    overflow: hidden;
    // padding-bottom: 1rem;
    
