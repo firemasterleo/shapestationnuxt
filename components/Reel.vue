@@ -35,7 +35,7 @@
       scrollTrigger: {
         trigger: vid.value,
         start: 'top 90%',
-        end: 'bottom 50%',
+        end: 'bottom 50',
         scrub: 0.3,
         // markers: true,
         invalidateOnRefresh: true, // Recalculate start/end on resize or refresh
