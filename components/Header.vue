@@ -29,7 +29,7 @@
           </nav>
   
           <!-- Hamburger Menu -->
-          <div class="hamburger" :class="{ 'is-active': isMenuOpen }" @click="toggleMenu" v-if="isMobile">
+          <div class="hamburger" :class="{ 'is-active': isMenuOpen }" @click="toggleMenu">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -46,31 +46,19 @@
   // Use the composable for managing toggle state
   const { isMenuOpen, toggleMenu, closeMenu } = useToggle();
   
-  // Detect mobile view
-  const isMobile = ref(false)
-  const checkScreenSize = () => {
-    isMobile.value = window.innerWidth <= 800
-  }
-  
 // Function to close the menu when clicking a menu item
 const handleItemClick = () => {
   closeMenu(); // Ensures the menu closes on click
 };
-  // Watch for screen size changes
-  onMounted(() => {
-    checkScreenSize()
-    window.addEventListener('resize', checkScreenSize)
-  })
-  
-  onUnmounted(() => {
-    window.removeEventListener('resize', checkScreenSize)
-  })
+
   </script>
   
 
-  <style lang="scss" scoped>
-  @use "@/assets/sass/variables" as *; // Import variables
 
+
+
+<style lang="scss" scoped>
+  @use "@/assets/sass/variables" as *; // Import variables
 
 .presection {
     // background-color: rgb(45, 45, 49);
