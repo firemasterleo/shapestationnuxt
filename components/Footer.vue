@@ -158,7 +158,7 @@ onMounted(() => {
 
    margin-inline: auto;
    // padding-top: 4rem;
-   border: solid blue;
+  //  border: solid blue;
    overflow: hidden;
    // padding-bottom: 1rem;
    

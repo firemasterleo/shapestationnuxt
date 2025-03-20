@@ -42,7 +42,7 @@
 <script setup>
 import { useToggle } from '~/composables/useToggle';
 
-const { isMenuOpen, toggleMenu, closeMenu } = useToggle();
+const { isMenuOpen, closeMenu } = useToggle();
 
 const menuItems = [
   { label: 'Home', path: '/' },
