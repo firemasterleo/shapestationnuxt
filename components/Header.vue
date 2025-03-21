@@ -45,19 +45,30 @@
       <h1>NaijaHaven</h1>
     </NuxtLink>
           </div>
+
+          <div class="right">
+            <div class="user">
+              <div class="signin">
+                <p>sign-in</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+
+              </div>
+                  <svg class="user" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
+            </div>
+            <NuxtLink class="cart" to="/cart" >
+          
+                  <div class="svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
+                    <h1>
+                          {{ cartStore.totalItems }}
+          
+                        </h1>
+                  </div>
+     
+              </NuxtLink>
+          </div>
   
       
-        <NuxtLink class="cart" to="/cart" >
-      
-              <div class="svg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
-                <h1>
-                      {{ cartStore.totalItems }}
-      
-                    </h1>
-              </div>
- 
-          </NuxtLink>
         </div>
       </div>
     </div>
@@ -325,24 +336,61 @@ background-color: $primarycolorblack; /* Solid black background */
         }
                 }
 
+                .right {
+                  display: flex;
+                  width: 10.5rem;
+                  // border: solid red;
+                  .user {
+                    display: flex;
+                    align-items: center;
+
+                  // border: solid red;
+
+                    .signin {
+                    display: flex;
+                    align-items: center;
+
+                      p {
+                        color: white;
+                        font-size: 14px;
+                      }
+                      svg {
+                        fill: $textcolorwhite;
+                        width: 15px;
+                        height: 15px;
+                      }
+
+                    }
+                    .user {
+                      fill: $textcolorwhite;
+                      width: 35px;
+                      height: 35px;
+                    }
+                  }
+
                   .cart {
                     position: fixed;
                 z-index: 25;
                 mix-blend-mode: difference;
                 right: 0.5rem;
                 
+                // border: solid green;
                     
                     
                     .svg {
                       display: flex;
+                      align-items: center;
+                      padding-top: 0.2rem;
                       // border: solid green;
-                      width:3.5rem;
+                      // width:3.5rem;
                       overflow: hidden;
-                      position: relative;
+               
+
+                      
                       svg {
                         fill: $textcolorwhite;
-                        width: 50px;
-                        height: 50px;
+                        width: 40px;
+                        height: 40px;
                         
                       }
                       h1 {
@@ -352,13 +400,15 @@ background-color: $primarycolorblack; /* Solid black background */
                         position: absolute;
                       top: 50%;
                       left: 50%;
-                      transform: translate(-50%, -55%);
-
+                      transform: translate(-15%, -40%);
+  
                       }
-
+  
                     }
                   
                 }
+                }
+
 
             }
         }
