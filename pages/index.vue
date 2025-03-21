@@ -1,14 +1,13 @@
 <template>
     <div>
-      <Header />
-      
+
       <main>
         <HeroSection />
         <Reel />
 
       </main>
       
-      <Footer/>
+      <!-- <Footer/> -->
     </div>
   </template>
   

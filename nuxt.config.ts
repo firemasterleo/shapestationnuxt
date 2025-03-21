@@ -5,11 +5,18 @@ export default defineNuxtConfig({
   css: ["@/assets/sass/main.scss"],
   build: {
     transpile: ["gsap"], // Ensure GSAP is transpiled correctly
+
   },
   vite: {
     define: {
       "window.global": {},
     },
+  },
+  modules: [
+    '@pinia/nuxt',
+  ],
+  imports: {
+    autoImport: true,
   },
 
 })

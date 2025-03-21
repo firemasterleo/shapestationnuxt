@@ -27,6 +27,11 @@
               </div>
             </ul>
           </nav>
+          <div class="cart">
+            <NuxtLink to="/cart">Cart ({{ cartStore.totalItems }})</NuxtLink>
+
+          </div>
+
   
           <!-- Hamburger Menu -->
           <div class="hamburger" :class="{ 'is-active': isMenuOpen }" @click="toggleMenu">
@@ -41,6 +46,7 @@
   
   <script setup>
   import { useToggle } from '@/composables/useToggle'
+  import { useCartStore } from '@/stores/cartStore';
   
   // Use the composable for managing toggle state
   const { isMenuOpen, toggleMenu, closeMenu } = useToggle();
@@ -49,6 +55,8 @@
   const handleItemClick = () => {
     closeMenu(); // Ensures the menu closes on click
   };
+
+const cartStore = useCartStore();
 
   </script>
   
@@ -194,6 +202,11 @@
 
                 .nav-bar {
                     display: none;
+                }
+                .cart {
+                  position: absolute;
+                  right: 5rem;
+                  transition: all 0.8s ease-in-out; 
                 }
                 .hamburger {
                 -webkit-tap-highlight-color: transparent;

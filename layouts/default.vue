@@ -1,5 +1,10 @@
 <template>
     <div>
+      <div class="default-header">
+        <Header />
+
+      </div>
+
       <!-- Side Panel -->
       <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
         <SidePanel />
@@ -15,10 +20,18 @@
       <!-- Page Transition -->
       <NuxtPage />
     </div>
+
+    <Footer/>
+ 
+
   </template>
   
   <script setup>
   import { ref, onMounted, onBeforeUnmount } from "vue";
+  import Header from '@/components/Header.vue';
+  import Footer from '@/components/Footer.vue';
+
+
   import { useToggle } from "~/composables/useToggle";
   import gsap from "gsap";
   import ScrollTrigger from "gsap/ScrollTrigger";
@@ -44,7 +57,7 @@
     cleanupAnimations();
   });
   </script>
-  <style lang="scss">
+  <style lang="scss" scoped>
   
   .fade-enter-active,
   .fade-leave-active {
@@ -61,6 +74,7 @@
   }
   
   @media (max-width: 800px) {
+
     .sidepanel {
       width: 100vw;
       height: 0dvh;
@@ -100,5 +114,7 @@
       }
     }
   }
+
+
   </style>
   

@@ -1,10 +1,10 @@
 <template>
     <div>
-      <Header />
+      <!-- <Header /> -->
       
       <main>
         <!-- <HeroSection /> -->
-        <OurApproach />
+        <Spices />
         <Reel />
 
       </main>
@@ -15,7 +15,7 @@
   
   <script setup>
   import Header from '@/components/Header.vue';
-  import HeroSection from '@/components/HeroSection.vue';
+  import Spices from '@/components/Spices.vue';
   import Footer from '@/components/Footer.vue';
 
   </script>
