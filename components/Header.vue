@@ -104,6 +104,8 @@ const cartStore = useCartStore();
         overflow: hidden;
         display: flex;
         position: relative;
+background-color: $primarycolorblack; /* Solid black background */
+
 
 
 
@@ -223,6 +225,8 @@ const cartStore = useCartStore();
                 display: flex;
                 justify-content: space-between;
                 height: 3.2rem;
+                background-color: $primarycolorblack; /* Solid black background */
+
 
 
                 .left {
