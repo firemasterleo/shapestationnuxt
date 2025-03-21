@@ -1,7 +1,7 @@
 <template>
     <div class="presection">
       <div class="section1">
-        <div class="header">
+        <div class="desktop-header">
           <!-- Logo -->
           <NuxtLink to="/" class="logo" @click="handleItemClick">
             <h1>NaijaHaven</h1>
@@ -27,10 +27,12 @@
               </div>
             </ul>
           </nav>
-          <div class="cart">
-            <NuxtLink to="/cart">Cart ({{ cartStore.totalItems }})</NuxtLink>
 
-          </div>
+        </div>
+        <div class="mobile-header">
+          <!-- Logo -->
+
+          <div class="left">
 
   
           <!-- Hamburger Menu -->
@@ -39,6 +41,23 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
+    <NuxtLink to="/" class="logo" @click="handleItemClick">
+      <h1>NaijaHaven</h1>
+    </NuxtLink>
+          </div>
+  
+      
+        <NuxtLink class="cart" to="/cart" >
+      
+              <div class="svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
+                <h1>
+                      {{ cartStore.totalItems }}
+      
+                    </h1>
+              </div>
+ 
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -88,7 +107,7 @@ const cartStore = useCartStore();
 
 
 
-        .header {
+        .desktop-header {
             
 
             // border: solid red;
@@ -183,11 +202,10 @@ const cartStore = useCartStore();
                         }
                     }
                 }
-            }
-            .hamburger {
-                display: none;
-            }
-            
+            }          
+        }
+        .mobile-header {
+          display: none;
         }
     }
 }
@@ -196,19 +214,55 @@ const cartStore = useCartStore();
     .presection {
         .section1 {
             width: 100%;
-            .header {
+            .desktop-header {
+              display: none;
+            }
+            .mobile-header {
                 width: 100%;
                 // border: solid red;
+                display: flex;
+                justify-content: space-between;
+                height: 3.2rem;
 
-                .nav-bar {
-                    display: none;
+
+                .left {
+                  // border: solid blue;
+                  width: fit-content;
+                  .logo {
+                // borderight: solid 2px #7cae65;
+                // border: solid red;
+                padding-right: 1rem;
+                // letter-spacing: 6px;
+                // font-size: 10px;
+                // position: relative; /* Ensure proper layering */
+                // background: transparent;
+                top: 1.2rem;
+                left: 3rem;
+                position: fixed;
+                z-index: 25;
+                mix-blend-mode: difference;
+                color: $textcolorwhite;
+                
+                
+                
+                h1 {
+                    // z-index: 200;
+                    // position: relative; /* Ensure it stays in front */
+                    // z-index: 2; /* Ensures it stays in front */
+                    cursor: pointer; /* Make it behave like a button */
+                    font-size: 18px;
+                    // font-variant-caps: all-small-caps; /* To make uppercase match lowercase in height */
+                    line-height: 1.2; /* Adjust as needed */
+                    font-weight: 400;
+                    
+                    
                 }
-                .cart {
-                  position: absolute;
-                  right: 5rem;
-                  transition: all 0.8s ease-in-out; 
+                h1:active {
+                    transform: scale(1.1);
                 }
-                .hamburger {
+            }
+
+                  .hamburger {
                 -webkit-tap-highlight-color: transparent;
                 
                 // border: solid red;
@@ -223,13 +277,13 @@ const cartStore = useCartStore();
                 align-items: flex-end;
                 cursor: pointer;
       
-                width: 6rem;
+                width: 2.5rem;
                 padding-right:0.5rem ;
       
                 height: 3rem;
                 position: fixed;
-                top: 0.5rem;
-                right: 1rem;
+                top: 0.3rem;
+             
                 mix-blend-mode: difference;
                 color: $textcolorwhite;
       
@@ -265,6 +319,43 @@ const cartStore = useCartStore();
       
                 }
         }
+                }
+
+                  .cart {
+                    position: fixed;
+                z-index: 25;
+                mix-blend-mode: difference;
+                right: 0.5rem;
+                
+                    
+                    
+                    .svg {
+                      display: flex;
+                      // border: solid green;
+                      width:3.5rem;
+                      overflow: hidden;
+                      position: relative;
+                      svg {
+                        fill: $textcolorwhite;
+                        width: 50px;
+                        height: 50px;
+                        
+                      }
+                      h1 {
+                        
+                        color: $textcolorwhite;
+                        font-size: 14px;
+                        position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -55%);
+
+                      }
+
+                    }
+                  
+                }
+
             }
         }
     }

@@ -1,9 +1,6 @@
 <template>
     <div>
-      <div class="default-header">
         <Header />
-
-      </div>
 
       <!-- Side Panel -->
       <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
@@ -84,6 +81,7 @@
       gap: 1.2rem;
       overflow-y: hidden;
       position: fixed;
+      top: -2rem;
       z-index: 24;
       visibility: hidden;
       background-color: #101010;
@@ -91,7 +89,7 @@
   
       &.is-expanded {
         transition: all 0.7s cubic-bezier(0.95, 0.05, 0.05, 1);
-        height: 100dvh;
+        height: 105dvh;
         visibility: visible;
       }
     }
