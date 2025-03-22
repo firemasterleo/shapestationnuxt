@@ -46,15 +46,22 @@
     </NuxtLink>
           </div>
 
-          <div class="right">
-            <div class="user">
-              <div class="signin">
-                <p>sign-in</p>
+          <div class="right" >
+            <div class="user" @click="handleUserClick">
+              <div class="signin" >
+                <p v-if="userStore.isAuthenticated">{{ userStore.user?.username }}</p>
+                <p v-else>Sign in</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
 
               </div>
                   <svg class="user" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
             </div>
+                  <!-- User Dashboard Menu -->
+      <div v-if="showMenu" class="dropdown-menu">
+        <NuxtLink to="/profile">Profile</NuxtLink>
+        <NuxtLink to="/orders">My Orders</NuxtLink>
+        <button @click="userStore.logout()">Logout</button>
+      </div>
             <NuxtLink class="cart" to="/cart" >
           
                   <div class="svg">
@@ -72,21 +79,41 @@
         </div>
       </div>
     </div>
+                      <!-- User Dashboard Menu -->
+      <div v-if="showMenu" class="dropdown-menu">
+        <NuxtLink to="/profile">Profile</NuxtLink>
+        <NuxtLink to="/orders">My Orders</NuxtLink>
+        <button @click="userStore.logout()">Logout</button>
+      </div>
   </template>
   
   <script setup>
+  import { ref } from 'vue';
   import { useToggle } from '@/composables/useToggle'
+  import { useUserStore } from '@/stores/userStore';
+
   import { useCartStore } from '@/stores/cartStore';
+  import { navigateTo } from '#app';
   
   // Use the composable for managing toggle state
   const { isMenuOpen, toggleMenu, closeMenu } = useToggle();
-  
+  const userStore = useUserStore();
+  const cartStore = useCartStore();
+
+  const showMenu = ref(false);
   // Function to close the menu when clicking a menu item
   const handleItemClick = () => {
     closeMenu(); // Ensures the menu closes on click
   };
 
-const cartStore = useCartStore();
+  const handleUserClick = () => {
+  if (!userStore.isAuthenticated) {
+    navigateTo('/login');
+  } else {
+    showMenu.value = !showMenu.value; // Toggle user menu
+  }
+};
+
 
   </script>
   
@@ -115,7 +142,7 @@ const cartStore = useCartStore();
         overflow: hidden;
         display: flex;
         position: relative;
-background-color: $primarycolorblack; /* Solid black background */
+        background-color: rgb(121, 140, 97); /* Solid black background */
 
 
 
@@ -225,6 +252,9 @@ background-color: $primarycolorblack; /* Solid black background */
 
 @media (max-width: 800px) {
     .presection {
+      position: sticky;
+      top: 0;
+      z-index: 100;
         .section1 {
             width: 100%;
             .desktop-header {
@@ -233,33 +263,33 @@ background-color: $primarycolorblack; /* Solid black background */
             .mobile-header {
                 width: 100%;
                 // border: solid red;
+
                 display: flex;
                 justify-content: space-between;
                 height: 3.2rem;
-                background-color: $primarycolorblack; /* Solid black background */
+                height: fit-content;
+                background-color: rgb(231, 229, 227); /* Solid black background */
+                // background-color: rgb(121, 140, 97); /* Solid black background */
 
 
 
                 .left {
                   // border: solid blue;
                   width: fit-content;
+                  display: flex;
+                  gap: 0.5rem;
+                  align-items: center;
                   .logo {
-                // borderight: solid 2px #7cae65;
-                // border: solid red;
+
                 padding-right: 1rem;
-                // letter-spacing: 6px;
-                // font-size: 10px;
-                // position: relative; /* Ensure proper layering */
-                // background: transparent;
-                top: 1.2rem;
-                left: 3rem;
-                position: fixed;
-                z-index: 25;
-                mix-blend-mode: difference;
-                color: $textcolorwhite;
-                
-                
-                
+
+                position: relative;
+                // z-index: 25;
+                // mix-blend-mode: difference;
+                color: $textcolorblack;
+                // color: rgb(121, 140, 97);
+                display: flex;
+
                 h1 {
                     // z-index: 200;
                     // position: relative; /* Ensure it stays in front */
@@ -292,14 +322,15 @@ background-color: $primarycolorblack; /* Solid black background */
                 align-items: flex-end;
                 cursor: pointer;
       
-                width: 2.5rem;
-                padding-right:0.5rem ;
+                // width: 2.5rem;
+                padding-left:1rem ;
+                padding-right: 1.5rem;
       
                 height: 3rem;
-                position: fixed;
-                top: 0.3rem;
+                position: relative;
+                // top: 0.3rem;
              
-                mix-blend-mode: difference;
+                // mix-blend-mode: difference;
                 color: $textcolorwhite;
       
       
@@ -308,7 +339,8 @@ background-color: $primarycolorblack; /* Solid black background */
                     width: 19px;
                     height: 2px;
                     // background-color: rgba(255, 255, 255, 0.413);
-                    background-color: rgb(255, 255, 255);
+                    background-color: $textcolorblack;
+                    // background-color: $textcolorblack;
       
       
                     transition: transform 0.3s, opacity 0.3s;
@@ -338,43 +370,49 @@ background-color: $primarycolorblack; /* Solid black background */
 
                 .right {
                   display: flex;
-                  width: 10.5rem;
-                  // border: solid red;
+                  gap: 1rem;
+                  // width: 10.5rem;
+                  border: solid green;
+                  // position: fixed;
+                // z-index: 25;
+                // mix-blend-mode: difference;
+                right: 0.5rem;
                   .user {
                     display: flex;
                     align-items: center;
 
-                  // border: solid red;
+                  border: solid red;
 
                     .signin {
                     display: flex;
                     align-items: center;
 
                       p {
-                        color: white;
+                        color: $textcolorblack;
                         font-size: 14px;
                       }
                       svg {
-                        fill: $textcolorwhite;
+                        fill: $textcolorblack;
                         width: 15px;
                         height: 15px;
                       }
 
                     }
                     .user {
-                      fill: $textcolorwhite;
+                      fill: $textcolorblack;
                       width: 35px;
                       height: 35px;
                     }
                   }
 
                   .cart {
-                    position: fixed;
-                z-index: 25;
-                mix-blend-mode: difference;
-                right: 0.5rem;
+                    position: relative;
+                // z-index: 25;
+                // mix-blend-mode: difference;
+                // right: 0.5rem;
                 
                 // border: solid green;
+                padding-right: 1rem;
                     
                     
                     .svg {
@@ -384,23 +422,24 @@ background-color: $primarycolorblack; /* Solid black background */
                       // border: solid green;
                       // width:3.5rem;
                       overflow: hidden;
+                      position: relative;
                
 
                       
                       svg {
-                        fill: $textcolorwhite;
+                        fill: $textcolorblack;
                         width: 40px;
                         height: 40px;
                         
                       }
                       h1 {
                         
-                        color: $textcolorwhite;
+                        color: $textcolorblack;
                         font-size: 14px;
                         position: absolute;
                       top: 50%;
                       left: 50%;
-                      transform: translate(-15%, -40%);
+                      transform: translate(-30%, -40%);
   
                       }
   
@@ -413,6 +452,36 @@ background-color: $primarycolorblack; /* Solid black background */
             }
         }
     }
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 50px;
+  z-index: 100;
+  border: solid red;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  padding: 8px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-menu button:hover,
+.dropdown-menu a:hover {
+  background: #f4f4f4;
 }
 </style>
 

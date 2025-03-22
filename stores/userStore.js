@@ -50,6 +50,35 @@ export const useUserStore = defineStore("user", () => {
       console.error("❌ Error fetching user:", err);
     }
   }
+  async function register(username, email, password) {
+    try {
+      const { data, error } = await useFetch("http://localhost:1337/api/auth/local/register", {
+        method: "POST",
+        body: { username, email, password },
+      });
+  
+      if (error.value) {
+        console.error("❌ Full Strapi Error Response:", error.value);
+  
+        return { error: error.value?.data?.error?.message || "Registration failed" };
+      }
+  
+      if (data.value) {
+        console.log("✅ Registration successful:", data.value);
+  
+        token.value = data.value.jwt;
+        user.value = data.value.user;
+  
+        tokenCookie.value = token.value;
+        userCookie.value = JSON.stringify(user.value);
+        
+        return { error: null };
+      }
+    } catch (err) {
+      console.error("❌ Registration error:", err);
+      return { error: "An unexpected error occurred" };
+    }
+  }
 
   async function login(identifier, password) {
     try {
@@ -92,5 +121,5 @@ export const useUserStore = defineStore("user", () => {
 
   const isAuthenticated = computed(() => !!token.value);
 
-  return { user, token, fetchUser, login, logout, isAuthenticated };
+  return { user, token, fetchUser, register, login, logout, isAuthenticated };
 });

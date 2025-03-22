@@ -1,22 +1,22 @@
 <template>
     <div class="sectioncontainer">
       <div class="section">
-        <div>
+        <div class="body">
     <h1>Our Products</h1>
     <div v-if="status === 'pending'">Loading...</div>
     <div v-if="error">Error loading products: {{ error }}</div>
     
-    <ul v-if="products?.data?.length">
-      <li v-for="product in products.data" :key="product.id">
+    <ul class="products" v-if="products?.data?.length" >
+      <li class="product" v-for="product in products.data" :key="product.id">
+          <NuxtLink :to="`/product/${product.id}`">
+              
+              <img v-if="product.image?.url"
+              :src="`http://localhost:1337${product.image.url}`"
+              alt="Product Image">
+            </NuxtLink>
       <h2>{{ product.name }}</h2>
       <p>{{ product.description[0]?.children[0]?.text || "No Description" }}</p>
       <p>Price: ${{ product.price }}</p>
-      <NuxtLink :to="`/product/${product.id}`">
-          
-          <img v-if="product.image?.url"
-          :src="`http://localhost:1337${product.image.url}`"
-          alt="Product Image">
-        </NuxtLink>
           
       <!-- Add to Cart Button -->
         <button @click="cartStore.addToCart(product)">
@@ -54,10 +54,27 @@ display: flex;
 
 
   .section {
-  background-color: rgb(208, 193, 134); /* Solid black background */
+  background-color: rgb(231, 229, 227); /* Solid black background */
     width: 80rem;
     height: 100vh; /* Full viewport height */
     margin-inline: auto;
+
+    .body {
+        padding-inline: 1rem;
+        .products {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .product {
+                // border: solid red;
+                display: flex;
+                // gap: 1rem;
+                flex-direction: column;
+                background-color: rgb(219, 213, 213);
+
+            }
+        }
+    }
 
   }
 }

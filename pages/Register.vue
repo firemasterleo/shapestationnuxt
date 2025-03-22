@@ -24,22 +24,13 @@ const password = ref('');
 const errorMsg = ref('');
 const route = useRoute(); // ✅ Capture current route
 
-// If the user is already logged in, redirect them
-if (userStore.isAuthenticated) {
-  const redirectPath = route.query.redirect || '/profile'; // Go to intended page or profile
-  navigateTo(redirectPath);
-}
-
-
 const handleRegister = async () => {
-  const { error } = await userStore.register(username.value, email.value, password.value);
+  const response = await userStore.register(username.value, email.value, password.value);
 
-  if (!error.value) {
-    // ✅ Redirect back to checkout if coming from there, otherwise go to profile
-    const redirectPath = route.query.redirect || '/profile';
-    navigateTo(redirectPath);
+  if (response && !response.error) {
+    navigateTo('/Checkout'); // ✅ Redirect after successful registration
   } else {
-    errorMsg.value = 'Registration failed';
+    errorMsg.value = response.error || 'Registration failed'; // ✅ Show specific error if available
   }
 };
 </script>

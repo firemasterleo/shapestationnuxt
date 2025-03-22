@@ -75,13 +75,13 @@
     .sidepanel {
       width: 100vw;
       height: 0dvh;
-      border-radius: 0.6rem;
+      // border-radius: 0.6rem;
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
       overflow-y: hidden;
       position: fixed;
-      top: -2rem;
+      // top: -2rem;
       z-index: 24;
       visibility: hidden;
       background-color: #101010;
@@ -89,7 +89,7 @@
   
       &.is-expanded {
         transition: all 0.7s cubic-bezier(0.95, 0.05, 0.05, 1);
-        height: 105dvh;
+        height: 100dvh;
         visibility: visible;
       }
     }

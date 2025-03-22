@@ -70,6 +70,8 @@ const handleItemClick = () => {
     .sidebarcontainer {
         // border: solid green;
         background-color: #101010;
+background-color: rgb(121, 140, 97); /* Solid black background */
+
         width: 100%;
         height: 100dvh;
         // padding-inline: 1rem;
