@@ -32,7 +32,7 @@ export const useUserStore = defineStore("user", () => {
     if (!token.value) return;
 
     try {
-      const { data, error } = await useFetch("http://localhost:1337/api/users/me", {
+      const { data, error } = await useFetch("https://naijahaven-strapi.onrender.com/api/users/me", {
         headers: { Authorization: `Bearer ${token.value}` },
       });
 
@@ -52,7 +52,7 @@ export const useUserStore = defineStore("user", () => {
   }
   async function register(username, email, password) {
     try {
-      const { data, error } = await useFetch("http://localhost:1337/api/auth/local/register", {
+      const { data, error } = await useFetch("https://naijahaven-strapi.onrender.com/api/auth/local/register", {
         method: "POST",
         body: { username, email, password },
       });
@@ -82,7 +82,7 @@ export const useUserStore = defineStore("user", () => {
 
   async function login(identifier, password) {
     try {
-      const { data, error } = await useFetch("http://localhost:1337/api/auth/local", {
+      const { data, error } = await useFetch("https://naijahaven-strapi.onrender.com/api/auth/local", {
         method: "POST",
         body: { identifier, password },
       });

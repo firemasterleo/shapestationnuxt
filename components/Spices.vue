@@ -37,7 +37,7 @@
   import { useCartStore } from '@/stores/cartStore';
   const cartStore = useCartStore();
 
-  const { data: products, status, error } = useFetch("http://localhost:1337/api/products?populate=*");
+  const { data: products, status, error } = useFetch("https://naijahaven-strapi.onrender.com/api/products?populate=*");
   
   // Debugging to see actual API response
   watchEffect(() => {

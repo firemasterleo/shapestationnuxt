@@ -25,7 +25,7 @@
   const route = useRoute();
   const productId = route.params.id;
   
-  const { data } = useFetch(`http://localhost:1337/api/products?filters[id][$eq]=${productId}&populate=*`);
+  const { data } = useFetch(`https://naijahaven-strapi.onrender.com/api/products?filters[id][$eq]=${productId}&populate=*`);
   const product = computed(() => data.value?.data?.[0] || null);
   </script>
 
