@@ -372,7 +372,7 @@
                   display: flex;
                   gap: 1rem;
                   // width: 10.5rem;
-                  border: solid green;
+                  // border: solid green;
                   // position: fixed;
                 // z-index: 25;
                 // mix-blend-mode: difference;
@@ -381,7 +381,7 @@
                     display: flex;
                     align-items: center;
 
-                  border: solid red;
+                  // border: solid red;
 
                     .signin {
                     display: flex;

@@ -6,9 +6,8 @@
       <ul >
         <li v-for="item in cartStore.cart" :key="item.id">
           <h2>{{ item.name }}</h2>
-          <img v-if="item.image?.url"
-       :src="`http://localhost:1337${item.image.url}`"
-       alt="Product Image">
+          <img v-if="item.image?.url" :src="item.image.url" alt="Product Image">
+
           <p>Price: ${{ item.price }}</p>
           
         <!-- Quantity Controls -->

@@ -8,11 +8,9 @@
     
     <ul class="products" v-if="products?.data?.length" >
       <li class="product" v-for="product in products.data" :key="product.id">
-          <NuxtLink :to="`/product/${product.id}`">
+          <NuxtLink class="image" :to="`/product/${product.id}`">
               
-              <img v-if="product.image?.url"
-              :src="`http://localhost:1337${product.image.url}`"
-              alt="Product Image">
+            <img v-if="product.image?.url" :src="product.image.url" alt="Product Image">
             </NuxtLink>
       <h2>{{ product.name }}</h2>
       <p>{{ product.description[0]?.children[0]?.text || "No Description" }}</p>
@@ -47,7 +45,7 @@
     @use "@/assets/sass/variables" as *; // Import variables
 
 .sectioncontainer {
-  background-color: rgb(70, 96, 181); /* Solid black background */
+  background-color: rgb(231, 229, 227); /* Solid black background */
   width: 100%;
   height: 100vh; /* Large enough to allow scrolling */
 display: flex;
@@ -71,6 +69,19 @@ display: flex;
                 // gap: 1rem;
                 flex-direction: column;
                 background-color: rgb(219, 213, 213);
+                // border: solid red;
+
+
+                .image {
+                    width: 15rem;
+                    height: 15rem;
+                    // border: solid red;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
 
             }
         }
@@ -83,9 +94,11 @@ display: flex;
 
 @media (max-width: 800px) {
   .sectioncontainer {
+    height: fit-content;
+    padding-bottom: 1rem;
     .section {
       width: 100vw;
-      height: 100vh;
+      height: fit-content;
     }
   }
 }
