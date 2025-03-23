@@ -10,7 +10,11 @@
       <li class="product" v-for="product in products.data" :key="product.id">
           <NuxtLink class="image" :to="`/product/${product.id}`">
               
-            <img v-if="product.image?.url" :src="product.image.url" alt="Product Image">
+            <img 
+  v-if="product.image?.url"
+  :src="`${product.image.url}?width=500`"
+  alt="Product Image"
+>
             </NuxtLink>
       <h2>{{ product.name }}</h2>
       <p>{{ product.description[0]?.children[0]?.text || "No Description" }}</p>

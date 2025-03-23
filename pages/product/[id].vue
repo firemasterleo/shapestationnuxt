@@ -1,9 +1,11 @@
 <template>
     <div v-if="product" class="product">
       <h1>{{ product.name }}</h1>
-      <img v-if="product.image?.data?.attributes?.url" 
-           :src="`http://localhost:1337${product.image.data.attributes.url}`" 
-           alt="Product Image">
+      <img 
+  v-if="product.image?.url"
+  :src="`${product.image.url}?width=500`"
+  alt="Product Image"
+>
            <p v-if="product.description">
   {{ product.description[0]?.children[0]?.text || "No description available" }}
 </p>
