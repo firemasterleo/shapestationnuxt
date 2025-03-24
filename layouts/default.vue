@@ -4,7 +4,7 @@
 
       <!-- Side Panel -->
       <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
-        <SidePanel />
+        <SidePanel2 />
       </div>
   
       <!-- Overlay (closes menu when clicked) -->
@@ -73,27 +73,37 @@
   @media (max-width: 800px) {
 
     .sidepanel {
-      width: 100vw;
-      height: 0dvh;
-      // border-radius: 0.6rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      overflow-y: hidden;
-      position: fixed;
-      // top: -2rem;
-      z-index: 24;
-      visibility: hidden;
-      background-color: #101010;
-      transition: all 0.8s cubic-bezier(0.95, 0.05, 0.2, 1);
-  
-      &.is-expanded {
-        transition: all 0.7s cubic-bezier(0.95, 0.05, 0.05, 1);
-        height: 100dvh;
-        visibility: visible;
-      }
+
+// opacity: 0;
+// visibility: hidden;
+width: 23rem;
+height: 100vh;
+transform: translatex(-100%);
+// padding-top: 6rem;
+padding-left: 1.5rem;
+border-radius: 0.6rem;
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+overflow-y: hidden;
+// z-index: 0;
+position: fixed;
+// top: 3rem;
+z-index: 24;
+opacity: 0;
+
+// visibility: hidden;
+// border: solid red;
+
+
+&.is-expanded {
+  // transition: all 0.35s; 
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) ; 
+  opacity: 1;
+transform: translatex(-10%);
+}
+
     }
-  
     .sidepanel-overlay {
       width: 100vw;
       height: 100vh;

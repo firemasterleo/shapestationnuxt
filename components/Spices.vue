@@ -3,7 +3,22 @@
       <div class="section">
         <div class="body">
     <h1>Our Products</h1>
-    <div v-if="status === 'pending'">Loading...</div>
+
+        <div v-if="status === 'pending'" class="loader loader--style2" title="1">
+  <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+  <path fill="#000" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+    <animateTransform attributeType="xml"
+      attributeName="transform"
+      type="rotate"
+      from="0 25 25"
+      to="360 25 25"
+      dur="0.6s"
+      repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>
+
     <div v-if="error">Error loading products: {{ error }}</div>
     
     <ul class="products" v-if="products?.data?.length" >
@@ -105,6 +120,8 @@ display: flex;
       height: fit-content;
     }
   }
+
+
 }
 @media (max-width: 1200px) and (min-width: 800px) {
   .sectioncontainer {
@@ -112,5 +129,24 @@ display: flex;
 
     }
   }
+}
+
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect{
+  fill: #FF6700;
 }
 </style>
