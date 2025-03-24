@@ -403,6 +403,8 @@
                     justify-content: center;
                     height: 100%;
                     padding-right: 1rem;
+                    width: 2.6rem;
+
 
                 
                 // border: solid green;
@@ -411,16 +413,21 @@
                         fill: $textcolorblack;
                         width: 35px;
                         height: 35px;
+                        position: absolute;
+                        // border: solid red;
                         
                       }
                       h1 {
                         
                         color: $textcolorblack;
                         font-size: 12px;
-                        position: absolute;
-                      top: 50%;
-                      left: 50%;
-                      transform: translate(-120%, -50%);
+                        position: relative;
+                        left: 2px;
+                        bottom: 0.5px;
+                      //   position: absolute;
+                      // top: 50%;
+                      // left: 50%;
+                      // transform: translate(-120%, -50%);
   
                       }
   

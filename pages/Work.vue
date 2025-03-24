@@ -5,7 +5,7 @@
       <main>
         <!-- <HeroSection /> -->
         <Spices />
-        <Reel />
+        <!-- <Reel /> -->
 
       </main>
       
