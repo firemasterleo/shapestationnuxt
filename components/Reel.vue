@@ -34,10 +34,10 @@
       ease: 'none',
       scrollTrigger: {
         trigger: vid.value,
-        start: 'top 90%',
-        end: 'bottom 50',
+        start: '50 90%',
+        end: 'bottom 100',
         scrub: 0.3,
-        // markers: true,
+        markers: true,
         invalidateOnRefresh: true, // Recalculate start/end on resize or refresh
   
       },
