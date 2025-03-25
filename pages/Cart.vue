@@ -10,7 +10,7 @@
           back to shop
         </div>
         <div class="checkout">
-          <p ><span class="sub">Subtotal</span><sup>$</sup> <span class="total">{{ cartStore.cartTotal }}</span> </p>
+          <p ><span class="sub">Subtotal</span><span class="dollar"><sup>$</sup></span> <span class="total">{{ cartStore.cartTotal }}</span> </p>
           <button @click="handleCheckout">Proceed to Checkout ({{ cartStore.totalItems }} items)</button>
     
         </div>
@@ -27,8 +27,9 @@
                   
                 </div>
                 <div class="details">
-                  <h2>{{ item.name }}</h2>
-                  <p>{{ item.description[0]?.children[0]?.text || "No Description" }}</p>
+                  <!-- <h2>{{ item.name }}</h2> -->
+                  <p class="descrp">                  {{ item.description[0]?.children[0]?.text.split(" ").slice(0, 15).join(" ") }}. . .
+                  </p>
                   <p class="price">$<span>{{ item.price }}</span></p>
       
                 </div>
@@ -86,7 +87,8 @@ const handleCheckout = () => {
 .sectioncontainer {
   background-color: rgb(70, 96, 181); /* Solid black background */
   width: 100%;
-  height: 100vh; /* Large enough to allow scrolling */
+  height: fit-content; /* Large enough to allow scrolling */
+  min-height: 100vh;
 display: flex;
 
 
@@ -126,15 +128,20 @@ display: flex;
           gap: 1rem;
           p {
             display: flex;
-            font-size: 20px;
+            font-size: 24px;
             
             .sub {
               padding-right: 0.5rem;
               font-weight: 500;
             }
+            .dollar {
+              font-size: 19px;
+              position: relative;
+              top: 4px;
+            }
             .total {
               font-weight: 600;
-              font-size: 20px;
+              font-size: 24px;
             }
             
             
@@ -197,6 +204,12 @@ display: flex;
                   flex-direction: column;
                   // width: 16rem;
                   // border: solid;
+                  .descrp {
+                    font-size: 16px;
+                    color: $textcolorblack;
+                    line-height: 1.3rem;
+                    padding-bottom: 0.5rem;
+                  }
                   h2 {
                     font-size: 24px;
                     font-weight: 500;
@@ -205,6 +218,7 @@ display: flex;
                     display: flex;
                     span {
                       font-size: 20px;
+                      font-weight: 600;
                     }
 
 
