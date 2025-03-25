@@ -3,7 +3,7 @@
       <!-- <Header/> -->
 
       <main>
-        <HeroSection />
+        <Hero />
         <HeroSection />
         <!-- <Reel /> -->
 
@@ -13,9 +13,3 @@
     </div>
   </template>
   
-  <script setup>
-  import Header from '@/components/Header.vue';
-  import HeroSection from '@/components/HeroSection.vue';
-  import Footer from '@/components/Footer.vue';
-
-  </script>
