@@ -19,6 +19,13 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true,
   },
+  image: {
+    domains: [
+      "wmhpulllzyarvfatyfuw.supabase.co", // Supabase storage
+      "naijahaven-strapi.onrender.com"    // Your Strapi backend
+    ],
+    provider: "ipx", // Ensures Nuxt optimizes images
+  },
 
 })
 
