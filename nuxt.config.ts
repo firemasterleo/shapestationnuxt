@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@pinia/nuxt',
+    '@nuxt/image',
   ],
   imports: {
     autoImport: true,
