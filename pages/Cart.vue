@@ -11,7 +11,7 @@
         </div>
         <div class="checkout">
           <p ><span class="sub">Subtotal</span><sup>$</sup> <span class="total">{{ cartStore.cartTotal }}</span> </p>
-          <button @click="handleCheckout">Proceed to Checkout({{ cartStore.totalItems }} items)</button>
+          <button @click="handleCheckout">Proceed to Checkout ({{ cartStore.totalItems }} items)</button>
     
         </div>
         <div class="item" v-if="cartStore.cart.length">
@@ -36,9 +36,9 @@
               </div>
               <div class="bottom">
                 <div class="quantitycontrols">
-                  <button @click="cartStore.decreaseQuantity(item.id)">-</button>
+                  <button class="decrease" @click="cartStore.decreaseQuantity(item.id)">-</button>
                   <span>{{ item.quantity }}</span>
-                  <button @click="cartStore.increaseQuantity(item.id)">+</button>
+                  <button class="increase" @click="cartStore.increaseQuantity(item.id)">+</button>
    
                 </div>
                 <button class="delete" @click="cartStore.removeFromCart(item.id)">Delete</button>
@@ -215,18 +215,19 @@ display: flex;
               .bottom {
                 display: flex;
                 gap: 1.5rem;
+                
                 .quantitycontrols {
                   width: 7rem;
                   display: flex;
                   justify-content: space-between;
                   border: solid 2px rgb(193, 167, 21);
                   height: 2rem;
-                  
                   padding-inline: 0.5rem;
                   border-radius: 1rem;
                   align-items: center;
+                  // background-color: white;
 
-                  button {
+                  .increase, .decrease {
                     outline: none;
                     background: none;
                     border: none;
@@ -241,6 +242,8 @@ display: flex;
                   font-size: 14px;
                   border: solid 2px grey;
                   color: $textcolorblack;
+                  background: none;
+
 
 
 
@@ -252,6 +255,7 @@ display: flex;
                   font-size: 14px;
                   border: solid 2px grey;
                   color: $textcolorblack;
+                  background: none;
 
               }
               }
