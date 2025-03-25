@@ -25,12 +25,13 @@
       <li class="product" v-for="product in products.data" :key="product.id">
           <NuxtLink class="image" :to="`/product/${product.id}`">
             <NuxtImg 
-                v-if="product.image?.url"
-                :src="product.image.url"
-                width="500"
-                format="webp"
-                loading="lazy"
-                placeholder
+            v-if="product.image?.url"
+            :src="product.image.url" 
+            width="500"
+            format="webp"  
+            loading="lazy" 
+            placeholder="blur" 
+            alt="Product Image"
             />
           </NuxtLink>
       <h2>{{ product.name }}</h2>
