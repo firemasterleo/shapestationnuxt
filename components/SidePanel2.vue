@@ -111,7 +111,7 @@ const handleItemClick = () => {
                   align-items: center;
                   cursor: pointer;
                   height: 3.5rem;
-                  border-bottom: solid 1px black ;
+                  border-bottom: solid 1px grey ;
                   
                   
                   p {
