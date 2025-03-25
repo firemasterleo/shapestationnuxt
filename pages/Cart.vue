@@ -81,6 +81,8 @@ const handleCheckout = () => {
 
 
 <style lang="scss" scoped>
+    @use "@/assets/sass/variables" as *; // Import variables
+
 .sectioncontainer {
   background-color: rgb(70, 96, 181); /* Solid black background */
   width: 100%;
@@ -145,6 +147,8 @@ display: flex;
             background-color: rgb(191, 167, 34);
             border: none;
             font-size: 17px;
+            color: $textcolorblack;
+
 
           }
 
@@ -227,6 +231,8 @@ display: flex;
                     background: none;
                     border: none;
                     font-size: 24px;
+                    color: $textcolorblack;
+
                   }
                 }
                 .delete {
@@ -234,6 +240,8 @@ display: flex;
                   border-radius: 1rem;
                   font-size: 14px;
                   border: solid 2px grey;
+                  color: $textcolorblack;
+
 
 
                   
@@ -243,6 +251,8 @@ display: flex;
                   border-radius: 1rem;
                   font-size: 14px;
                   border: solid 2px grey;
+                  color: $textcolorblack;
+
               }
               }
             }
