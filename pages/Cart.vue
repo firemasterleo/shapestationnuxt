@@ -29,7 +29,7 @@
                 <div class="details">
                   <!-- <h2>{{ item.name }}</h2> -->
                   <p class="descrp">  {{ item.description[0]?.children[0]?.text.split(" ").length > 16 
-      ? item.description[0]?.children[0]?.text.split(" ").slice(0, 16).join(" ") + "..." 
+      ? item.description[0]?.children[0]?.text.split(" ").slice(0, 17).join(" ") + "..." 
       : item.description[0]?.children[0]?.text 
   }}.
                   </p>
