@@ -56,18 +56,18 @@
           </div>
           <div class="bottom">
                     <div class="shape-footer">
-                        <h1 class="s">o</h1>
+                        <h1 class="s">O</h1>
                         <h1 class="h">j</h1>
-                        <h1 class="a">u</h1>
+                        <h1 class="a">ú</h1>
                         <h1 class="p">A</h1>
                         <h1 class="e">f</h1>
                         <h1  class="s2">r</h1>
                         <h1 class="t">i</h1>
                         <h1  class="a2">c</h1>
                         <h1  class="t2">a</h1>
-                        <h1 class="i">i</h1>
+                        <!-- <h1 class="i">i</h1>
                         <h1 class="o">o</h1>
-                        <h1 class="n">n</h1>
+                        <h1 class="n">n</h1> -->
                     </div>
 
                 </div>
