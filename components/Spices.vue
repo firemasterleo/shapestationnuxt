@@ -30,10 +30,10 @@
             alt="Product Image"
             />
           </NuxtLink>
-      <h2>{{ product.name }}</h2>
-      <p>{{ product.description[0]?.children[0]?.text || "No Description" }}</p>
-      <p>Price: ${{ product.price }}</p>
-          
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description[0]?.children[0]?.text || "No Description" }}</p>
+            <p>Price: ${{ product.price }}</p>
+                
       <!-- Add to Cart Button -->
         <button @click="cartStore.addToCart(product)">
           Add to Cart

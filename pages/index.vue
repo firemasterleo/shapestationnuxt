@@ -4,7 +4,8 @@
 
       <main>
         <HeroSection />
-        <Reel />
+        <HeroSection />
+        <!-- <Reel /> -->
 
       </main>
       

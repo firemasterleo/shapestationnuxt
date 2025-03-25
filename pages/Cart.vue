@@ -7,10 +7,10 @@
         <li v-for="item in cartStore.cart" :key="item.id">
           <h2>{{ item.name }}</h2>
           <img 
-  v-if="item.image?.url"
-  :src="`${item.image.url}?width=500`"
-  alt="Product Image"
->
+            v-if="item.image?.url"
+            :src="`${item.image.url}?width=500`"
+            alt="Product Image"
+          >
           <p>Price: ${{ item.price }}</p>
           
         <!-- Quantity Controls -->

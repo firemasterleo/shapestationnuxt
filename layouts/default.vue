@@ -76,12 +76,12 @@
 
 // opacity: 0;
 // visibility: hidden;
-width: 23rem;
+width: 25rem;
 height: 100vh;
 transform: translatex(-100%);
 // padding-top: 6rem;
-padding-left: 1.5rem;
-border-radius: 0.6rem;
+// padding-left: 1.5rem;
+// border-radius: 0.6rem;
 display: flex;
 flex-direction: column;
 gap: 1.2rem;
@@ -100,7 +100,7 @@ opacity: 0;
   // transition: all 0.35s; 
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) ; 
   opacity: 1;
-transform: translatex(-10%);
+transform: translatex(0%);
 }
 
     }
@@ -118,7 +118,7 @@ transform: translatex(-10%);
       &.is-expanded {
         opacity: 1;
         visibility: visible;
-        transition: opacity 0.5s ease-in;
+        transition: opacity 0.3s ease-in;
       }
     }
   }

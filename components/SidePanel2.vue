@@ -4,9 +4,6 @@
       <div class="sidebarcontainer">
       <div class="sidebarsection">
           <div class="sidebar">
-            <div class="logo">
-              <h1>From Africa with Love</h1>
-            </div>
           <!-- Menu Section -->
           <div class="menu">
             <NuxtLink v-for="item in menuItems" :key="item.path" :to="item.path" active-class="active">
@@ -29,11 +26,16 @@ const { isMenuOpen, closeMenu } = useToggle();
 
 const menuItems = [
   { label: 'Home', path: '/' },
-  { label: 'Categories', path: '/Work' },
-  { label: 'Best Sellers', path: '/Services' },
-  { label: 'About Us', path: '/About' },
-  { label: 'Naija Culture', path: '/Resources' },
-  { label: 'Contact us', path: '/BlogPage' }
+  { label: 'Wall Art', path: '/Work' },
+  { label: 'Sculptures & Carvings', path: '/Services' },
+  { label: 'Home decor Accents', path: '/About' },
+  { label: 'Textile & Fiber Art', path: '/Resources' },
+  { label: 'Furnitures & Furniture Art', path: '/Resources' },
+  { label: 'Lighting & Lamps', path: '/Resources' },
+  { label: 'Cultural & Traditional Artifacts', path: '/Resources' },
+  { label: 'Account', path: '/Resources' },
+  { label: 'Help', path: '/Resources' },
+  // { label: 'Contact us', path: '/BlogPage' }
 ];
 
 // Close sidebar when a menu item is clicked
@@ -55,9 +57,9 @@ const handleItemClick = () => {
   .sidebarcontainer {
       // border: solid red;
       background-color: $primarycolorwhite; /* Solid black background */
-      width: 100%;
+      width: 23rem;
       height: 40rem;
-      padding-inline: 1rem;
+      // padding-inline: 1rem;
       outline: none; /* Remove the default outline */
       box-shadow: 0 0 0 0.1px ;   //remove outline and use box shadow for thinnest line 
       
@@ -97,22 +99,25 @@ const handleItemClick = () => {
               flex-direction: column;
               border-bottom: solid 1px rgba(255, 255, 255, 0.162);
               padding-bottom: 0.5rem;
+              padding-top: 2rem;
               // gap: 1rem;
               div {
-                  // border: solid;
+                  // border: solid ;
                   padding-top: 0.5rem;
-                  border-radius: 0.5rem;
+                  // border-radius: 0.5rem;
                   padding-bottom: 0.5rem;
                   display: flex;
                   gap: 0.5rem;
                   align-items: center;
                   cursor: pointer;
-                  padding-inline: 0.5rem;
-
-
+                  height: 4rem;
+                  border-bottom: solid 1px black ;
+                  
+                  
                   p {
-                -webkit-tap-highlight-color: transparent;
-
+                    -webkit-tap-highlight-color: transparent;
+                    
+                    padding-left: 1.5rem;
                       font-size: 20px;
                       font-weight: 500;
                       color: $primarycolorblack;
