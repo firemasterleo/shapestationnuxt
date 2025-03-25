@@ -29,7 +29,6 @@
   :src="product.image.formats.small.url"
   alt="Product Image"
   width="500"
-  format="webp"
   loading="lazy"
   placeholder="blur"
 />
