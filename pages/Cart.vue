@@ -28,7 +28,10 @@
                 </div>
                 <div class="details">
                   <!-- <h2>{{ item.name }}</h2> -->
-                  <p class="descrp">                  {{ item.description[0]?.children[0]?.text.split(" ").slice(0, 15).join(" ") }}. . .
+                  <p class="descrp">  {{ item.description[0]?.children[0]?.text.split(" ").length > 16 
+      ? item.description[0]?.children[0]?.text.split(" ").slice(0, 16).join(" ") + "..." 
+      : item.description[0]?.children[0]?.text 
+  }}.
                   </p>
                   <p class="price">$<span>{{ item.price }}</span></p>
       
@@ -205,7 +208,7 @@ display: flex;
                   // width: 16rem;
                   // border: solid;
                   .descrp {
-                    font-size: 16px;
+                    font-size: 14px;
                     color: $textcolorblack;
                     line-height: 1.3rem;
                     padding-bottom: 0.5rem;
