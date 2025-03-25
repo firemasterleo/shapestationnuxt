@@ -217,6 +217,7 @@ z-index: 1;
 
 .section {
 background-color: $primarycolorblack; /* Solid black background */
+background-color: rgb(0, 0, 0); /* Solid black background */
   width: 80rem;
   height: 100%; /* Full viewport height */
   margin-inline: auto;
@@ -324,7 +325,7 @@ display: none;
           // transition: all 6s;
           background: linear-gradient(
                280deg,
-              rgba(0, 0, 0, 0.769) 85%, /* Least transparent at the top */
+              rgba(0, 0, 0, 0.826) 85%, /* Least transparent at the top */
               rgba(255, 255, 255, 0)   /* 0.854 Darker and less transparent at the bottom */
           );          
         }

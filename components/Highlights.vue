@@ -374,7 +374,7 @@ height: 20rem;
           }
 
           .slide {
-          height: 30rem;
+          height: 20rem;
             // border: solid red;
             width: 100%;
             display: flex;
@@ -388,7 +388,7 @@ height: 20rem;
                 flex-shrink: 0;
                 // border: solid blue;
                 width: 19rem;
-                height: 25rem;
+                height:19rem;
                 // border: solid;
                 border-radius: 0.5rem;
                 overflow: hidden;

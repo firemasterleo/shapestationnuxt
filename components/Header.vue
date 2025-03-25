@@ -42,7 +42,7 @@
       <span class="bar"></span>
     </div>
     <NuxtLink to="/" class="logo" @click="handleItemClick">
-      <h1>ojuAfrica</h1>
+      <h1>OjúAfrica</h1>
     </NuxtLink>
           </div>
 
