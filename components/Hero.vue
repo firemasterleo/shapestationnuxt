@@ -25,7 +25,7 @@ const imageStore = useImageStore();
 .sectioncontainer {
   // background-color: rgb(70, 96, 181); /* Solid black background */
   width: 100%;
-  height: 100vh; /* Large enough to allow scrolling */
+  // height: 100vh; /* Large enough to allow scrolling */
 display: flex;
 
 
@@ -46,7 +46,9 @@ display: flex;
   .sectioncontainer {
     .section {
       width: 100vw;
-      height: 100vh;
+      height:85vh;
+      // border: solid green;
+      overflow: hidden;
       .image {
     width: 100%;
     height: 80vh;

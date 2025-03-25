@@ -25,7 +25,7 @@
             <div class="socials">
               <p>Instagram</p>
               <p>LinkedIn</p>
-              <p>New business: <span>hello@shapestationdesigns.com</span></p>
+              <p>New business: <span>hello@ojuafrica.com</span></p>
             </div>
             <div class="terms">
               <p>Terms of use</p>
@@ -56,15 +56,15 @@
           </div>
           <div class="bottom">
                     <div class="shape-footer">
-                        <h1 class="s">S</h1>
-                        <h1 class="h">h</h1>
-                        <h1 class="a">a</h1>
-                        <h1 class="p">p</h1>
-                        <h1 class="e">e</h1>
-                        <h1  class="s2">s</h1>
-                        <h1 class="t">t</h1>
-                        <h1  class="a2">a</h1>
-                        <h1  class="t2">t</h1>
+                        <h1 class="s">o</h1>
+                        <h1 class="h">j</h1>
+                        <h1 class="a">u</h1>
+                        <h1 class="p">A</h1>
+                        <h1 class="e">f</h1>
+                        <h1  class="s2">r</h1>
+                        <h1 class="t">i</h1>
+                        <h1  class="a2">c</h1>
+                        <h1  class="t2">a</h1>
                         <h1 class="i">i</h1>
                         <h1 class="o">o</h1>
                         <h1 class="n">n</h1>

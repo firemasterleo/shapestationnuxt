@@ -4,24 +4,22 @@
       <div class="tagline-mobile">
         <div class="line line1">
           <div class="overlay overlay1" ref="overlay1"></div>
-          <p>We blend the power of design</p>
+          <p>Where african heritage </p>
         </div>
+
         <div class="line line2">
           <div class="overlay overlay2" ref="overlay2"></div>
-          <p>performance and Strategy,</p>
+          <p> inspires timeless art </p>
         </div>
         <div class="line line3">
           <div class="overlay overlay3" ref="overlay3"></div>
-          <p>Crafting immersive experiences </p>
-        </div>
-        <div class="line line4">
-          <div class="overlay overlay4" ref="overlay4"></div>
-          <p> that captivate and convert.</p>
-        </div>
+          <p> From across the world. </p>
+          </div>
+
         <div class="line line5">
           <div class="overlay overlay5" ref="overlay5"></div>
-          <p> See 
-            <span> our services 
+          <p>
+            <span> Explore 
             <span>
 <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
 
