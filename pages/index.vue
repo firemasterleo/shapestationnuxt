@@ -1,10 +1,12 @@
+
+
 <template>
     <div>
       <!-- <Header/> -->
 
       <main>
         <Hero />
-        <HeroSection />
+        <Whatwedo />
         <!-- <Reel /> -->
 
       </main>
