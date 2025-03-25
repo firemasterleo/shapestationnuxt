@@ -76,7 +76,8 @@
 
 // opacity: 0;
 // visibility: hidden;
-width: 25rem;
+// border: solid red;
+width: 21rem;
 height: 100vh;
 transform: translatex(-100%);
 // padding-top: 6rem;

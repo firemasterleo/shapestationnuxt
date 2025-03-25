@@ -57,7 +57,7 @@ const handleItemClick = () => {
   .sidebarcontainer {
       // border: solid red;
       background-color: $primarycolorwhite; /* Solid black background */
-      width: 23rem;
+      width: 21rem;
       height: 40rem;
       // padding-inline: 1rem;
       outline: none; /* Remove the default outline */
