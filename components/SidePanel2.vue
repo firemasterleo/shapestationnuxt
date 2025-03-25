@@ -110,7 +110,7 @@ const handleItemClick = () => {
                   gap: 0.5rem;
                   align-items: center;
                   cursor: pointer;
-                  height: 4rem;
+                  height: 3.5rem;
                   border-bottom: solid 1px black ;
                   
                   
@@ -118,7 +118,7 @@ const handleItemClick = () => {
                     -webkit-tap-highlight-color: transparent;
                     
                     padding-left: 1.5rem;
-                      font-size: 20px;
+                      font-size: 16px;
                       font-weight: 500;
                       color: $primarycolorblack;
                     }
