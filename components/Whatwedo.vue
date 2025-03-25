@@ -58,12 +58,11 @@
 </template>
 
 
-<script script setup>
-import { ref, onMounted, onBeforeUnmount  } from 'vue';
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useNuxtApp } from "#app";
 
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+const { $gsap, $ScrollTrigger } = useNuxtApp(); // Access GSAP & ScrollTrigger
 
 const overlay1 = ref(null);
 const overlay2 = ref(null);
@@ -74,139 +73,146 @@ const overlay6 = ref(null);
 const overlay7 = ref(null);
 const overlay8 = ref(null);
 
-
 onMounted(() => {
-// Parallax effect for child elements on scroll
-gsap.fromTo(
-      [overlay1.value],
-      { x: '0%' },  // Start from off-screen (bottom)
-      {
-        x: '100%', // Move to normal position (0%)
-        ease: "cubic-bezier(0.25, 1, 0.5, 1)",
-        scrollTrigger: {
-          trigger: '.overlay1', // The element that triggers the animation
-          start: 'top 95%',   // Start when the top of the element hits the bottom of the viewport
-          end: 'bottom 70%',     // End when the bottom of the element reaches the top of the viewport
-          scrub: 1.7,            // Smooth scrubbing with slight delay
-          // markers: true,       // Uncomment for debugging
-        }
-      },
-      
-    );
-gsap.fromTo(
-      [overlay2.value],
-      { x: '0%' },  // Start from off-screen (bottom)
-      {
-        x: '100%', // Move to normal position (0%)
-        ease: "cubic-bezier(0.25, 1, 0.5, 1)",
-        scrollTrigger: {
-          trigger: '.overlay2', // The element that triggers the animation
-          start: 'top 85%',   // Start when the top of the element hits the bottom of the viewport
-          end: 'bottom 60%',     // End when the bottom of the element reaches the top of the viewport
-          scrub: 1.7,            // Smooth scrubbing with slight delay
-          // markers: true,       // Uncomment for debugging
-        }
-      },
-      
-    );
-gsap.fromTo(
-      [overlay3.value],
-      { x: '0%' },  // Start from off-screen (bottom)
-      {
-        x: '100%', // Move to normal position (0%)
-        ease: "cubic-bezier(0.25, 1, 0.5, 1)",
-        scrollTrigger: {
-          trigger: '.overlay3', // The element that triggers the animation
-          start: 'top 75%',   // Start when the top of the element hits the bottom of the viewport
-          end: 'bottom 50%',     // End when the bottom of the element reaches the top of the viewport
-          scrub: 1.7,            // Smooth scrubbing with slight delay
-          // markers: true,       // Uncomment for debugging
-        }
-      },
-      
-    );
-gsap.fromTo(
-      [overlay4.value],
-      { x: '0' },  // Start from off-screen (bottom)
-      {
-        x: '100%', // Move to normal position (0%)
-        ease: "cubic-bezier(0.25, 1, 0.5, 1)",
-        scrollTrigger: {
-          trigger: '.overlay4', // The element that triggers the animation
-          start: 'top 65%',   // Start when the top of the element hits the bottom of the viewport
-          end: 'bottom 40%',     // End when the bottom of the element reaches the top of the viewport
-          scrub: 1,            // Smooth scrubbing with slight delay
-          // markers: true,       // Uncomment for debugging
-        }
-      },
-      
-    );
-gsap.fromTo(
-      [overlay5.value],
-      { x: '0%' },  // Start from off-screen (bottom)
-      {
-        x: '100%', // Move to normal position (0%)
-        ease: "cubic-bezier(0.25, 1, 0.5, 1)",
-        scrollTrigger: {
-          trigger: '.overlay5', // The element that triggers the animation
-          start: 'top 55%',   // Start when the top of the element hits the bottom of the viewport
-          end: 'bottom 30%',     // End when the bottom of the element reaches the top of the viewport
-          scrub: 1.7,            // Smooth scrubbing with slight delay
-          // markers: true,       // Uncomment for debugging
-        }
-      },
-      
-    );
-    gsap.fromTo(
-      [overlay6.value],
-      { x: '0%' },  // Start from off-screen (bottom)
-      {
-        x: '100%', // Move to normal position (0%)
-        ease: "cubic-bezier(0.25, 1, 0.5, 1)",
-        scrollTrigger: {
-          trigger: '.overlay6', // The element that triggers the animation
-          start: 'top 95%',   // Start when the top of the element hits the bottom of the viewport
-          end: 'bottom 70%',     // End when the bottom of the element reaches the top of the viewport
-          scrub: 1.7,            // Smooth scrubbing with slight delay
-          // markers: true,       // Uncomment for debugging
-        }
-      },
-      
-    );
-gsap.fromTo(
-      [overlay7.value],
-      { x: '0%' },  // Start from off-screen (bottom)
-      {
-        x: '100%', // Move to normal position (0%)
-        ease: "cubic-bezier(0.25, 1, 0.5, 1)",
-        scrollTrigger: {
-          trigger: '.overlay7', // The element that triggers the animation
-          start: 'top 85%',   // Start when the top of the element hits the bottom of the viewport
-          end: 'bottom 60%',     // End when the bottom of the element reaches the top of the viewport
-          scrub: 1.7,            // Smooth scrubbing with slight delay
-          // markers: true,       // Uncomment for debugging
-        }
-      },
-      
-    );
-gsap.fromTo(
-      [overlay8.value],
-      { x: '0%' },  // Start from off-screen (bottom)
-      {
-        x: '100%', // Move to normal position (0%)
-        ease: "cubic-bezier(0.25, 1, 0.5, 1)",
-        scrollTrigger: {
-          trigger: '.overlay8', // The element that triggers the animation
-          start: 'top 75%',   // Start when the top of the element hits the bottom of the viewport
-          end: 'bottom 50%',     // End when the bottom of the element reaches the top of the viewport
-          scrub: 1.7,            // Smooth scrubbing with slight delay
-          // markers: true,       // Uncomment for debugging
-        }
-      },
-      
-    );
+  if (!$gsap || !$ScrollTrigger) return;
+
+  $gsap.registerPlugin($ScrollTrigger); // Register ScrollTrigger
+
+  // Overlay 1
+  $gsap.fromTo(
+    overlay1.value,
+    { x: '0%' },
+    {
+      x: '100%',
+      ease: "cubic-bezier(0.25, 1, 0.5, 1)",
+      scrollTrigger: {
+        trigger: '.overlay1',
+        start: 'top 95%',
+        end: 'bottom 70%',
+        scrub: 1.7,
+      }
+    }
+  );
+
+  // Overlay 2
+  $gsap.fromTo(
+    overlay2.value,
+    { x: '0%' },
+    {
+      x: '100%',
+      ease: "cubic-bezier(0.25, 1, 0.5, 1)",
+      scrollTrigger: {
+        trigger: '.overlay2',
+        start: 'top 85%',
+        end: 'bottom 60%',
+        scrub: 1.7,
+      }
+    }
+  );
+
+  // Overlay 3
+  $gsap.fromTo(
+    overlay3.value,
+    { x: '0%' },
+    {
+      x: '100%',
+      ease: "cubic-bezier(0.25, 1, 0.5, 1)",
+      scrollTrigger: {
+        trigger: '.overlay3',
+        start: 'top 75%',
+        end: 'bottom 50%',
+        scrub: 1.7,
+      }
+    }
+  );
+
+  // Overlay 4
+  $gsap.fromTo(
+    overlay4.value,
+    { x: '0%' },
+    {
+      x: '100%',
+      ease: "cubic-bezier(0.25, 1, 0.5, 1)",
+      scrollTrigger: {
+        trigger: '.overlay4',
+        start: 'top 65%',
+        end: 'bottom 40%',
+        scrub: 1,
+      }
+    }
+  );
+
+  // Overlay 5
+  $gsap.fromTo(
+    overlay5.value,
+    { x: '0%' },
+    {
+      x: '100%',
+      ease: "cubic-bezier(0.25, 1, 0.5, 1)",
+      scrollTrigger: {
+        trigger: '.overlay5',
+        start: 'top 55%',
+        end: 'bottom 30%',
+        scrub: 1.7,
+      }
+    }
+  );
+
+  // Overlay 6
+  $gsap.fromTo(
+    overlay6.value,
+    { x: '0%' },
+    {
+      x: '100%',
+      ease: "cubic-bezier(0.25, 1, 0.5, 1)",
+      scrollTrigger: {
+        trigger: '.overlay6',
+        start: 'top 95%',
+        end: 'bottom 70%',
+        scrub: 1.7,
+      }
+    }
+  );
+
+  // Overlay 7
+  $gsap.fromTo(
+    overlay7.value,
+    { x: '0%' },
+    {
+      x: '100%',
+      ease: "cubic-bezier(0.25, 1, 0.5, 1)",
+      scrollTrigger: {
+        trigger: '.overlay7',
+        start: 'top 85%',
+        end: 'bottom 60%',
+        scrub: 1.7,
+      }
+    }
+  );
+
+  // Overlay 8
+  $gsap.fromTo(
+    overlay8.value,
+    { x: '0%' },
+    {
+      x: '100%',
+      ease: "cubic-bezier(0.25, 1, 0.5, 1)",
+      scrollTrigger: {
+        trigger: '.overlay8',
+        start: 'top 75%',
+        end: 'bottom 50%',
+        scrub: 1.7,
+      }
+    }
+  );
+});
+
+// Cleanup GSAP on unmount
+onBeforeUnmount(() => {
+  $ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 });
 </script>
+
 
 <style lang="scss" scoped>
     @use "@/assets/sass/variables" as *; // Import variables

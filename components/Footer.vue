@@ -83,10 +83,10 @@ import { useNuxtApp } from "#app";
 
 
 
+const { $gsap, $ScrollTrigger } = useNuxtApp(); // Access GSAP & ScrollTrigger
 
 
 const isSubmitted = ref(false); // Track if the form has been submitted
-const { $gsap, $ScrollTrigger } = useNuxtApp(); // Access GSAP & ScrollTrigger
 
 
 const handleSubmit = async (event) => {
