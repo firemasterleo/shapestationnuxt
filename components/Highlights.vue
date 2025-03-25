@@ -1,56 +1,103 @@
 <template>
     <div class="sectioncontainer">
       <div class="section">
-        <div class="text">
-            <p>Bestsellers</p>
-            <p>See the work
-              <span>
-                <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
-              </span>
-            </p>
-        </div>
-
-        <div class="slide">
-          <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-            <div class="image">
-              <img src="../assets/art-product.jpg" alt="">
-            </div >
-            <div class="text">
-              <p>Topmoviesquad</p>
-              
-            </div>
-            <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-              <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-            </div> -->
-            
+        <div class="bronzework">
+          <div class="text">
+              <p>Bestsellers in Bronze work</p>
+  
           </div>
-          <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-            <div class="image">
-              <img src="../assets/ori-olokun.jpg" alt="">
-            </div>
-            <div class="text">
-              <p>Quotech</p>
-            </div>
-            <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-      <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-    </div> -->
 
-          </div>
-          <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-            
-            <div class="image">
+          <div class="slide">
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
                 <img src="../assets/art-product.jpg" alt="">
-              </div>
+              </div >
               <div class="text">
-                <p>Views on Mide</p>
-
+                <p>Topmoviesquad</p>
+                
               </div>
               <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-      <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-    </div> -->
+                <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+              </div> -->
               
             </div>
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/ori-olokun.jpg" alt="">
+              </div>
+              <div class="text">
+                <p>Quotech</p>
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+      </div> -->
+  
+            </div>
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              
+              <div class="image">
+                  <img src="../assets/art-product.jpg" alt="">
+                </div>
+                <div class="text">
+                  <p>Views on Mide</p>
+  
+                </div>
+                <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+      </div> -->
+                
+              </div>
+          </div>
         </div>
+        <div class="bronzework">
+          <div class="text">
+              <p>Bestsellers in Wall Art</p>
+  
+          </div>
+
+          <div class="slide">
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/art-product.jpg" alt="">
+              </div >
+              <div class="text">
+                <p>Topmoviesquad</p>
+                
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+                <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+              </div> -->
+              
+            </div>
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/ori-olokun.jpg" alt="">
+              </div>
+              <div class="text">
+                <p>Quotech</p>
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+      </div> -->
+  
+            </div>
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              
+              <div class="image">
+                  <img src="../assets/art-product.jpg" alt="">
+                </div>
+                <div class="text">
+                  <p>Views on Mide</p>
+  
+                </div>
+                <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+      </div> -->
+                
+              </div>
+          </div>
+        </div>
+
   
       </div>
     </div>

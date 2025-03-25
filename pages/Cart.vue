@@ -95,6 +95,7 @@ const handleCheckout = () => {
 display: flex;
 
 
+
   .section {
     background-color: rgb(231, 229, 227); /* Solid black background */
     width: 80rem;
