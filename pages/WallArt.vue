@@ -4,7 +4,7 @@
       
       <main>
         <!-- <HeroSection /> -->
-        <Spices />
+        <WallArts />
         <!-- <Reel /> -->
 
       </main>
@@ -16,6 +16,7 @@
   <script setup>
 //   import Header from '@/components/Header.vue';
   import Spices from '@/components/Spices.vue';
+  import WallArts from '@/components/WallArts.vue';
 //   import Footer from '@/components/Footer.vue';
 
   </script>

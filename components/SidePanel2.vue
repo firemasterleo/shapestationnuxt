@@ -26,7 +26,7 @@ const { isMenuOpen, closeMenu } = useToggle();
 
 const menuItems = [
   { label: 'Home', path: '/' },
-  { label: 'Wall Art', path: '/Work' },
+  { label: 'Wall Art', path: '/WallArt' },
   { label: 'Sculptures & Carvings', path: '/Services' },
   { label: 'Home decor Accents', path: '/About' },
   { label: 'Textile & Fiber Art', path: '/Resources' },
