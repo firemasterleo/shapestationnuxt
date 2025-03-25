@@ -4,29 +4,17 @@
       <div class="tagline-mobile">
         <div class="line line1">
           <div class="overlay overlay1" ref="overlay1"></div>
-          <p>Where african heritage </p>
+          <p>Where African Heritage </p>
         </div>
 
         <div class="line line2">
           <div class="overlay overlay2" ref="overlay2"></div>
-          <p> inspires timeless art </p>
+          <p> Inspires Timeless Art </p>
         </div>
         <div class="line line3">
           <div class="overlay overlay3" ref="overlay3"></div>
-          <p> From across the world. </p>
+          <p> From Across The World. </p>
           </div>
-
-        <div class="line line5">
-          <div class="overlay overlay5" ref="overlay5"></div>
-          <p>
-            <span> Explore 
-            <span>
-<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
-
-            </span>
-          </span>
-        </p>
-        </div>
 
       </div>
       <div class="tagline-desktop">

@@ -7,6 +7,7 @@
       <main>
         <Hero />
         <Whatwedo />
+        <Highlights />
         <!-- <Reel /> -->
 
       </main>
