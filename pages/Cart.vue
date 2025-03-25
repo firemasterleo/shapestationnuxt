@@ -154,9 +154,9 @@ display: flex;
           }
           button {
             width: 100%;
-            height: 2.5rem;
+            height: 3rem;
             border-radius: 2rem;
-            background-color: rgb(191, 167, 34);
+            background-color: rgb(209, 183, 37);
             border: none;
             font-size: 17px;
             color: $textcolorblack;
