@@ -2,13 +2,13 @@
 <template>
   <div class="sectioncontainer">
     <div class="section">
+      <div class="back">
+        <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
+        
+        back to shop
+      </div>
       <div class="cart">
 
-        <div class="back">
-          <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
-          
-          back to shop
-        </div>
         <div class="checkout">
           <p ><span class="sub">Subtotal</span><span class="dollar"><sup>$</sup></span> <span class="total">{{ cartStore.cartTotal }}</span> </p>
           <button @click="handleCheckout">Proceed to Checkout ({{ cartStore.totalItems }} items)</button>
@@ -113,19 +113,21 @@ display: flex;
       width: 100vw;
       height: 100vh;
       // padding-inline: 0.5rem;
+      .back {
+        background-color: rgb(216, 216, 216); /* Solid black background */
+        height: 2.5rem;
+        padding-inline: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
       .cart {
-        .back {
-          background-color: rgb(216, 216, 216); /* Solid black background */
-          height: 2.5rem;
-          padding-inline: 1rem;
-          display: flex;
-          gap: 0.5rem;
-          align-items: center;
-        }
+        padding-inline: 1rem;
         .checkout {
-          padding-inline: 1rem;
+          // padding-inline: 1rem;
           padding-top: 1rem;
           padding-bottom: 1rem;
+          border-bottom: solid 1px ;
           display: flex;
           flex-direction: column;
           gap: 1rem;
@@ -166,7 +168,8 @@ display: flex;
         }
         .item {
           width: 100vw;
-          padding-inline: 0.5rem;
+          // padding-inline: 0.5rem;
+          padding-top: 1rem;
           // border: solid red;
           ul {
             display: flex;
