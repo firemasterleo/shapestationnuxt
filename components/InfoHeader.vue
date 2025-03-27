@@ -73,6 +73,7 @@
     display: flex;
     justify-content: center;
     gap: 0.5rem;
+    align-items: center;
     
     p {
       color: $text-muted;
@@ -83,6 +84,8 @@
     svg {
       fill: $text-muted;
       rotate: 180deg;
+      width: 18px;
+      height: 18px;
 
     }
   }
