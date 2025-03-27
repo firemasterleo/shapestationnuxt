@@ -30,43 +30,56 @@
 
         </div>
         <div class="mobile-header">
-          <!-- Logo -->
-
-          <div class="left">
-
-  
-          <!-- Hamburger Menu -->
-          <div class="hamburger" :class="{ 'is-active': isMenuOpen }" @click="toggleMenu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <NuxtLink to="/" class="logo" @click="handleItemClick">
-      <h1>OjúAfrica</h1>
-    </NuxtLink>
-          </div>
-
-          <div class="right" >
-            <div class="user" @click="handleUserClick">
-              <div class="signin" >
-                <p v-if="userStore.isAuthenticated">{{ userStore.user?.username }}</p>
-                <p v-else>Sign in</p>
-                <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
-
-              </div>
-                  <svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
-            </div>
-            <NuxtLink to="/cart" class="cart" >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
-                  <h1>
-                        {{ cartStore.totalItems }}
-        
-                      </h1>
-    
-              </NuxtLink>
-          </div>
-  
+          <div class="top">
+            <div class="info">
+          <div class="text">
+            <p>New: Featured Pieces</p>
+            <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
       
+          </div>
+      
+        </div>
+          </div>
+          <div class="bottom">
+
+            <!-- Logo -->
+  
+            <div class="left">
+  
+    
+            <!-- Hamburger Menu -->
+            <div class="hamburger" :class="{ 'is-active': isMenuOpen }" @click="toggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <NuxtLink to="/" class="logo" @click="handleItemClick">
+        <h1>OjúAfrica</h1>
+      </NuxtLink>
+            </div>
+  
+            <div class="right" >
+              <div class="user" @click="handleUserClick">
+                <div class="signin" >
+                  <p v-if="userStore.isAuthenticated">{{ userStore.user?.username }}</p>
+                  <p v-else>Sign in</p>
+                  <svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+  
+                </div>
+                    <svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
+              </div>
+              <NuxtLink to="/cart" class="cart" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
+                    <h1>
+                          {{ cartStore.totalItems }}
+          
+                        </h1>
+      
+                </NuxtLink>
+            </div>
+    
+        
+          </div>
         </div>
       </div>
     </div>
@@ -257,191 +270,227 @@
                 // border: solid red;
 
                 display: flex;
-                justify-content: space-between;
-                height: 3.2rem;
+                flex-direction: column;
+                // justify-content: space-between;
+                height: fit-content;
                 // height: fit-content;
                 background-color: $bg-white; /* Solid black background */
                 // background-color: rgb(121, 140, 97); /* Solid black background */
                 position: relative;
+                .top {
+                  .info {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-secondary;
 
+  .text {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    p {
+      color: $text-muted;
+      font-size: 16px;
+      font-weight: 300;
 
+    }
+    svg {
+      fill: $text-muted;
+      rotate: 180deg;
 
-                .left {
-                  // border: solid blue;
-                  width: fit-content;
+    }
+  }
+
+}
+
+                }
+                .bottom {
                   display: flex;
-                  gap: 0.5rem;
-                  align-items: center;
-                  .logo {
-                  -webkit-tap-highlight-color: transparent;
-
-
-                padding-right: 1rem;
-
-                position: relative;
-                // z-index: 25;
-                // mix-blend-mode: difference;
-                color: $text-dark;
-                // color: rgb(121, 140, 97);
-                display: flex;
-
-                h1 {
-
-                    // z-index: 200;
-                    // position: relative; /* Ensure it stays in front */
-                    // z-index: 2; /* Ensures it stays in front */
-                    cursor: pointer; /* Make it behave like a button */
-                    font-size: 18px;
-                    // font-variant-caps: all-small-caps; /* To make uppercase match lowercase in height */
-                    line-height: 1.2; /* Adjust as needed */
-                    font-weight: 400;
-                    
-                    
-                }
-                h1:active {
-                    transform: scale(1.1);
-                }
-            }
-
-                  .hamburger {
-                -webkit-tap-highlight-color: transparent;
-                
-                // border: solid red;
-                position: relative;
-                z-index: 25;
-      
-                display: flex;
-                flex-direction: column;
-                gap: 0.25rem;
-                justify-content: center;
-                background-color: none;
-                align-items: flex-end;
-                cursor: pointer;
-      
-                // width: 2.5rem;
-                padding-left:1rem ;
-                padding-right: 1.5rem;
-      
-                height: 3rem;
-                position: relative;
-                // top: 0.3rem;
-             
-                // mix-blend-mode: difference;
-                // color: $textcolorwhite;
-      
-      
-        
-                .bar {
-                    width: 19px;
-                    height: 2px;
-                    // background-color: rgba(255, 255, 255, 0.413);
-                    background-color: $text-dark;
-                    // background-color: $textcolorblack;
-      
-      
-                    transition: transform 0.3s, opacity 0.3s;
-                    
-                  }
-                &.is-active {
-                    
-                    
-                    .bar:nth-child(1) {
-                        // background-color: rgba(255, 255, 255, 0.413);
-      
-                        transform: translateY(6px) rotate(45deg);
-                      }
-                    .bar:nth-child(2) {
-                        // background-color: rgba(255, 255, 255, 0.413);
-      
-                        opacity: 0; }
-                    .bar:nth-child(3) {
-                        // background-color: rgba(255, 255, 255, 0.413);
-      
-                        transform: translateY(-6px) rotate(-45deg);
-                    }
-      
-                }
-        }
-                }
-
-                .right {
-                  display: flex;
-                  gap: 1rem;
-
-                  .user {
-                    display: flex;
-                    align-items: center;
-
-                  // border: solid red;
-
-                    .signin {
-                    display: flex;
-                    align-items: center;
-                    // border: solid red;
-
-                      p {
-                        color: $text-dark;
-                        font-size: 14px;
-                      }
-                      .arrow-svg {
-                        fill: $text-dark;
-                        width: 15px;
-                        height: 15px;
-                      }
-
-                    }
-                    .user-svg {
-                      fill: $text-dark;
-                      width: 30px;
-                      height: 30px;
-                    }
-                  }
-
-                  .cart {
-                  -webkit-tap-highlight-color: transparent;
-                  // border: solid;
-
-
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100%;
-                    padding-right: 1rem;
-                    width: 2.6rem;
-
-
-                
-                // border: solid green;
-
-                      svg {
-
-                        fill: $text-dark;
-                        width: 35px;
-                        height: 35px;
-                        position: absolute;
-                        // border: solid red;
-                        
-                      }
-                      h1 {
-                        
-                        
-                        color: $text-dark;
-                        font-size: 12px;
-                        position: relative;
-                        left: 2px;
-                        bottom: 0.5px;
-                      //   position: absolute;
-                      // top: 50%;
-                      // left: 50%;
-                      // transform: translate(-120%, -50%);
-  
-                      }
-  
-
+                  justify-content: space-between;
                   
+                  
+                                  .left {
+                                    // border: solid blue;
+                                    width: fit-content;
+                                    display: flex;
+                                    gap: 0.5rem;
+                                    align-items: center;
+                                    .logo {
+                                    -webkit-tap-highlight-color: transparent;
+                  
+                  
+                                  padding-right: 1rem;
+                  
+                                  position: relative;
+                                  // z-index: 25;
+                                  // mix-blend-mode: difference;
+                                  color: $text-dark;
+                                  // color: rgb(121, 140, 97);
+                                  display: flex;
+                  
+                                  h1 {
+                  
+                                      // z-index: 200;
+                                      // position: relative; /* Ensure it stays in front */
+                                      // z-index: 2; /* Ensures it stays in front */
+                                      cursor: pointer; /* Make it behave like a button */
+                                      font-size: 18px;
+                                      // font-variant-caps: all-small-caps; /* To make uppercase match lowercase in height */
+                                      line-height: 1.2; /* Adjust as needed */
+                                      font-weight: 400;
+                                      
+                                      
+                                  }
+                                  h1:active {
+                                      transform: scale(1.1);
+                                  }
+                              }
+                  
+                                    .hamburger {
+                                  -webkit-tap-highlight-color: transparent;
+                                  
+                                  // border: solid red;
+                                  position: relative;
+                                  z-index: 25;
+                        
+                                  display: flex;
+                                  flex-direction: column;
+                                  gap: 0.25rem;
+                                  justify-content: center;
+                                  background-color: none;
+                                  align-items: flex-end;
+                                  cursor: pointer;
+                        
+                                  // width: 2.5rem;
+                                  padding-left:1rem ;
+                                  padding-right: 1.5rem;
+                        
+                                  height: 3rem;
+                                  position: relative;
+                                  // top: 0.3rem;
+                               
+                                  // mix-blend-mode: difference;
+                                  // color: $textcolorwhite;
+                        
+                        
+                          
+                                  .bar {
+                                      width: 19px;
+                                      height: 2px;
+                                      // background-color: rgba(255, 255, 255, 0.413);
+                                      background-color: $text-dark;
+                                      // background-color: $textcolorblack;
+                        
+                        
+                                      transition: transform 0.3s, opacity 0.3s;
+                                      
+                                    }
+                                  &.is-active {
+                                      
+                                      
+                                      .bar:nth-child(1) {
+                                          // background-color: rgba(255, 255, 255, 0.413);
+                        
+                                          transform: translateY(6px) rotate(45deg);
+                                        }
+                                      .bar:nth-child(2) {
+                                          // background-color: rgba(255, 255, 255, 0.413);
+                        
+                                          opacity: 0; }
+                                      .bar:nth-child(3) {
+                                          // background-color: rgba(255, 255, 255, 0.413);
+                        
+                                          transform: translateY(-6px) rotate(-45deg);
+                                      }
+                        
+                                  }
+                          }
+                                  }
+                  
+                                  .right {
+                                    display: flex;
+                                    gap: 1rem;
+                  
+                                    .user {
+                                      display: flex;
+                                      align-items: center;
+                  
+                                    // border: solid red;
+                  
+                                      .signin {
+                                      display: flex;
+                                      align-items: center;
+                                      // border: solid red;
+                  
+                                        p {
+                                          color: $text-dark;
+                                          font-size: 14px;
+                                        }
+                                        .arrow-svg {
+                                          fill: $text-dark;
+                                          width: 15px;
+                                          height: 15px;
+                                        }
+                  
+                                      }
+                                      .user-svg {
+                                        fill: $text-dark;
+                                        width: 30px;
+                                        height: 30px;
+                                      }
+                                    }
+                  
+                                    .cart {
+                                    -webkit-tap-highlight-color: transparent;
+                                    // border: solid;
+                  
+                  
+                                      position: relative;
+                                      display: flex;
+                                      align-items: center;
+                                      justify-content: center;
+                                      height: 100%;
+                                      padding-right: 1rem;
+                                      width: 2.6rem;
+                  
+                  
+                                  
+                                  // border: solid green;
+                  
+                                        svg {
+                  
+                                          fill: $text-dark;
+                                          width: 35px;
+                                          height: 35px;
+                                          position: absolute;
+                                          // border: solid red;
+                                          
+                                        }
+                                        h1 {
+                                          
+                                          
+                                          color: $text-dark;
+                                          font-size: 12px;
+                                          position: relative;
+                                          left: 2px;
+                                          bottom: 0.5px;
+                                        //   position: absolute;
+                                        // top: 50%;
+                                        // left: 50%;
+                                        // transform: translate(-120%, -50%);
+                    
+                                        }
+                    
+                  
+                                    
+                                  }
+                                  }
+
                 }
-                }
+
 
 
             }
