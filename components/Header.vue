@@ -269,7 +269,7 @@
             .mobile-header {
                 width: 100%;
                 // border: solid red;
-                padding-top: 2px;
+                // padding-top: 2px;
 
                 display: flex;
                 flex-direction: column;
@@ -295,7 +295,7 @@
     
     p {
       color: $text-muted;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 300;
 
     }
