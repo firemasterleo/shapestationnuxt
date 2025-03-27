@@ -32,7 +32,7 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    padding-top: 1px;
+    padding-top: 0px;
     background-color: $bg-white;
 
 
@@ -56,10 +56,10 @@
 
 @media (max-width: 800px) {
     .presection {
-    //   position: sticky;
-    //   top: 0;
-    //   z-index: 100;
-      border-bottom: 1px solid $line-grey;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    //   border-bottom: 1px solid $line-grey;
         .section1 {
             width: 100%;
             .info {

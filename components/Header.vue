@@ -244,7 +244,7 @@
 @media (max-width: 800px) {
     .presection {
       position: sticky;
-      top: 0;
+      top: 2.5rem;
       z-index: 100;
       border-bottom: 1px solid $line-grey;
         .section1 {

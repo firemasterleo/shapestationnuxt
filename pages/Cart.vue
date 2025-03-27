@@ -141,7 +141,7 @@ display: flex;
           flex-direction: column;
           gap: 1rem;
           position: sticky;
-          top: 0;
+          top: 2.5rem;
           background-color: $bg-white;
           p {
             display: flex;
