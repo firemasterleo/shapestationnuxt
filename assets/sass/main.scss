@@ -16,7 +16,7 @@
 }
 :root {
   // width: 100%;
-  background-color: $bg-white !important; /* Solid black background */
+  background: #ffffff !important; /* Solid black background */
   height: 100%;
 
   // font-size: 100px;
@@ -27,10 +27,10 @@
     
 
 }
-html {
-  background-color: $bg-white !important;
-  height: 100%;
-}
+// html {
+//   background-color: $bg-white !important;
+//   height: 100%;
+// }
 
 ::-webkit-scrollbar {
 
@@ -43,7 +43,6 @@ body.no-scroll {
   overflow: hidden !important;
   height: 100vh;
   touch-action: none; /* Prevents touch scrolling */
-  background-color: $bg-white !important;
 
 }
 
