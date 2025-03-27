@@ -277,6 +277,8 @@ display: flex;
                     padding-inline: 5px;
                     font-size: 28px;
                     color: $text-black;
+                  -webkit-tap-highlight-color: transparent;
+
 
 
                     
@@ -297,6 +299,8 @@ display: flex;
                   border: solid 2px grey;
                   color: $textcolorblack;
                   background: none;
+                  -webkit-tap-highlight-color: transparent;
+
 
 
 
@@ -313,6 +317,8 @@ display: flex;
                   border: solid 2px grey;
                   color: $textcolorblack;
                   background: none;
+                  -webkit-tap-highlight-color: transparent;
+
 
               }
               .saveforlater:active {
