@@ -268,7 +268,7 @@
             }
             .mobile-header {
                 width: 100%;
-                border: solid red;
+                // border: solid red;
                 padding-top: 2px;
 
                 display: flex;
