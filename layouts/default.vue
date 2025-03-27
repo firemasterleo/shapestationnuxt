@@ -1,7 +1,7 @@
 <template>
 
   <div>
-      <!-- <info-header /> -->
+
         <Header />
 
       <!-- Side Panel -->
