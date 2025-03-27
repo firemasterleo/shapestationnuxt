@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="presection">
       <div class="section1">
@@ -17,32 +15,6 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue';
-  import { useToggle } from '@/composables/useToggle'
-  import { useUserStore } from '@/stores/userStore';
-
-  import { useCartStore } from '@/stores/cartStore';
-  import { navigateTo } from '#app';
-  
-  // Use the composable for managing toggle state
-  const { isMenuOpen, toggleMenu, closeMenu } = useToggle();
-  const userStore = useUserStore();
-  const cartStore = useCartStore();
-
-  const showMenu = ref(false);
-  // Function to close the menu when clicking a menu item
-  const handleItemClick = () => {
-    closeMenu(); // Ensures the menu closes on click
-  };
-
-  const handleUserClick = () => {
-  if (!userStore.isAuthenticated) {
-    navigateTo('/login');
-  } else {
-    showMenu.value = !showMenu.value; // Toggle user menu
-  }
-};
-
 
   </script>
   
@@ -71,7 +43,7 @@
         overflow: hidden;
         display: flex;
         position: relative;
-        background-color: $bg-secondary; /* Solid black background */
+        background-color: red; /* Solid black background */
 
 
 
