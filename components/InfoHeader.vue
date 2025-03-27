@@ -32,8 +32,7 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    padding-top: 0px;
-    background-color: $bg-white;
+
 
 
     .section1 {
@@ -59,6 +58,8 @@
       position: sticky;
       top: 0;
       z-index: 200;
+      padding-top: 1px;
+      background-color: $bg-white;
     //   border-bottom: 1px solid $line-grey;
         .section1 {
             width: 100%;
