@@ -136,7 +136,6 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    background-color: transparent !important;
 
 
     .section1 {
@@ -159,7 +158,7 @@
             // border: solid red;
             // width: 62rem;
             width: 100%;
-            background-color: $primarycolorblack; /* Solid black background */
+            // background-color: $primarycolorblack; /* Solid black background */
 
             // backdrop-filter: blur(20px);
             height: 3.2rem;
