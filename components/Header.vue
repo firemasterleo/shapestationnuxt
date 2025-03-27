@@ -30,7 +30,16 @@
 
         </div>
         <div class="mobile-header">
-
+          <div class="top">
+            <div class="info">
+              <div class="text">
+                <p>New: Featured Pieces</p>
+                <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
+          
+              </div>
+      
+        </div>
+          </div>
           <div class="bottom">
 
             <!-- Logo -->
@@ -71,16 +80,7 @@
     
         
           </div>
-          <div class="top">
-            <div class="info">
-              <div class="text">
-                <p>New: Featured Pieces</p>
-                <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
-          
-              </div>
-      
-        </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -268,7 +268,8 @@
             }
             .mobile-header {
                 width: 100%;
-                // border: solid red;
+                border: solid red;
+                padding-top: 2px;
 
                 display: flex;
                 flex-direction: column;
