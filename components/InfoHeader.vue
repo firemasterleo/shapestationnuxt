@@ -41,7 +41,7 @@
     .section {
       width: 100vw;
       .info-header {
-  background-color: $bg-secondary;
+//   background-color: $bg-secondary;
   height: 2.5rem;
   width: 100%;
   display: flex;
