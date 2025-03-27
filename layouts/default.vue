@@ -58,7 +58,11 @@
   </script>
   <style lang="scss">
     @use "@/assets/sass/main" as *; // Import variables
-    @use "@/assets/sass/variables" as *; // Import variables
+    // @use "@/assets/sass/variables" as *; // Import variables
+
+    html {
+  background-color: $bg-white !important;
+}
 
 
   .fade-enter-active,
