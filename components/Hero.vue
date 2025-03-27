@@ -30,7 +30,7 @@ display: flex;
 
 
   .section {
-    background-color: rgb(231, 229, 227); /* Solid black background */
+    background-color: $bg-white; /* Solid black background */
     width: 80rem;
     height: 100vh; /* Full viewport height */
     margin-inline: auto;
