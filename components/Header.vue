@@ -260,7 +260,7 @@
                 justify-content: space-between;
                 height: 3.2rem;
                 // height: fit-content;
-                background-color: $bg-secondary; /* Solid black background */
+                background-color: red; /* Solid black background */
                 // background-color: rgb(121, 140, 97); /* Solid black background */
                 position: relative;
 
