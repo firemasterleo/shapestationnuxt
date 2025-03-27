@@ -1,10 +1,7 @@
 <template>
-  <div >
-    <!-- <info-header /> -->
 
-
-  </div>
-    <div>
+  <div>
+      <info-header />
         <Header />
 
       <!-- Side Panel -->
