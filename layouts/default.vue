@@ -2,6 +2,7 @@
 
   <div>
 
+        <InfoHeader />
         <Header />
 
       <!-- Side Panel -->

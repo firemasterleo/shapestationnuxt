@@ -32,6 +32,8 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+    padding-top: 1px;
+    background-color: $bg-white;
 
 
     .section1 {
