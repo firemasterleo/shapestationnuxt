@@ -136,6 +136,7 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+    background-color: transparent !important;
 
 
     .section1 {
@@ -147,7 +148,7 @@
         overflow: hidden;
         display: flex;
         position: relative;
-        background-color: rgb(121, 140, 97); /* Solid black background */
+        // background-color: rgb(121, 140, 97); /* Solid black background */
 
 
 
