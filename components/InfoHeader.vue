@@ -25,6 +25,7 @@
     @use "@/assets/sass/variables" as *; // Import variables
 
 .sectioncontainer {
+    background-color: $bg-white;
   width: 100%;
 
 
