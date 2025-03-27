@@ -56,9 +56,9 @@
 
 @media (max-width: 800px) {
     .presection {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    //   position: sticky;
+    //   top: 0;
+    //   z-index: 100;
       border-bottom: 1px solid $line-grey;
         .section1 {
             width: 100%;
