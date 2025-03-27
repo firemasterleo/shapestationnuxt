@@ -15,7 +15,7 @@
 @use "@/assets/sass/variables" as *; // Import variables
 
 .info-header {
-  background-color: $bg-red;
+  background-color: red;
   height: 2.5rem;
   width: 100%;
   display: flex;
