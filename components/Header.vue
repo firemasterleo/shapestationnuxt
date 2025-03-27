@@ -246,6 +246,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      border-bottom: 1px solid $line-grey;
         .section1 {
             width: 100%;
             .desktop-header {
