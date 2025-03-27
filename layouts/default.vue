@@ -56,8 +56,10 @@
     cleanupAnimations();
   });
   </script>
-  <style lang="scss" scoped>
+  <style lang="scss">
     @use "@/assets/sass/main" as *; // Import variables
+    @use "@/assets/sass/variables" as *; // Import variables
+
 
   .fade-enter-active,
   .fade-leave-active {
