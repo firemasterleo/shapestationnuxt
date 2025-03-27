@@ -5,7 +5,7 @@
       <div class="back">
         <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg>
         
-        back to shop
+        <p>Continue shopping</p>
       </div>
       <div class="cart">
 
@@ -97,7 +97,7 @@ display: flex;
 
 
   .section {
-    background-color: rgb(231, 229, 227); /* Solid black background */
+    background-color: $bg-white; /* Solid black background */
     width: 80rem;
     height: 100vh; /* Full viewport height */
     margin-inline: auto;
@@ -110,6 +110,8 @@ display: flex;
 
 @media (max-width: 800px) {
   .sectioncontainer {
+    // border: solid red;
+
     .section {
       width: 100vw;
       height: 100vh;
@@ -121,6 +123,12 @@ display: flex;
         display: flex;
         gap: 0.5rem;
         align-items: center;
+        svg {
+          fill: $text-dark;
+        }
+        p {
+          color: $text-dark;
+        }
       }
       .cart {
         padding-inline: 1rem;
@@ -128,13 +136,17 @@ display: flex;
           // padding-inline: 1rem;
           padding-top: 1rem;
           padding-bottom: 1rem;
-          border-bottom: solid 1px ;
+          // border-bottom: solid 1px ;
           display: flex;
           flex-direction: column;
           gap: 1rem;
+          position: sticky;
+          top: 0;
+          background-color: $bg-white;
           p {
             display: flex;
             font-size: 24px;
+            color: $text-dark;
             
             .sub {
               padding-right: 0.5rem;
@@ -144,10 +156,12 @@ display: flex;
               font-size: 19px;
               position: relative;
               top: 4px;
+
             }
             .total {
               font-weight: 600;
               font-size: 24px;
+
             }
             
             
@@ -157,10 +171,10 @@ display: flex;
             width: 100%;
             height: 3rem;
             border-radius: 2rem;
-            background-color: rgb(209, 183, 37);
+            background-color: $bg-primary;
             border: none;
             font-size: 17px;
-            color: $textcolorblack;
+            color: $text-highlight;
 
 
           }
@@ -168,10 +182,12 @@ display: flex;
 
         }
         .item {
-          width: 100vw;
+          width: 100%;
           // padding-inline: 0.5rem;
           padding-top: 1rem;
           // border: solid red;
+          border-top: solid 1px ;
+
           ul {
             display: flex;
             flex-direction: column;
@@ -185,7 +201,7 @@ display: flex;
               padding-block: 0.5rem;
               gap: 1.5rem;
               border-radius: 0.5rem;
-    background-color: rgb(216, 216, 216); /* Solid black background */
+    background-color: $bg-offwhite; /* Solid black background */
 
               border-bottom: 1px solid silver;
 
@@ -213,16 +229,20 @@ display: flex;
                   // border: solid;
                   .descrp {
                     font-size: 14px;
-                    color: $textcolorblack;
+                    color: $text-dark;
                     line-height: 1.3rem;
                     padding-bottom: 0.5rem;
                   }
                   h2 {
                     font-size: 24px;
                     font-weight: 500;
+                    color: $text-dark;
+
                   }
                   .price{
                     display: flex;
+                    color: $text-black;
+
                     span {
                       font-size: 20px;
                       font-weight: 600;
@@ -241,19 +261,32 @@ display: flex;
                   width: 7rem;
                   display: flex;
                   justify-content: space-between;
-                  border: solid 2px rgb(193, 167, 21);
-                  height: 2rem;
-                  padding-inline: 0.5rem;
+                  border: solid 3px $line-grey;
+                  height: 2.2rem;
+                  // padding-inline: 0.5rem;
                   border-radius: 1rem;
                   align-items: center;
                   // background-color: white;
+                  color: $text-black;
+
 
                   .increase, .decrease {
                     outline: none;
                     background: none;
-                    border: none;
-                    font-size: 24px;
-                    color: $textcolorblack;
+                    border: none ;
+                    padding-inline: 5px;
+                    font-size: 28px;
+                    color: $text-black;
+
+
+                    
+                  }
+                .decrease:active {
+                    transform: scale(1.1);
+
+                  }
+                .increase:active {
+                    transform: scale(1.1);
 
                   }
                 }
@@ -270,6 +303,9 @@ display: flex;
 
                   
                 }
+                .delete:active {
+                  transform: scale(1.1);
+                }
                 .saveforlater {
                   padding-inline: 1rem;
                   border-radius: 1rem;
@@ -278,6 +314,9 @@ display: flex;
                   color: $textcolorblack;
                   background: none;
 
+              }
+              .saveforlater:active {
+                transform: scale(1.05);
               }
               }
             }

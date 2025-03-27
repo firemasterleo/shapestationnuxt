@@ -56,17 +56,13 @@
               </div>
                   <svg class="user-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
             </div>
-            <NuxtLink to="/cart" >
-              <div class="cart">
-
+            <NuxtLink to="/cart" class="cart" >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
                   <h1>
                         {{ cartStore.totalItems }}
         
                       </h1>
-     
-
-              </div>
+    
               </NuxtLink>
           </div>
   
@@ -263,7 +259,7 @@
                 justify-content: space-between;
                 height: 3.2rem;
                 // height: fit-content;
-                background-color: rgb(231, 229, 227); /* Solid black background */
+                background-color: $bg-white; /* Solid black background */
                 // background-color: rgb(121, 140, 97); /* Solid black background */
                 position: relative;
 
@@ -276,17 +272,20 @@
                   gap: 0.5rem;
                   align-items: center;
                   .logo {
+                  -webkit-tap-highlight-color: transparent;
+
 
                 padding-right: 1rem;
 
                 position: relative;
                 // z-index: 25;
                 // mix-blend-mode: difference;
-                color: $textcolorblack;
+                color: $text-dark;
                 // color: rgb(121, 140, 97);
                 display: flex;
 
                 h1 {
+
                     // z-index: 200;
                     // position: relative; /* Ensure it stays in front */
                     // z-index: 2; /* Ensures it stays in front */
@@ -327,7 +326,7 @@
                 // top: 0.3rem;
              
                 // mix-blend-mode: difference;
-                color: $textcolorwhite;
+                // color: $textcolorwhite;
       
       
         
@@ -335,7 +334,7 @@
                     width: 19px;
                     height: 2px;
                     // background-color: rgba(255, 255, 255, 0.413);
-                    background-color: $textcolorblack;
+                    background-color: $text-dark;
                     // background-color: $textcolorblack;
       
       
@@ -380,24 +379,28 @@
                     // border: solid red;
 
                       p {
-                        color: $textcolorblack;
+                        color: $text-dark;
                         font-size: 14px;
                       }
                       .arrow-svg {
-                        fill: $textcolorblack;
+                        fill: $text-dark;
                         width: 15px;
                         height: 15px;
                       }
 
                     }
                     .user-svg {
-                      fill: $textcolorblack;
+                      fill: $text-dark;
                       width: 30px;
                       height: 30px;
                     }
                   }
 
                   .cart {
+                  -webkit-tap-highlight-color: transparent;
+                  // border: solid;
+
+
                     position: relative;
                     display: flex;
                     align-items: center;
@@ -411,7 +414,8 @@
                 // border: solid green;
 
                       svg {
-                        fill: $textcolorblack;
+
+                        fill: $text-dark;
                         width: 35px;
                         height: 35px;
                         position: absolute;
@@ -420,7 +424,8 @@
                       }
                       h1 {
                         
-                        color: $textcolorblack;
+                        
+                        color: $text-dark;
                         font-size: 12px;
                         position: relative;
                         left: 2px;

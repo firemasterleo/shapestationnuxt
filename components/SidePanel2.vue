@@ -26,13 +26,14 @@ const { isMenuOpen, closeMenu } = useToggle();
 
 const menuItems = [
   { label: 'Home', path: '/' },
-  { label: 'Wall Art', path: '/WallArt' },
-  { label: 'Sculptures & Carvings', path: '/Services' },
-  { label: 'Home decor Accents', path: '/About' },
+  { label: 'New: Featured Peices', path: '/FeaturedPeices' },
+  { label: 'Sculptures & Carvings', path: '/WallArt' },
+  // { label: 'Home decor Accents', path: '/About' },
   { label: 'Textile & Fiber Art', path: '/Resources' },
-  { label: 'Furnitures & Furniture Art', path: '/Resources' },
-  { label: 'Lighting & Lamps', path: '/Resources' },
+  // { label: 'Furnitures & Furniture Art', path: '/Resources' },
+  // { label: 'Lighting & Lamps', path: '/Resources' },
   { label: 'Cultural & Traditional Artifacts', path: '/Resources' },
+  { label: 'Wall Art', path: '/WallArt' },
   { label: 'Account', path: '/Resources' },
   { label: 'Help', path: '/Resources' },
   // { label: 'Contact us', path: '/BlogPage' }
@@ -120,7 +121,7 @@ const handleItemClick = () => {
                     padding-left: 1.5rem;
                       font-size: 16px;
                       font-weight: 500;
-                      color: $primarycolorblack;
+                      color: $text-dark;
                     }
                     p:active {
                       
