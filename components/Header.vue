@@ -262,6 +262,7 @@
       top: 0;
       z-index: 100;
       border-bottom: 1px solid $line-grey;
+      padding-top: 1px #ffffff;
         .section1 {
             width: 100%;
             .desktop-header {
