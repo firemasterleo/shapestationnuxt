@@ -1,6 +1,8 @@
+
+
 <template>
-    <div class="sectioncontainer">
-      <div class="section">
+    <div class="presection">
+      <div class="section1">
         <div class="info">
           <div class="text">
             <p>New: Featured Pieces</p>
@@ -9,37 +11,84 @@
           </div>
       
         </div>
-  
       </div>
     </div>
+
   </template>
   
+  <script setup>
+  import { ref } from 'vue';
+  import { useToggle } from '@/composables/useToggle'
+  import { useUserStore } from '@/stores/userStore';
 
-<script script setup>
+  import { useCartStore } from '@/stores/cartStore';
+  import { navigateTo } from '#app';
+  
+  // Use the composable for managing toggle state
+  const { isMenuOpen, toggleMenu, closeMenu } = useToggle();
+  const userStore = useUserStore();
+  const cartStore = useCartStore();
 
-</script>
+  const showMenu = ref(false);
+  // Function to close the menu when clicking a menu item
+  const handleItemClick = () => {
+    closeMenu(); // Ensures the menu closes on click
+  };
+
+  const handleUserClick = () => {
+  if (!userStore.isAuthenticated) {
+    navigateTo('/login');
+  } else {
+    showMenu.value = !showMenu.value; // Toggle user menu
+  }
+};
+
+
+  </script>
+  
+
+
+
 
 <style lang="scss" scoped>
-    @use "@/assets/sass/variables" as *; // Import variables
+  @use "@/assets/sass/variables" as *; // Import variables
 
-.sectioncontainer {
-    background-color: $bg-secondary;
+.presection {
+    // background-color: rgb(45, 45, 49);
+    // border: yellow solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 
-  width: 100%;
+
+    .section1 {
+        // margin-inline: auto;
+        // border: solid green;
+        width: 80rem;
+        height: 100%;
+        // padding-inline: 1rem;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        background-color: $bg-secondary; /* Solid black background */
 
 
-  .section {
 
-  }
+
+
+    }
 }
 
-
-
 @media (max-width: 800px) {
-  .sectioncontainer {
-    .section {
-      width: 100vw;
-      .info {
+    .presection {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid $line-grey;
+        .section1 {
+            width: 100%;
+            .info {
   height: 2.5rem;
   width: 100%;
   display: flex;
@@ -66,15 +115,9 @@
 
 }
 
-      
+        }
     }
-  }
 }
-@media (max-width: 1200px) and (min-width: 800px) {
-  .sectioncontainer {
-    .section {
 
-    }
-  }
-}
 </style>
+
