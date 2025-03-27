@@ -23,7 +23,8 @@
     @use "@/assets/sass/variables" as *; // Import variables
 
 .sectioncontainer {
-    background-color: $bg-white;
+    background-color: $bg-secondary;
+
   width: 100%;
 
 
@@ -39,7 +40,6 @@
     .section {
       width: 100vw;
       .info {
-  background-color: $bg-secondary;
   height: 2.5rem;
   width: 100%;
   display: flex;
