@@ -61,7 +61,8 @@
     // @use "@/assets/sass/variables" as *; // Import variables
 
     html {
-  background-color: $bg-white !important;
+  background-color: RGB(255, 255, 255) !important;
+  // border: solid red;
 }
 
 
