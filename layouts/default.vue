@@ -60,6 +60,7 @@
   });
   </script>
   <style lang="scss" scoped>
+    @use "@/assets/sass/main" as *; // Import variables
 
   .fade-enter-active,
   .fade-leave-active {
