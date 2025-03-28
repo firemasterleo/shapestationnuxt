@@ -96,8 +96,8 @@ display: flex;
           }
 
           p {
-            width: 90%;
-            font-size: 16px;
+            width: 80%;
+            font-size: 14px;
             text-align: center;
                 // border: solid blue;
 
