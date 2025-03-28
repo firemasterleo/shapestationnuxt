@@ -1,27 +1,27 @@
 <template>
 
-  <div>
-
-        <!-- <InfoHeader /> -->
-        <Header />
-
-      <!-- Side Panel -->
-      <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
-        <SidePanel2 />
-      </div>
+  <Header />
   
-      <!-- Overlay (closes menu when clicked) -->
-      <div
-        class="sidepanel-overlay"
-        :class="{ 'is-expanded': isMenuOpen }"
-        @click="closeMenu"
-      ></div>
+  <!-- <InfoHeader /> -->
   
+  <!-- Side Panel -->
+  <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
+    <SidePanel2 />
+  </div>
+  
+  <!-- Overlay (closes menu when clicked) -->
+  <div class="sidepanel-overlay"
+  :class="{ 'is-expanded': isMenuOpen }"
+  @click="closeMenu"
+  >
+</div>
+
+
       <!-- Page Transition -->
       <NuxtPage />
-      <Footer/>
-    </div>
-
+  
+    
+    <Footer/>
  
 
   </template>
