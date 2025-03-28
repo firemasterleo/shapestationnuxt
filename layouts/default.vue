@@ -1,6 +1,9 @@
 <template>
+  <div class="default-header">
 
-  <Header />
+    <Header />
+  </div>
+
   
   <!-- <InfoHeader /> -->
   
@@ -60,7 +63,10 @@
   <style lang="scss">
     @use "@/assets/sass/main" as *; // Import variables
     // @use "@/assets/sass/variables" as *; // Import variables
-
+.default-header {
+  position: relative;
+  z-index: 1000;
+}
 
   .fade-enter-active,
   .fade-leave-active {
