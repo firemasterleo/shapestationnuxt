@@ -13,7 +13,7 @@
 
       </h1>
     </div>
-    <p>OjuAfrica brings you authentic, handcrafted African art—each piece rich with culture, heritage, and timeless craftsmanship</p>
+    <p>Celebrating authentic, handcrafted African art—each piece rich with culture, heritage, and timeless craftsmanship.</p>
     <button>SHOP AUTHENTIC ART</button>
 
   </div>
@@ -107,8 +107,8 @@ display: flex;
             font-size: 16px;
             font-weight: 600;
             word-spacing: 3px;
-            letter-spacing: 1.5px;
-            padding-inline: 2rem;
+            letter-spacing: 1px;
+            padding-inline: 1.5rem;
             background-color: $bg-secondary;
             color: $text-muted;
             border: none;
