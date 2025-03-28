@@ -5,7 +5,8 @@
       <!-- <Header/> -->
 
       <main>
-        <Hero />
+        <!-- <Hero /> -->
+        <Highlights />
         <Highlights />
       </main>
   
