@@ -14,6 +14,19 @@ useHead({
     }
   ]
 });
+
+import { useCartStore } from '@/stores/cartStore';
+import { onMounted } from 'vue';
+
+const cartStore = useCartStore();
+
+onMounted(() => {
+  // Check if there’s old invalid data, then reset
+  if (!Array.isArray(cartStore.cart) || cartStore.cart.some(item => !item.id)) {
+    console.log('Resetting cart...');
+    cartStore.clearCart();
+  }
+});
 </script>
 
 <template>

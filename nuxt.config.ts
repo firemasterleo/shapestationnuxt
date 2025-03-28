@@ -26,6 +26,19 @@ export default defineNuxtConfig({
     ],
     provider: "ipx", // Ensures Nuxt optimizes images
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: "preload",
+          href: "/ori-olokun.png",
+          as: "image",
+          type: "image/png",
+          fetchpriority: "high",
+        },
+      ],
+    },
+  },
 
 })
 
