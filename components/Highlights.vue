@@ -1,19 +1,14 @@
 <template>
     <div class="sectioncontainer">
       <div class="section">
-        <div class="bronzework">
-          <div class="text">
-              <p>Bestsellers in Bronze work</p>
-  
-          </div>
-
+        <div class="Featured Collection">
           <div class="slide">
             <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
               <div class="image">
-                <img src="../assets/art-product.jpg" alt="">
+                <img src="../assets/ori-olokun.jpg" alt="">
               </div >
               <div class="text">
-                <p>Topmoviesquad</p>
+                <p>Sculptures & Carvings</p>
                 
               </div>
               <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
@@ -23,10 +18,10 @@
             </div>
             <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
               <div class="image">
-                <img src="../assets/ori-olokun.jpg" alt="">
+                <img src="../assets/textile.jpg" alt="">
               </div>
               <div class="text">
-                <p>Quotech</p>
+                <p>Textile & Fabrics</p>
               </div>
               <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
         <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
@@ -36,10 +31,10 @@
             <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
               
               <div class="image">
-                  <img src="../assets/art-product.jpg" alt="">
+                  <img src="../assets/tradartifacts.jpg" alt="">
                 </div>
                 <div class="text">
-                  <p>Views on Mide</p>
+                  <p>Artifacts</p>
   
                 </div>
                 <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
@@ -49,54 +44,7 @@
               </div>
           </div>
         </div>
-        <div class="bronzework">
-          <div class="text">
-              <p>Bestsellers in Wall Art</p>
-  
-          </div>
 
-          <div class="slide">
-            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-              <div class="image">
-                <img src="../assets/art-product.jpg" alt="">
-              </div >
-              <div class="text">
-                <p>Topmoviesquad</p>
-                
-              </div>
-              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-                <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-              </div> -->
-              
-            </div>
-            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-              <div class="image">
-                <img src="../assets/ori-olokun.jpg" alt="">
-              </div>
-              <div class="text">
-                <p>Quotech</p>
-              </div>
-              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-      </div> -->
-  
-            </div>
-            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-              
-              <div class="image">
-                  <img src="../assets/art-product.jpg" alt="">
-                </div>
-                <div class="text">
-                  <p>Views on Mide</p>
-  
-                </div>
-                <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-      </div> -->
-                
-              </div>
-          </div>
-        </div>
 
   
       </div>
@@ -236,30 +184,9 @@
     margin-inline: auto;
     overflow-x: hidden;
     padding-inline: 2.5rem;
-    .text {
-              display: flex;
-              justify-content: space-between;
-              padding-block: 0.5rem;
-
-              p {
-                color: $textcolorwhite;
-
-                span {
-                  
-                  svg {
-                    fill: $textcolorwhite;
-                    rotate:130deg;
-                // border: solid red;
-                position: relative;
-                top: 3px;
-                height: 18px;
-                width: 18px;
-
-                  }
-                }
-              }
-          }
-
+    // border: solid red;
+    padding-block: 1rem;
+    background-color: $bg-white;
           .slide {
         //   height: 30rem;
             // border: solid red;
@@ -312,8 +239,10 @@
                     bottom: 4rem;
                     margin-inline: auto;
                     width: fit-content;
+                    // border: sol;
+                    background-color: $bg-offwhite;
                     p{
-                      color: $textcolorwhite;
+                      color: $text-dark;
                       font-weight: 700;
                       letter-spacing: 2px;
 
@@ -363,7 +292,7 @@
 .video-popup {
   background: rgb(167, 165, 154);
 height: 20rem;
-  border: solid red;
+  // border: solid red;
   position: fixed;
   width: 15rem;
   // height: auto;
@@ -388,8 +317,9 @@ height: 20rem;
     .section {
       width: 100vw;
       height: fit-content;
-      background-color: rgb(231, 229, 227); /* Solid black background */
+      background-color: $bg-white; /* Solid black background */
       padding-inline: 0.5rem;
+      // border: solid red;
     //   overflow: auto;
     //   overflow-x: scroll;
     overflow-x: hidden;
@@ -426,7 +356,7 @@ height: 20rem;
             width: 100%;
             display: flex;
             flex-wrap: nowrap;
-            gap: 0.7rem;
+            gap: 2rem;
             overflow-x: auto;
             scroll-snap-type: x mandatory; /* Enables smooth snap scrolling */
 
@@ -452,6 +382,24 @@ height: 20rem;
                         object-fit: scale-down;
                     }
                 }
+                .text {
+                    // border: solid red;
+                    position: relative;
+                    bottom: 4rem;
+                    margin-inline: auto;
+                    width: fit-content;
+                    // border: sol;
+                    background-color: $bg-offwhite;
+                    padding-inline: 0.5rem;
+                    p{
+                      color: $text-dark;
+                      font-weight: 700;
+                      letter-spacing: 2px;
+
+                      
+                      
+                    }
+                  }
             }
           }
 

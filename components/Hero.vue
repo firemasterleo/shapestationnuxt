@@ -9,7 +9,7 @@
 
     <div>
       <h1>
-        Authentic African Art
+        Authentic African Artistry
 
       </h1>
     </div>
@@ -57,7 +57,7 @@ display: flex;
   .sectioncontainer {
     .section {
       width: 100vw;
-      height:85vh;
+      height:80vh;
       // border: solid green;
       overflow: hidden;
       // display: block;

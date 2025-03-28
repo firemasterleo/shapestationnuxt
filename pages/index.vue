@@ -6,7 +6,7 @@
 
       <main>
         <Hero />
-        <Whatwedo />
+        <!-- <Whatwedo /> -->
         <Highlights />
         <!-- <Highlights /> -->
         <!-- <Reel /> -->
