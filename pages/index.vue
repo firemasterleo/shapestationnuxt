@@ -5,9 +5,9 @@
       <!-- <Header/> -->
 
       <main>
-        <!-- <Hero /> -->
-        <Highlights />
-        <Highlights />
+        <Hero />
+        <!-- <Highlights /> -->
+        <!-- <Highlights /> -->
       </main>
   
     </div>
