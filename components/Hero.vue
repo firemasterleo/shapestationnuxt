@@ -2,7 +2,7 @@
     <div class="sectioncontainer">
       <div class="section">
         <div class="image">
-<img :src="imageStore.heroImag || '/ori-olokun.png'" loading="eager" decoding="async" />
+<img :src="imageStore.heroImage || '/ori-olokun.png'" loading="eager" decoding="async" />
 
         </div>
   <div class="hero-text">

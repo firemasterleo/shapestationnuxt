@@ -166,6 +166,15 @@
   onUnmounted(() => {
     stopAnimation();
   });
+
+
+  onMounted(() => {
+  const slider = document.querySelector(".slide");
+  slider.scrollTo({
+    left: slider.children[1].offsetLeft - (slider.offsetWidth / 2) + (slider.children[1].offsetWidth / 2),
+    behavior: "smooth"
+  });
+});
   </script>
   
 
@@ -198,6 +207,7 @@
             // grid-auto-flow: row; /* Forces new items onto the next row */
             overflow-x: auto;
             scroll-snap-type: x mandatory; /* Enables smooth snap scrolling */
+
 
             
             .highlight {
@@ -360,6 +370,10 @@ height: 20rem;
             gap: 2rem;
             overflow-x: auto;
             scroll-snap-type: x mandatory; /* Enables smooth snap scrolling */
+            // scroll-padding:80%; /* Ensures snapping centers the second item */
+            // justify-content: center; /* Centers the whole flex container */
+
+
 
             
             .highlight {
@@ -371,6 +385,8 @@ height: 20rem;
                 border-radius: 0.5rem;
                 overflow: hidden;
                 scroll-snap-align: center; /* Ensures items snap into place */
+                // transform: translateX(-92%);
+
 
 
                 .image {
@@ -408,6 +424,7 @@ height: 20rem;
                   }
             }
           }
+          
 
     }
 }

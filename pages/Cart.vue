@@ -7,57 +7,61 @@
         
         <p>Continue shopping</p>
       </div>
-      <div class="cart">
+      <client-only>
 
-        <div class="checkout">
-          <p ><span class="sub">Subtotal</span><span class="dollar"><sup>$</sup></span> <span class="total">{{ cartStore.cartTotal }}</span> </p>
-          <button @click="handleCheckout">Proceed to Checkout ({{ cartStore.totalItems }} items)</button>
-    
-        </div>
-        <div class="item" v-if="cartStore.cart.length">
-          <ul >
-            <li v-for="item in cartStore.cart" :key="item.id">
-              <div class="top">
-                <div class="image">
-                  <img 
-                  v-if="item.image?.url"
-                  :src="`${item.image.url}?width=500`"
-                  alt="Product Image"
-                  >
+        <div class="cart">
+  
+          <div class="checkout">
+            <p ><span class="sub">Subtotal</span><span class="dollar"><sup>$</sup></span> <span class="total">{{ cartStore.cartTotal }}</span> </p>
+            
+            <button @click="handleCheckout">Proceed to Checkout ({{ cartStore.totalItems }} items)</button>
+      
+          </div>
+          <div class="item" v-if="cartStore.cart.length">
+            <ul >
+              <li v-for="item in cartStore.cart" :key="item.id">
+                <div class="top">
+                  <div class="image">
+                    <img 
+                    v-if="item.image?.url"
+                    :src="`${item.image.url}?width=500`"
+                    alt="Product Image"
+                    >
+                    
+                  </div>
+                  <div class="details">
+                    <!-- <h2>{{ item.name }}</h2> -->
+                    <p class="descrp">  {{ item.description[0]?.children[0]?.text.split(" ").length > 16 
+        ? item.description[0]?.children[0]?.text.split(" ").slice(0, 17).join(" ") + "..." 
+        : item.description[0]?.children[0]?.text 
+    }}.
+                    </p>
+                    <p class="price">$<span>{{ item.price }}</span></p>
+        
+                  </div>
                   
                 </div>
-                <div class="details">
-                  <!-- <h2>{{ item.name }}</h2> -->
-                  <p class="descrp">  {{ item.description[0]?.children[0]?.text.split(" ").length > 16 
-      ? item.description[0]?.children[0]?.text.split(" ").slice(0, 17).join(" ") + "..." 
-      : item.description[0]?.children[0]?.text 
-  }}.
-                  </p>
-                  <p class="price">$<span>{{ item.price }}</span></p>
-      
+                <div class="bottom">
+                  <div class="quantitycontrols">
+                    <button class="decrease" @click="cartStore.decreaseQuantity(item.id)">-</button>
+                    <span>{{ item.quantity }}</span>
+                    <button class="increase" @click="cartStore.increaseQuantity(item.id)">+</button>
+     
+                  </div>
+                  <button class="delete" @click="cartStore.removeFromCart(item.id)">Delete</button>
+                  <button class="saveforlater">Save for later</button>
+  
                 </div>
                 
-              </div>
-              <div class="bottom">
-                <div class="quantitycontrols">
-                  <button class="decrease" @click="cartStore.decreaseQuantity(item.id)">-</button>
-                  <span>{{ item.quantity }}</span>
-                  <button class="increase" @click="cartStore.increaseQuantity(item.id)">+</button>
-   
-                </div>
-                <button class="delete" @click="cartStore.removeFromCart(item.id)">Delete</button>
-                <button class="saveforlater">Save for later</button>
-
-              </div>
-              
-            <!-- Quantity Controls -->
-          </li>
-          </ul>
-
+              <!-- Quantity Controls -->
+            </li>
+            </ul>
+  
+          </div>
+          <p v-else>Your cart is empty</p>
+      
         </div>
-        <p v-else>Your cart is empty</p>
-    
-      </div>
+      </client-only>
 
     </div>
   </div>
