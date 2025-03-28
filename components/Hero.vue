@@ -14,7 +14,7 @@
       </h1>
     </div>
     <p>Celebrating authentic, handcrafted African art—each piece rich with culture, heritage, and timeless craftsmanship.</p>
-    <button>SHOP AUTHENTIC ART</button>
+    <button>SHOP NEW ARRIVALS</button>
 
   </div>
       </div>
