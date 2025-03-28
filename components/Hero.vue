@@ -49,18 +49,23 @@ display: flex;
       height:85vh;
       // border: solid green;
       overflow: hidden;
+
       .image {
-    width: 100%;
-    height: 80vh;
+    width: 80vw;
+    height: 65vh;
     // border: solid red;
     overflow: hidden;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
 
             img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+                width: 170%;
+                // margin-inline: auto;
+                height: auto;
+                object-fit: scale-down;
                 // border: solid blue;
-                transform: translateX(150px);
+                transform: translateX(-38px);
             }
         }
     }
