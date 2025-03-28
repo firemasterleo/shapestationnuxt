@@ -76,7 +76,7 @@ display: flex;
                 // margin-inline: auto;
                 height: auto;
                 object-fit: cover;
-                // border: solid blue;
+                border: solid blue;
                 transform: translateX(-30px);
             }
         }
