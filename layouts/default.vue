@@ -19,9 +19,9 @@
   
       <!-- Page Transition -->
       <NuxtPage />
+      <Footer/>
     </div>
 
-    <Footer/>
  
 
   </template>

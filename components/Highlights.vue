@@ -4,31 +4,6 @@
         <div class="Featured Collection">
           <div class="slide">
             <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-              <div class="image">
-                <img src="../assets/ori-olokun.jpg" alt="">
-              </div >
-              <div class="text">
-                <p>SCULPTURES & CARVINGS</p>
-                
-              </div>
-              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-                <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-              </div> -->
-              
-            </div>
-            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-              <div class="image">
-                <img src="../assets/textile.jpg" alt="">
-              </div>
-              <div class="text">
-                <p>TEXTILE & FABRICS</p>
-              </div>
-              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-      </div> -->
-  
-            </div>
-            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
               
               <div class="image">
                   <img src="../assets/tradartifacts.jpg" alt="">
@@ -42,6 +17,32 @@
       </div> -->
                 
               </div>
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/textile.jpg" alt="">
+              </div>
+              <div class="text">
+                <p>TEXTILE & FABRICS</p>
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+      </div> -->
+  
+            </div>
+
+              <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/ori-olokun.jpg" alt="">
+              </div >
+              <div class="text">
+                <p>SCULPTURES & CARVINGS</p>
+                
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+                <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+              </div> -->
+              
+            </div>
           </div>
         </div>
 

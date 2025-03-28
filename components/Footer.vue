@@ -4,7 +4,21 @@
 
       </div>
       <div class="newsletter">
-
+        <form name="newsletter" method="POST" data-netlify="true" @submit.prevent="handleSubmit">
+              <input type="hidden" name="form-name" value="newsletter" />
+              <input type="hidden" name="bot-field" />
+              <h1>Become an Insider</h1>
+              <p>Stay inspired with exclusive handcrafte</p>
+              <label for="email">(No spam)</label>
+              <div class="input-container">
+                <input type="email" id="email" name="email" placeholder="Enter email address" required />
+                <button type="submit">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" width="24" height="24">
+                    <path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
       </div>
       <div class="footer">
         <div class="top-container">
@@ -378,6 +392,71 @@ onMounted(() => {
       .newsletter {
         height: 13rem;
         background-color: $bg-cream;
+
+        form {
+                  display: flex;
+                  flex-direction: column;
+                  p {
+                    color: $text-dark;
+                    font-size: 14px;
+  
+                      
+                      
+                  }
+                  label {
+                    color: $text-dark;
+                    font-size: 16px;
+  
+                  }
+                  .input-container {
+                      // border: solid blue;
+                      position: relative;
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      height: fit-content;
+  
+                      input {
+                          // font-size: 20px;
+                          background-color: $bg-white;
+                          width: 100%;
+                          border: none;
+                          padding: 10px 45px 10px 15px; /* Left padding normal, Right padding for button */
+  
+                          font-size: 16px;
+                          outline: none;
+                          height: 45px;
+                          color: $text-dark;
+                          // border: solid green;
+                          // position: relative;
+  
+                      }
+                      button {
+                          background-color: $bg-white;
+                          border: none;
+                          // border: solid red;
+                          position: relative;
+                          right: 0;
+                          top: 0;
+                          height: fit-content;
+                          height: 100%;
+  
+  
+                          svg {
+                              fill: $text-dark;
+                              // border: solid red;
+                          background-color: $bg-white;
+                          rotate: 180deg;
+                          height: 18px;
+                          width: 18px;
+                          // border: solid blue;
+  
+  
+                          }
+  
+                      }
+                  }
+              }
 
       }
       .footer {
