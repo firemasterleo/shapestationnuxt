@@ -14,7 +14,7 @@
       </h1>
     </div>
     <p>OjuAfrica brings you authentic, handcrafted African art—each piece rich with culture, heritage, and timeless craftsmanship</p>
-    <button>Explore our Collection</button>
+    <button>SHOP AUTHENTIC ART</button>
 
   </div>
       </div>
@@ -64,7 +64,7 @@ display: flex;
 
       .image {
     width: 80vw;
-    height: 55vh;
+    height: 45vh;
     // border: solid red;
     overflow: hidden;
     margin-inline: auto;
@@ -77,7 +77,7 @@ display: flex;
                 height: auto;
                 object-fit: cover;
                 // border: solid blue;
-                transform: translateX(-38px);
+                transform: translateX(-30px);
             }
         }
         .hero-text {
@@ -106,6 +106,10 @@ display: flex;
             height: 3rem;
             font-size: 18px;
             padding-inline: 2rem;
+            background-color: $bg-secondary;
+            color: $text-muted;
+            border: none;
+            border-radius: 0.5rem;
           }
         }
     }
