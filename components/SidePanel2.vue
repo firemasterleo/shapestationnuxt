@@ -26,16 +26,16 @@ const { isMenuOpen, closeMenu } = useToggle();
 
 const menuItems = [
   { label: 'Home', path: '/' },
-  { label: 'New: Featured Peices', path: '/FeaturedPeices' },
+  { label: 'New: Featured Peices', path: '/WallArt' },
   { label: 'Sculptures & Carvings', path: '/WallArt' },
   // { label: 'Home decor Accents', path: '/About' },
-  { label: 'Textile & Fiber Art', path: '/Resources' },
+  { label: 'Textile & Fiber Art', path: '/WallArt' },
   // { label: 'Furnitures & Furniture Art', path: '/Resources' },
   // { label: 'Lighting & Lamps', path: '/Resources' },
-  { label: 'Cultural & Traditional Artifacts', path: '/Resources' },
+  { label: 'Cultural & Traditional Artifacts', path: '/WallArt' },
   { label: 'Wall Art', path: '/WallArt' },
-  { label: 'Account', path: '/Resources' },
-  { label: 'Help', path: '/Resources' },
+  { label: 'Account', path: '/WallArt' },
+  { label: 'Help', path: '/WallArt' },
   // { label: 'Contact us', path: '/BlogPage' }
 ];
 

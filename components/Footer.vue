@@ -27,16 +27,16 @@
               <NuxtLink to="/">
                 <p>Home</p>
               </NuxtLink>
-              <NuxtLink to="/work">
+              <NuxtLink to="/">
                 <p>Work</p>
               </NuxtLink>
-              <NuxtLink to="/about">
+              <NuxtLink to="/">
                 <p>About</p>
               </NuxtLink>
-              <NuxtLink to="/services">
+              <NuxtLink to="/">
                 <p>Services</p>
               </NuxtLink>
-              <NuxtLink to="/blog-page">
+              <NuxtLink to="/">
                 <p>Resource</p>
               </NuxtLink>
             </div>
@@ -160,9 +160,9 @@ onMounted(() => {
     .fromTo(".shape-footer .t", { y: -170 }, { y: 0 }, 0.24)
     .fromTo(".shape-footer .a2", { y: -170 }, { y: 0 }, 0.26)
     .fromTo(".shape-footer .t2", { y: -170 }, { y: 0 }, 0.28)
-    .fromTo(".shape-footer .i", { y: -170 }, { y: 0 }, 0.3)
-    .fromTo(".shape-footer .o", { y: -170 }, { y: 0 }, 0.32)
-    .fromTo(".shape-footer .n", { y: -170 }, { y: 0 }, 0.38);
+    // .fromTo(".shape-footer .i", { y: -170 }, { y: 0 }, 0.3)
+    // .fromTo(".shape-footer .o", { y: -170 }, { y: 0 }, 0.32)
+    // .fromTo(".shape-footer .n", { y: -170 }, { y: 0 }, 0.38);
 });
 </script>
 <style lang="scss" scoped>

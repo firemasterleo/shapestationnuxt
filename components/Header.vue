@@ -8,22 +8,22 @@
           </NuxtLink>
   
           <!-- Navigation Bar -->
-          <nav class="nav-bar" v-if="!isMobile">
+          <nav class="nav-bar">
             <ul class="nav-links">
               <div class="nav-item">
-                <NuxtLink to="/work"><p>Work</p></NuxtLink>
+                <NuxtLink to="/"><p>Work</p></NuxtLink>
               </div>
               <div class="nav-item">
-                <NuxtLink to="/about"><p>About</p></NuxtLink>
+                <NuxtLink to="/"><p>About</p></NuxtLink>
               </div>
               <div class="nav-item">
-                <NuxtLink to="/services"><p>Services</p></NuxtLink>
+                <NuxtLink to="/"><p>Services</p></NuxtLink>
               </div>
               <div class="nav-item">
-                <NuxtLink to="/contact"><p>Contact</p></NuxtLink>
+                <NuxtLink to="/"><p>Contact</p></NuxtLink>
               </div>
               <div class="nav-item">
-                <NuxtLink to="/blog"><p>Blog</p></NuxtLink>
+                <NuxtLink to="/"><p>Blog</p></NuxtLink>
               </div>
             </ul>
           </nav>
@@ -58,10 +58,8 @@
             </div>
             <NuxtLink to="/cart" class="cart" >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
-                  <h1>
-                        {{ cartStore.totalItems }}
-        
-                      </h1>
+                  <h1 v-if="isHydrated">{{ cartStore.totalItems }}</h1>
+                      
     
               </NuxtLink>
           </div>
@@ -90,6 +88,8 @@
   const { isMenuOpen, toggleMenu, closeMenu } = useToggle();
   const userStore = useUserStore();
   const cartStore = useCartStore();
+  const isHydrated = ref(false);
+
 
   const showMenu = ref(false);
   // Function to close the menu when clicking a menu item
@@ -105,7 +105,9 @@
   }
 };
 
-
+onMounted(() => {
+  isHydrated.value = true; // ✅ Only update once we’re in the client
+});
   </script>
   
 
