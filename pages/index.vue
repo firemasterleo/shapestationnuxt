@@ -6,7 +6,7 @@
 
       <main>
         <Hero />
-        <!-- <Highlights /> -->
+        <Highlights />
       </main>
   
     </div>
