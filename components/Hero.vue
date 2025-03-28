@@ -4,8 +4,19 @@
         <div class="image">
                     <img :src="imageStore.heroImage" loading="eager" decoding="async" />
 
-                    </div>
-  
+        </div>
+  <div class="hero-text">
+
+    <div>
+      <h1>
+        Authentic African Art
+
+      </h1>
+    </div>
+    <p>OjuAfrica brings you authentic, handcrafted African art—each piece rich with culture, heritage, and timeless craftsmanship</p>
+    <button>Explore our Collection</button>
+
+  </div>
       </div>
     </div>
   </template>
@@ -49,10 +60,11 @@ display: flex;
       height:85vh;
       // border: solid green;
       overflow: hidden;
+      // display: block;
 
       .image {
     width: 80vw;
-    height: 65vh;
+    height: 55vh;
     // border: solid red;
     overflow: hidden;
     margin-inline: auto;
@@ -60,13 +72,41 @@ display: flex;
     justify-content: center;
 
             img {
-                width: 170%;
+                width: 100vw;
                 // margin-inline: auto;
                 height: auto;
-                object-fit: scale-down;
+                object-fit: cover;
                 // border: solid blue;
                 transform: translateX(-38px);
             }
+        }
+        .hero-text {
+          margin: auto;
+          padding-top: 1rem;
+          display: flex;
+          gap: 1.5rem;
+          flex-direction: column;
+          align-items: center;
+          color: $text-dark;
+          h1 {
+            font-size: 24px;
+                // border: solid blue;
+
+
+          }
+
+          p {
+            width: 90%;
+            font-size: 16px;
+            text-align: center;
+                // border: solid blue;
+
+          }
+          button {
+            height: 3rem;
+            font-size: 18px;
+            padding-inline: 2rem;
+          }
         }
     }
   }
