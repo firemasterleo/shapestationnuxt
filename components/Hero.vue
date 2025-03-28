@@ -64,7 +64,7 @@ display: flex;
 
       .image {
     width: 80vw;
-    height: 45vh;
+    height: 40vh;
     // border: solid red;
     overflow: hidden;
     margin-inline: auto;
@@ -72,11 +72,11 @@ display: flex;
     justify-content: center;
 
             img {
-                width: 100vw;
+                width: 100%;
                 // margin-inline: auto;
-                height: auto;
+                // height: auto;
                 object-fit: cover;
-                border: solid blue;
+                // border: solid blue;
                 transform: translateX(-30px);
             }
         }
@@ -104,7 +104,10 @@ display: flex;
           }
           button {
             height: 3rem;
-            font-size: 18px;
+            font-size: 16px;
+            font-weight: 600;
+            word-spacing: 3px;
+            letter-spacing: 1.5px;
             padding-inline: 2rem;
             background-color: $bg-secondary;
             color: $text-muted;
