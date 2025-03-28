@@ -64,7 +64,7 @@ display: flex;
 
       .image {
     width: 80vw;
-    height: 40vh;
+    height: 50vh;
     // border: solid red;
     overflow: hidden;
     margin-inline: auto;
@@ -72,7 +72,7 @@ display: flex;
     justify-content: center;
 
             img {
-                width: 100%;
+                width: 100vw;
                 // margin-inline: auto;
                 // height: auto;
                 object-fit: cover;
