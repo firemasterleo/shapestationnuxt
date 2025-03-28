@@ -194,6 +194,7 @@
     margin-inline: auto;
     overflow-x: hidden;
     padding-inline: 2.5rem;
+
     // border: solid red;
     padding-block: 1rem;
     background-color: $bg-white;
@@ -330,6 +331,8 @@ height: 20rem;
       height: fit-content;
       background-color: $bg-white; /* Solid black background */
       padding-inline: 0.5rem;
+  padding-bottom: 4rem;
+
       // border: solid red;
     //   overflow: auto;
     //   overflow-x: scroll;

@@ -1,15 +1,22 @@
 <template>
     <div class="footer-container">
       <div class="contact">
+        <h2>GET IN TOUCH</h2>
+        <P>Mon - Fri: 8 am - 8 pm GMT</P>
+        <P>Saturdays: 11 am - 4 pm GMT</P>
+        <p>Call Us: <span>+234 70 659 9246</span> </p>
+        <p>Email Us: <span>assistant@ojuafrica.com</span></p>
 
       </div>
       <div class="newsletter">
+        <div>
+          <h2>Become an Insider</h2>
+          <p>Stay inspired with exclusive collections and more</p>
+
+        </div>
         <form name="newsletter" method="POST" data-netlify="true" @submit.prevent="handleSubmit">
               <input type="hidden" name="form-name" value="newsletter" />
               <input type="hidden" name="bot-field" />
-              <h1>Become an Insider</h1>
-              <p>Stay inspired with exclusive handcrafte</p>
-              <label for="email">(No spam)</label>
               <div class="input-container">
                 <input type="email" id="email" name="email" placeholder="Enter email address" required />
                 <button type="submit">
@@ -193,6 +200,9 @@ onMounted(() => {
        flex-direction: column;
        justify-content: space-between;
    padding-inline: 2.5rem;
+   .contact {
+
+   }
 
 
        
@@ -384,18 +394,61 @@ onMounted(() => {
       
       
       .contact {
-        height: 13rem;
+        height: 16rem;
         // border: solid;
         border-top: solid 1px $text-dark;
         background-color: $bg-offwhite;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: center;
+        justify-content: center;
+        color: $text-dark;
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 16px;
+          span {
+            color: $text-accent;
+          }
+
+        }
+        :nth-child(4) {
+          margin-top:1.5rem;
+        }
+
       }
       .newsletter {
         height: 13rem;
         background-color: $bg-cream;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        // align-items: center;
+        justify-content: center;
+        color: $text-dark;
+        padding-inline: 1rem;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          p {
+            font-size: 14px;
+          }
+
+        }
 
         form {
                   display: flex;
                   flex-direction: column;
+                  h2 {
+                  font-size: 20px;
+
+
+                  }
                   p {
                     color: $text-dark;
                     font-size: 14px;
@@ -435,7 +488,7 @@ onMounted(() => {
                           background-color: $bg-white;
                           border: none;
                           // border: solid red;
-                          position: relative;
+                          position: absolute;
                           right: 0;
                           top: 0;
                           height: fit-content;
@@ -450,6 +503,8 @@ onMounted(() => {
                           height: 18px;
                           width: 18px;
                           // border: solid blue;
+                          // position: absolute;
+                          // right: 0;
   
   
                           }
