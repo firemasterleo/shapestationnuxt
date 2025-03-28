@@ -284,9 +284,10 @@ onMounted(() => {
                 position: relative;
 
                 .top {
-                  background-color: $bg-secondary; /* Solid black background */
-
+                  padding-top: 1px;
+                  
                   .info {
+                    background-color: $bg-secondary; /* Solid black background */
   height: 2.5rem;
   width: 100%;
   display: flex;

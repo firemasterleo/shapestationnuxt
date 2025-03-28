@@ -82,7 +82,7 @@
 
 // opacity: 0;
 // visibility: hidden;
-border: solid red;
+// border: solid red;
 width: 21rem;
 height: 100vh;
 transform: translatex(-100%);
