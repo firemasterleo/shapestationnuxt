@@ -8,7 +8,7 @@
                 <img src="../assets/ori-olokun.jpg" alt="">
               </div >
               <div class="text">
-                <p>Sculptures & Carvings</p>
+                <p>SCULPTURES & CARVINGS</p>
                 
               </div>
               <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
@@ -21,7 +21,7 @@
                 <img src="../assets/textile.jpg" alt="">
               </div>
               <div class="text">
-                <p>Textile & Fabrics</p>
+                <p>TEXTILE & FABRICS</p>
               </div>
               <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
         <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
@@ -34,7 +34,7 @@
                   <img src="../assets/tradartifacts.jpg" alt="">
                 </div>
                 <div class="text">
-                  <p>Artifacts</p>
+                  <p>ARTIFACTS</p>
   
                 </div>
                 <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
@@ -386,15 +386,20 @@ height: 20rem;
                     // border: solid red;
                     position: relative;
                     bottom: 4rem;
+                    height: 3rem;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 0.5rem;
                     margin-inline: auto;
                     width: fit-content;
                     // border: sol;
                     background-color: $bg-offwhite;
-                    padding-inline: 0.5rem;
+                    padding-inline: 1rem;
                     p{
                       color: $text-dark;
                       font-weight: 700;
                       letter-spacing: 2px;
+                      font-size: 16px;
 
                       
                       

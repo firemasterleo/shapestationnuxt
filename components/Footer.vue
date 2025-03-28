@@ -1,5 +1,11 @@
 <template>
     <div class="footer-container">
+      <div class="contact">
+
+      </div>
+      <div class="newsletter">
+
+      </div>
       <div class="footer">
         <div class="top-container">
           <div class="left-container">
@@ -243,7 +249,6 @@ onMounted(() => {
        justify-content: center;
        margin-inline: auto;
        font-size: 12px;
-       color: $textcolorwhite;
        // border: solid green;
        padding-inline: 0.5rem;
        // padding-bottom: 1rem;
@@ -253,8 +258,8 @@ onMounted(() => {
                display: flex;
                flex-direction: column;
                p {
-                   color: $textcolorwhite;
-                   font-size: 16px;
+                color: $text-dark;
+                font-size: 16px;
 
                    
                    
@@ -336,7 +341,7 @@ onMounted(() => {
                // line-height: 1;
                padding-bottom: 1.5rem;
 
-               color: $textcolorwhite;
+               color: $text-dark;
                text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.1);
                // border: solid red;
 
@@ -354,7 +359,7 @@ onMounted(() => {
 @media (max-width: 800px) {
    
    .footer-container {
-      background-color: $textcolorblack;
+      background-color: $bg-white;
       width: 100%;
       height: fit-content;
   
@@ -364,7 +369,17 @@ onMounted(() => {
       overflow: hidden;
       
       
-      
+      .contact {
+        height: 13rem;
+        // border: solid;
+        border-top: solid 1px $text-dark;
+        background-color: $bg-offwhite;
+      }
+      .newsletter {
+        height: 13rem;
+        background-color: $bg-cream;
+
+      }
       .footer {
           // padding-inline: 0.5rem;
           // margin-top: 20rem;
@@ -377,7 +392,8 @@ onMounted(() => {
   
           
           width: 100%;
-          background-color: $primarycolorblack; /* Solid black background */
+          background-color: $bg-white;
+          color: $text-dark;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -410,7 +426,7 @@ onMounted(() => {
                       // border: solid red;
                       font-size: 30px;
                       margin-top: -0.5rem;
-                      color: $textcolorwhite;
+                      color: $text-dark;
                       
                   }
               }
@@ -425,7 +441,7 @@ onMounted(() => {
               font-size: 16px;
               font-weight: 400;
               color: #7e848a;
-              color: $textcolorwhite;
+              color: $text-dark;
               // border: solid red;
               display: flex;
               flex-direction: column;
@@ -457,7 +473,7 @@ onMounted(() => {
           justify-content: center;
           margin-inline: auto;
           font-size: 12px;
-          color: $textcolorwhite;
+          color: $text-dark;
           // border: solid green;
           padding-inline: 0.5rem;
           .top {
@@ -466,15 +482,15 @@ onMounted(() => {
                   display: flex;
                   flex-direction: column;
                   p {
-                      color: $textcolorwhite;
-                      font-size: 16px;
+                    color: $text-dark;
+                    font-size: 16px;
   
                       
                       
                   }
                   label {
-                      color: $textcolorwhite;
-                      font-size: 16px;
+                    color: $text-dark;
+                    font-size: 16px;
   
                   }
                   .input-container {
@@ -487,7 +503,7 @@ onMounted(() => {
   
                       input {
                           // font-size: 20px;
-                          background-color: $primarycolorblack;
+                          background-color: $bg-white;
                           width: 100%;
                           border: none;
                           padding: 10px 45px 10px 15px; /* Left padding normal, Right padding for button */
@@ -495,13 +511,13 @@ onMounted(() => {
                           font-size: 16px;
                           outline: none;
                           height: 45px;
-                          color: $textcolorwhite;
+                          color: $text-dark;
                           // border: solid green;
                           // position: relative;
   
                       }
                       button {
-                          background-color: $primarycolorblack;
+                          background-color: $bg-white;
                           border: none;
                           // border: solid red;
                           position: relative;
@@ -512,9 +528,9 @@ onMounted(() => {
   
   
                           svg {
-                              fill: $textcolorwhite;
+                              fill: $text-dark;
                               // border: solid red;
-                          background-color: $primarycolorblack;
+                          background-color: $bg-white;
                           rotate: 180deg;
                           height: 18px;
                           width: 18px;
@@ -531,7 +547,7 @@ onMounted(() => {
           .bottom {
               padding-top: 3rem;
               // border: solid red;
-              border-top: solid 1px $textcolorwhite;
+              border-top: solid 1px $text-dark;
               .shape-footer {
                   display: flex;
               align-items: center;
@@ -548,7 +564,7 @@ onMounted(() => {
                   line-height: 1;
                   padding-bottom: 1.5rem;
   
-                  color: $textcolorwhite;
+                  color: $text-dark;
                   text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.1);
                   // border: solid red;
   
