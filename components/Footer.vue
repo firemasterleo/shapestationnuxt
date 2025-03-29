@@ -414,7 +414,7 @@ onMounted(() => {
     border-bottom: 1px solid $line-grey;
     // padding-bottom: 1rem;
     // border: solid red;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 
     svg {
       fill: $text-dark;
@@ -426,8 +426,8 @@ onMounted(() => {
       
       .bottom-container {
         // border: solid blue;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
 
         ul {
           display: flex;
