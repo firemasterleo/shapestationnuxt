@@ -26,9 +26,7 @@ useHead({
 <template>
   <div>
     <NuxtLayout>
-      <transition name="fade">
       <NuxtPage />
-    </transition>
     </NuxtLayout>
   </div>
 </template>

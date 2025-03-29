@@ -29,75 +29,78 @@
       </div>
       <div class="footer">
         <div class="top-container">
-          <div class="left-container">
-            <div class="menu">
-              <NuxtLink to="/">
-                <p>Home</p>
-              </NuxtLink>
-              <NuxtLink to="/">
-                <p>Work</p>
-              </NuxtLink>
-              <NuxtLink to="/">
-                <p>About</p>
-              </NuxtLink>
-              <NuxtLink to="/">
-                <p>Services</p>
-              </NuxtLink>
-              <NuxtLink to="/">
-                <p>Resource</p>
-              </NuxtLink>
-            </div>
+          <div class="help">
+            <h2>HELP</h2>
+            <ul>
+              <li>FAQS</li>
+              <li>Shipping & Returns</li>
+              <li>Gift Cards</li>
+              <li>Care & Assembly</li>
+              <li>Catalog</li>
+            </ul>
+
           </div>
-          <div class="right-container">
-            <div class="socials">
-              <p>Instagram</p>
-              <p>LinkedIn</p>
-              <p>New business: <span>hello@ojuafrica.com</span></p>
-            </div>
-            <div class="terms">
-              <p>Terms of use</p>
-              <p>&copy; 22-25</p>
-            </div>
+          <div class="ojuafrica">
+            <h2>OjuAfrica</h2>
+            <ul>
+              <li>Our Story</li>
+              <li>Aritisans Partners</li>
+              <li>Press</li>
+              <li>Careers</li>
+              <li>Corporate Sales & Gifting</li>
+              <li>Trade Program</li>
+            </ul>
           </div>
+          <div class="ourbrands">
+            <h2>Our Brands</h2>
+            <ul>
+              <li>BestAfrica</li>
+              <li>LumenInteriors</li>
+              <li>Decora</li>
+              <li>Jules</li>
+            </ul>
+          </div>
+          <div class="locations">
+            <h2>LOCATIONS</h2>
+            <ul>
+              <li>Lagos, NG</li>
+              <li>Abuja, NG</li>
+              <li>Mbeya, TZ</li>
+            </ul>
+          </div>
+
+
+        </div>
+        <div class="socials">
+          <div class="instagram">
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg>
+
+          </div>
+          <div class="whatsapp">
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path fill-rule="evenodd" clip-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"></path></svg>
+
+          </div>
+          <div class="youtube">
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path></svg>
+
+          </div>
+          <p class="tiktok">TikTok</p>
+          <div class="linkedin">
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg>
+
+          </div>
+          <p class="journal">Journal</p>
+
         </div>
         <div class="bottom-container">
-          <div class="top">
-            <form name="newsletter" method="POST" data-netlify="true" @submit.prevent="handleSubmit">
-              <input type="hidden" name="form-name" value="newsletter" />
-              <input type="hidden" name="bot-field" />
-              <p>Sign up for our newsletter</p>
-              <label for="email">(No spam)</label>
-              <div class="input-container">
-                <input type="email" id="email" name="email" placeholder="Email" required />
-                <button type="submit">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" width="24" height="24">
-                    <path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path>
-                  </svg>
-                </button>
-              </div>
-            </form>
-            <div v-if="isSubmitted" class="thank-you-message">
-              <h2>Thank You for Submitting!</h2>
-              <p>We appreciate your subscription.</p>
-            </div>
-          </div>
-          <div class="bottom">
-                    <div class="shape-footer">
-                        <h1 class="s">O</h1>
-                        <h1 class="h">j</h1>
-                        <h1 class="a">ú</h1>
-                        <h1 class="p">A</h1>
-                        <h1 class="e">f</h1>
-                        <h1  class="s2">r</h1>
-                        <h1 class="t">i</h1>
-                        <h1  class="a2">c</h1>
-                        <h1  class="t2">a</h1>
-                        <!-- <h1 class="i">i</h1>
-                        <h1 class="o">o</h1>
-                        <h1 class="n">n</h1> -->
-                    </div>
+          <ul>
+            <li>Terms</li>
+            <li>Privacy</li>
+            <li>Accessibility</li>
+            <li>Do Not Sell My Info</li>
+            <li>©</li>
+          </ul>
 
-                </div>
         </div>
       </div>
     </div>
@@ -177,204 +180,27 @@ onMounted(() => {
 
 
 .footer-container {
-   background-color: #151211;
-   width: 100%;
-   min-height: 40rem;
-   height: fit-content;
 
-
-   margin-inline: auto;
-   // padding-top: 4rem;
-  //  border: solid blue;
-   overflow: hidden;
-   // padding-bottom: 1rem;
-   
    
    
    .footer {
-       padding-top: 6rem;
-       height: 100%;
-       width: 100%;
-       background-color: $primarycolorblack; /* Solid black background */
-       display: flex;
-       flex-direction: column;
-       justify-content: space-between;
-   padding-inline: 2.5rem;
-   .contact {
-
-   }
-
-
-       
-
+ 
 
    }
    
 
 
    .top-container {
-       display: flex;
-       // height: 16.5rem;
-   // border: solid red;
-   // padding-inline: 0.5rem;
-   height: fit-content;
-   // border: solid red;
 
+   }
 
-       .left-container {
-           width: 50%;
-           height: fit-content;
+   .socials {
 
-           .menu {
-           -webkit-tap-highlight-color: transparent;
-           // border: solid green;
-
-               p {
-                   // border: solid red;
-                   font-size: 30px;
-                   margin-top: -0.5rem;
-                   color: $textcolorwhite;
-                   
-               }
-           }
-
-
-
-       }
-       
-       .right-container {
-           width: 50%;
-           height: 100%;
-           font-size: 16px;
-           font-weight: 400;
-           color: #7e848a;
-           color: $textcolorwhite;
-           // border: solid red;
-           display: flex;
-           flex-direction: column;
-           justify-content: space-between;
-           
-           .socials {
-               display: flex;
-               flex-direction: column;
-               gap: 0.3rem;
-
-   
-           }
-       }
    }
 
    
    
    .bottom-container {
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       margin-inline: auto;
-       font-size: 12px;
-       // border: solid green;
-       padding-inline: 0.5rem;
-       // padding-bottom: 1rem;
-       .top {
-           // border: solid white;
-           form {
-               display: flex;
-               flex-direction: column;
-               p {
-                color: $text-dark;
-                font-size: 16px;
-
-                   
-                   
-               }
-               label {
-                   color: $textcolorwhite;
-                   font-size: 16px;
-
-               }
-               .input-container {
-                   // border: solid blue;
-                   position: relative;
-                   width: 100%;
-                   display: flex;
-                   align-items: center;
-                   height: fit-content;
-
-                   input {
-                       // font-size: 20px;
-                       background-color: $primarycolorblack;
-                       width: 100%;
-                       border: none;
-                       padding: 10px 45px 10px 15px; /* Left padding normal, Right padding for button */
-
-                       font-size: 16px;
-                       outline: none;
-                       height: 45px;
-                       color: $textcolorwhite;
-                       // border: solid green;
-                       // position: relative;
-
-                   }
-                   button {
-                       background-color: $primarycolorblack;
-                       border: none;
-                       // border: solid red;
-                       position: relative;
-                       right: 0;
-                       top: 0;
-                       height: fit-content;
-                       height: 100%;
-
-
-                       svg {
-                           fill: $textcolorwhite;
-                           // border: solid red;
-                       background-color: $primarycolorblack;
-                       rotate: 180deg;
-                       height: 18px;
-                       width: 18px;
-                       // border: solid blue;
-
-
-                       }
-
-                   }
-               }
-           }
-           
-       }
-       .bottom {
-           padding-top: 3rem;
-           // padding-bottom: 3rem;
-           // border: solid red;
-           border-top: solid 1px $textcolorwhite;
-           .shape-footer {
-               display: flex;
-           align-items: center;
-           justify-content: center;
-           margin-inline: auto;
-           overflow: hidden;
-
-           //   border: solid red;
-
-           
-           h1 {
-               font-size: 13dvw;
-               // font-size: 180px;
-               // line-height: 1;
-               padding-bottom: 1.5rem;
-
-               color: $text-dark;
-               text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.1);
-               // border: solid red;
-
-
-           }
-
-           }
-
-       }
 
 
    }
@@ -389,7 +215,7 @@ onMounted(() => {
   
       margin-inline: auto;
       // padding-top: 4rem;
-   //    border: solid yellow;
+      // border: solid yellow;
       overflow: hidden;
       
       
@@ -532,22 +358,16 @@ onMounted(() => {
 
       }
       .footer {
-          // padding-inline: 0.5rem;
-          // margin-top: 20rem;
        //    border: solid red;
-          padding-top: 6rem;
-          height: 92vh;
-           // height: 65rem;
-   padding-inline: 1rem;
-
-  
-          
+          padding-top: 2.5rem;
+          height: 70vh;
+   padding-inline: 0rem;
           width: 100%;
           background-color: $bg-white;
           color: $text-dark;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+
   
           
   
@@ -557,176 +377,67 @@ onMounted(() => {
    
   
       .top-container {
-          display: flex;
-          // height: 16.5rem;
-      // border: solid red;
-      padding-inline: 0.5rem;
-      height: fit-content;
-   //    border: solid red;
-  
-  
-          .left-container {
-              width: 50%;
-              height: fit-content;
-  
-              .menu {
-              -webkit-tap-highlight-color: transparent;
-              // border: solid green;
-  
-                  p {
-                      // border: solid red;
-                      font-size: 30px;
-                      margin-top: -0.5rem;
-                      color: $text-dark;
-                      
-                  }
-              }
-  
-  
-  
-          }
-          
-          .right-container {
-              width: 50%;
-              height: 100%;
-              font-size: 16px;
-              font-weight: 400;
-              color: #7e848a;
-              color: $text-dark;
-              // border: solid red;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              
-              .socials {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 0.3rem;
+        padding-inline: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+        // column-gap: 3rem;
+        // border: solid;
+        padding-bottom: 3rem;
 
 
-                  p {
-                   span {
-                       font-size: 12px;
-                   }
-                  }
-  
-      
-              }
+        div {
+          // border: solid;
+          // width: 50%;
+          font-size: 15px;
+
+          h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
           }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+          }
+        }
+
+  
+
+      }
+      .socials {
+        display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-inline: 1rem;
+    border-bottom: 1px solid $line-grey;
+    // padding-bottom: 1rem;
+    // border: solid red;
+    padding-bottom: 1.5rem;
+
+    svg {
+      fill: $text-dark;
+    }
+
       }
   
       
       
       .bottom-container {
-          width: 100%;
+        // border: solid ;
+        padding-top: 1.5rem;
+
+        ul {
           display: flex;
-          flex-direction: column;
+          gap: 1rem;
           justify-content: center;
-          margin-inline: auto;
-          font-size: 12px;
-          color: $text-dark;
-          // border: solid green;
-          padding-inline: 0.5rem;
-          .top {
-              // border: solid white;
-              form {
-                  display: flex;
-                  flex-direction: column;
-                  p {
-                    color: $text-dark;
-                    font-size: 16px;
-  
-                      
-                      
-                  }
-                  label {
-                    color: $text-dark;
-                    font-size: 16px;
-  
-                  }
-                  .input-container {
-                      // border: solid blue;
-                      position: relative;
-                      width: 100%;
-                      display: flex;
-                      align-items: center;
-                      height: fit-content;
-  
-                      input {
-                          // font-size: 20px;
-                          background-color: $bg-white;
-                          width: 100%;
-                          border: none;
-                          padding: 10px 45px 10px 15px; /* Left padding normal, Right padding for button */
-  
-                          font-size: 16px;
-                          outline: none;
-                          height: 45px;
-                          color: $text-dark;
-                          // border: solid green;
-                          // position: relative;
-  
-                      }
-                      button {
-                          background-color: $bg-white;
-                          border: none;
-                          // border: solid red;
-                          position: relative;
-                          right: 0;
-                          top: 0;
-                          height: fit-content;
-                          height: 100%;
-  
-  
-                          svg {
-                              fill: $text-dark;
-                              // border: solid red;
-                          background-color: $bg-white;
-                          rotate: 180deg;
-                          height: 18px;
-                          width: 18px;
-                          // border: solid blue;
-  
-  
-                          }
-  
-                      }
-                  }
-              }
-              
+
+          li {
+            font-size: 14px;
           }
-          .bottom {
-              padding-top: 3rem;
-              // border: solid red;
-              border-top: solid 1px $text-dark;
-              .shape-footer {
-                  display: flex;
-              align-items: center;
-              justify-content: center;
-              margin-inline: auto;
-              overflow: hidden;
-  
-              //   border: solid red;
-  
-              
-              h1 {
-                  font-size: 13vw;
-                  // font-size: 180px;
-                  line-height: 1;
-                  padding-bottom: 1.5rem;
-  
-                  color: $text-dark;
-                  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.1);
-                  // border: solid red;
-  
-  
-              }
-  
-              }
-  
-          }
-  
-  
+        }
+
       }
   
   }

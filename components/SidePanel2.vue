@@ -6,6 +6,12 @@
           <div class="sidebar">
           <!-- Menu Section -->
           <div class="menu">
+            <div class="searchbar" @click="">   
+          <input type="text" v-model="query" placeholder="Search" @keyup.enter="searchMovies" spellcheck="false">
+          <div @click="searchMovies" :disabled="loading" class="searchbutton">
+            <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='16' height='16'><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+          </div>
+        </div>
             <NuxtLink v-for="item in menuItems" :key="item.path" :to="item.path" active-class="active">
               <div class="home" @click="handleItemClick">
                 <p :class="{ 'is-expanded': isMenuOpen }">{{ item.label }}</p>
@@ -27,12 +33,12 @@ const { isMenuOpen, closeMenu } = useToggle();
 const menuItems = [
   { label: 'Home', path: '/' },
   { label: 'New: Featured Peices', path: '/WallArt' },
+  { label: 'Cultural & Traditional Artifacts', path: '/WallArt' },
+  { label: 'Textile & Fiber Art', path: '/WallArt' },
   { label: 'Sculptures & Carvings', path: '/WallArt' },
   // { label: 'Home decor Accents', path: '/About' },
-  { label: 'Textile & Fiber Art', path: '/WallArt' },
   // { label: 'Furnitures & Furniture Art', path: '/Resources' },
   // { label: 'Lighting & Lamps', path: '/Resources' },
-  { label: 'Cultural & Traditional Artifacts', path: '/WallArt' },
   { label: 'Wall Art', path: '/WallArt' },
   { label: 'Account', path: '/WallArt' },
   { label: 'Help', path: '/WallArt' },
@@ -57,7 +63,7 @@ const handleItemClick = () => {
   
   .sidebarcontainer {
       // border: solid red;
-      background-color: $primarycolorwhite; /* Solid black background */
+      background-color: $bg-white; /* Solid black background */
       width: 21rem;
       height: 40rem;
       // padding-inline: 1rem;
@@ -98,11 +104,64 @@ const handleItemClick = () => {
               // border: solid;
               display: flex;
               flex-direction: column;
-              border-bottom: solid 1px rgba(255, 255, 255, 0.162);
+              // border-bottom: solid 1px rgba(255, 255, 255, 0.162);
               padding-bottom: 0.5rem;
               padding-top: 2rem;
               // gap: 1rem;
-              div {
+              .searchbar {
+
+                  // min-width: 22rem;
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  border: none;
+                  outline: none;
+                  padding-inline: 1rem;
+                  // border: solid black;
+
+
+                  input {
+                      padding-inline: 1rem;
+                      width: 100%;
+                      border-radius: 6px;
+                      border: none ;
+                      height: 2.5rem;
+                      background-color: $bg-offwhite;
+                    color: rgb(225, 213, 213);
+                    font-size: 16px;
+
+                    &:focus {
+                      outline: 1px solid $bg-secondary; /* Change to your desired color */
+                      }
+
+
+                    }
+                    .searchbutton {
+                      position: absolute;
+                      right: 1.5rem;
+                      // top: 0.5rem;
+                      // padding-inline: 0.5rem;
+                      cursor: pointer;
+                      
+                      svg {
+                        
+                        fill: $text-dark;
+
+                        &:hover {
+                        fill: rgb(225, 213, 213);
+
+
+                        }
+                      }
+
+                      
+
+                      
+                    }
+
+                  }
+                                div {
                   // border: solid ;
                   padding-top: 0.5rem;
                   // border-radius: 0.5rem;
