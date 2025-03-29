@@ -215,7 +215,7 @@ onMounted(() => {
   
       margin-inline: auto;
       // padding-top: 4rem;
-      border: solid yellow;
+      // border: solid yellow;
       overflow: hidden;
       
       
@@ -358,9 +358,9 @@ onMounted(() => {
 
       }
       .footer {
-          border: solid red;
+          // border: solid red;
           padding-top: 2.5rem;
-          height: 70vh;
+          height: fit-content;
    padding-inline: 0rem;
           width: 100%;
           background-color: $bg-white;
@@ -425,8 +425,9 @@ onMounted(() => {
       
       
       .bottom-container {
-        border: solid ;
-        padding-top: 1.5rem;
+        // border: solid blue;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
 
         ul {
           display: flex;
