@@ -413,7 +413,7 @@ onMounted(() => {
           font-size: 14px;
           color: $text-dark;
           span {
-            color: $text-accent !important;
+            color: #80654f !important;
           }
 
         }
