@@ -413,8 +413,10 @@ onMounted(() => {
           font-size: 14px;
           color: $text-dark;
           span {
+            color: $text-accent !important;
             text-decoration: none !important;
-            -webkit-text-fill-color: $text-accent !important;          }
+
+          }
 
         }
         :nth-child(4) {
