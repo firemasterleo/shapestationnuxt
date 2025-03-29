@@ -2,7 +2,7 @@
 
 <template>
     <div>
-      <!-- <Header/> -->
+      <Header/>
 
       <main>
         <Hero />
