@@ -2,8 +2,8 @@
     <div class="sectioncontainer">
       <div class="section">
         <div class="image">
-<!-- <img :src="imageStore.heroImage || '/ori-olokun.png'" loading="eager" decoding="async" /> -->
-<img src="../assets/tradartifacts.jpg" alt="">
+<img :src="imageStore.heroImage" loading="eager" decoding="async" />
+<!-- <img src="../assets/tradartifacts.jpg" alt=""> -->
 
 
         </div>

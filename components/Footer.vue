@@ -2,8 +2,8 @@
     <div class="footer-container">
       <div class="contact">
         <h2>GET IN TOUCH</h2>
-        <P>Mon - Fri: 8 am - 8 pm GMT</P>
-        <P>Saturdays: 11 am - 4 pm GMT</P>
+        <p>Mon - Fri: 8 am - 8 pm GMT</p>
+        <p>Saturdays: 11 am - 4 pm GMT</p>
         <p>Call Us: <span>+234 70 659 9246</span> </p>
         <p>Email Us: <span>assistant@ojuafrica.com</span></p>
 
@@ -415,6 +415,8 @@ onMounted(() => {
           span {
             color: $text-accent !important;
             text-decoration: none !important;
+            -webkit-text-fill-color: $text-accent !important; // Ensures override in Safari
+
 
           }
 

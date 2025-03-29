@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 
 export const useImageStore = defineStore('image', {
   state: () => ({
-    heroImage: '/ori-olokun.png',//IMPORTANT  // Path relative to the public directory for images you want to access directly via URL (for persistence, storage, etc.), 
+    heroImage: '/tradartifacts.jpg',//IMPORTANT  // Path relative to the public directory for images you want to access directly via URL (for persistence, storage, etc.), 
   }),
   actions: {
     setHeroImage(imageUrl) {

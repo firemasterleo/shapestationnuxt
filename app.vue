@@ -11,21 +11,15 @@ useHead({
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'
+    },
+    {
+      rel: 'preload',
+      href: '/tradartifacts.jpg', // Path relative to public folder
+      as: 'image',
+      type: 'image/jpg',
+      fetchpriority: 'high' // Ensures it loads early
     }
   ]
-});
-
-import { useCartStore } from '@/stores/cartStore';
-import { onMounted } from 'vue';
-
-const cartStore = useCartStore();
-
-onMounted(() => {
-  // Check if there’s old invalid data, then reset
-  if (!Array.isArray(cartStore.cart) || cartStore.cart.some(item => !item.id)) {
-    console.log('Resetting cart...');
-    cartStore.clearCart();
-  }
 });
 </script>
 
