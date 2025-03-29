@@ -326,6 +326,8 @@ height: 20rem;
 
 @media (max-width: 800px) {
   .sectioncontainer {
+    border-bottom: solid 1px $line-grey;
+
     .section {
       width: 100vw;
       height: fit-content;

@@ -396,7 +396,6 @@ onMounted(() => {
       .contact {
         height: 16rem;
         // border: solid;
-        border-top: solid 1px $line-grey;
         background-color: $bg-offwhite;
         display: flex;
         flex-direction: column;
