@@ -1,8 +1,5 @@
 <template>
-    <div>
 
-        hello
-    </div>
     <div v-if="userStore.user">
       <h2>Welcome, {{ userStore.user.username }}</h2>
       <p>Email: {{ userStore.user.email }}</p>
@@ -19,8 +16,18 @@
   </script>
 
 <style lang="scss" scoped>
+    @use "@/assets/sass/variables" as *; // Import variables
+
 div {
-  color: white;
+  
+  h2 {
+    color: $text-dark;
+    // border: solid red;
+
+  }
+  p {
+    color: $text-dark;
+  }
 }
 button {
   margin: 5px;

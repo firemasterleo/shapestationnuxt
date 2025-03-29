@@ -2,6 +2,7 @@
     <client-only>
       <UserProfile />
     </client-only>
+    
   </template>
   
   <script setup>
@@ -11,3 +12,10 @@
     middleware: 'auth',
   });
   </script>
+
+  <style lang="scss" scoped>
+    @use "@/assets/sass/variables" as *; // Import variables
+
+    
+
+</style>

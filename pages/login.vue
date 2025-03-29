@@ -48,8 +48,10 @@ const handleLogin = async () => {
 </script>
 
 <style lang="scss" scoped>
+    @use "@/assets/sass/variables" as *; // Import variables
+
 div {
-  color: white;
+  color: $text-dark;
 }
 button {
   margin: 5px;

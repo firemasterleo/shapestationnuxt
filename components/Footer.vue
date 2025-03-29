@@ -1,13 +1,13 @@
 <template>
     <div class="footer-container">
-      <div class="contact">
-        <h2>GET IN TOUCH</h2>
-        <p>Mon - Fri: 8 am - 8 pm GMT</p>
-        <p>Saturdays: 11 am - 4 pm GMT</p>
-        <p>Call Us: <span>+234 70 659 9246</span> </p>
-        <p>Email Us: <span>assistant@ojuafrica.com</span></p>
+      <ul class="contact">
+        <li class="getintouch">GET IN TOUCH</li>
+        <li class="contact-days">Mon - Fri: 8 am - 8 pm GMT</li>
+        <li class="contact-days">Saturdays: 11 am - 4 pm GMT</li>
+        <li class="contact-add"><a href="tel:2347060599246">Call Us: </a><span> +234 70 659 9246</span> </li>
+        <li class="contact-add"><a href="mailto:assistant@ojuafrica.com">Email Us:</a><span> assistant@ojuafrica.com</span></li>
 
-      </div>
+      </ul>
       <div class="newsletter">
         <div>
           <h2>Become an Insider</h2>
@@ -403,18 +403,29 @@ onMounted(() => {
         align-items: center;
         justify-content: center;
         color: $text-dark;
-        h2 {
+        .getintouch {
           font-size: 16px;
         color: $text-dark;
+        font-weight: 700;
 
         }
-        p {
+        .contact-days {
           font-size: 14px;
           color: $text-dark;
+        }
+        .contact-add {
+          display: flex;
+          gap: 5px;
+          font-size: 14px;
+          color: $text-dark;
+          a {
+            color: $text-dark;
+            text-decoration: none;
+          }
           span {
-            color: $text-accent !important;
-            text-decoration: none !important;
-            -webkit-text-fill-color: $text-accent !important; // Ensures override in Safari
+            color: $text-accent;
+            // text-decoration: none !important;
+            // -webkit-text-fill-color: $text-accent; // Ensures override in Safari
 
 
           }
