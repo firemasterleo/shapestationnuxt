@@ -2,7 +2,76 @@
   <div class="sectioncontainer">
     <div class="section">
       <div class="body">
-  <h1>Wall Art</h1>
+        <div class="featured-collection">
+          <div class="slide">
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              
+              <div class="image">
+                  <img src="../assets/tradartifacts.jpg" alt="">
+                </div>
+                <div class="text">
+                  <p>ARTIFACTS</p>
+  
+                </div>
+                <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+      </div> -->
+                
+              </div>
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/textile.jpg" alt="">
+              </div>
+              <div class="text">
+                <p>item 2</p>
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+      </div> -->
+  
+            </div>
+
+              <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/ori-olokun.jpg" alt="">
+              </div >
+              <div class="text">
+                <p>item3</p>
+                
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+                <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+              </div> -->
+              
+            </div>
+              <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/ori-olokun.jpg" alt="">
+              </div >
+              <div class="text">
+                <p>item4</p>
+                
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+                <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+              </div> -->
+              
+            </div>
+          </div>
+        </div>
+        <div class="filter-sort">
+          <div class="filter">
+            <p>filter</p>
+          </div>
+          <div class="sort">
+            <p>Sort By</p>
+          </div>
+        </div>
+        <div class="category-descr">
+          <h1>Artifacts</h1>
+          <p>Handcrafted by skilled artisans, each piece carries deep cultural significance. Elevate your space with history and tradition!</p>
+
+        </div>
 
       <div v-if="status === 'pending'" class="loader loader--style2" title="1">
 <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -31,8 +100,8 @@
           />
         </NuxtLink>
           <h2>{{ product.name }}</h2>
-          <p>{{ product.description[0]?.children[0]?.text || "No Description" }}</p>
-          <p>Price: ${{ product.price }}</p>
+          <!-- <p>{{ product.description[0]?.children[0]?.text || "No Description" }}</p> -->
+          <p>${{ product.price }}</p>
               
     <!-- Add to Cart Button -->
       <button @click="cartStore.addToCart(product)">
@@ -73,35 +142,121 @@ display: flex;
 
 
 .section {
-background-color: rgb(231, 229, 227); /* Solid black background */
+background-color: $bg-white; /* Solid black background */
   width: 80rem;
   height: 100vh; /* Full viewport height */
   margin-inline: auto;
 
   .body {
-      padding-inline: 1rem;
+      .featured-collection {
+      padding-left: 1rem;
+      padding-bottom: 2rem;
+      padding-top: 1rem;
+
+        .slide {
+
+            // border: solid red;
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory; /* Enables smooth snap scrolling */
+            .highlight {
+                flex-shrink: 0;
+                // border: solid blue;
+                width: 12rem;
+                // border-radius: 0.5rem;
+                overflow: hidden;
+                scroll-snap-align: center; /* Ensures items snap into place */
+
+
+                .image {
+                    width: 100%;
+                    height: 13rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .text {
+                    // border: solid red;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 0.5rem;
+                    width: 100%;
+                    padding-block: 5px;
+                    background-color: $bg-white;
+                    // padding-inline: 1rem;
+                    p{
+                      color: $text-dark;
+                      font-weight: 700;
+                      letter-spacing: 2px;
+                      font-size: 13px;
+
+                      
+                      
+                    }
+                  }
+            }
+          }
+      }
+      .filter-sort {
+        position: sticky;
+        top: 5.7rem;
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 1rem;
+        align-items: center;
+        height: 3rem;
+        background-color: $bg-offwhite;
+        margin-bottom: 2rem;
+      }
+      .category-descr {
+        background-color: $bg-white;
+        padding-inline: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+        h1 {
+          font-size: 16px;
+          color: $text-dark;
+        }
+        p {
+          font-size: 14px;
+          color: $text-dark;
+        }
+      }
       .products {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
+          display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding-inline: 1rem;
+
+          
           .product {
-              // border: solid red;
               display: flex;
-              // gap: 1rem;
               flex-direction: column;
-              background-color: rgb(219, 213, 213);
+              background-color: $bg-white;
               // border: solid red;
 
 
               .image {
-                  width: 15rem;
-                  height: 15rem;
+                  width: 100%;
+                  height: 10rem;
                   // border: solid red;
                   img {
                       width: 100%;
                       height: 100%;
                       object-fit: cover;
                   }
+              }
+              h2 {
+                font-size: 12px;
+                font-weight: 500;
               }
 
           }
