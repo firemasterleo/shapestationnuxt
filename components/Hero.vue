@@ -2,7 +2,9 @@
     <div class="sectioncontainer">
       <div class="section">
         <div class="image">
-<img :src="imageStore.heroImage || '/ori-olokun.png'" loading="eager" decoding="async" />
+<!-- <img :src="imageStore.heroImage || '/ori-olokun.png'" loading="eager" decoding="async" /> -->
+<img src="../assets/tradartifacts.jpg" alt="">
+
 
         </div>
   <div class="hero-text">
@@ -63,8 +65,8 @@ display: flex;
       // display: block;
 
       .image {
-    width: 80vw;
-    height: 50vh;
+    width: 90vw;
+    height: 48vh;
     // border: solid red;
     overflow: hidden;
     margin-inline: auto;
@@ -73,11 +75,12 @@ display: flex;
 
             img {
                 width: 100vw;
+                // width: 100%;
                 // margin-inline: auto;
                 // height: auto;
                 object-fit: cover;
                 // border: solid blue;
-                transform: translateX(-30px);
+                // transform: translateX(-30px);
             }
         }
         .hero-text {
