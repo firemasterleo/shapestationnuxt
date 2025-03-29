@@ -406,9 +406,12 @@ onMounted(() => {
         color: $text-dark;
         h2 {
           font-size: 16px;
+        color: $text-dark;
+
         }
         p {
           font-size: 14px;
+          color: $text-dark;
           span {
             color: $text-accent !important;
           }
