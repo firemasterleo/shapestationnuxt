@@ -126,6 +126,7 @@ const handleItemClick = () => {
                       width: 100%;
                       border-radius: 6px;
                       border: none ;
+                      // outline: none;
                       height: 2.5rem;
                       background-color: $bg-offwhite;
                     color: rgb(225, 213, 213);
@@ -143,10 +144,13 @@ const handleItemClick = () => {
                       // top: 0.5rem;
                       // padding-inline: 0.5rem;
                       cursor: pointer;
+                      // border: solid;
+                      height: fit-content;
+                      border: none;
                       
                       svg {
                         
-                        fill: $text-dark;
+                        fill: $text-accent;
 
                         &:hover {
                         fill: rgb(225, 213, 213);
@@ -171,7 +175,7 @@ const handleItemClick = () => {
                   align-items: center;
                   cursor: pointer;
                   height: 3.5rem;
-                  border-bottom: solid 1px grey ;
+                  border-bottom: solid 1px $line-grey; ;
                   
                   
                   p {
