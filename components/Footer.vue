@@ -4,7 +4,7 @@
         <h2>GET IN TOUCH</h2>
         <P>Mon - Fri: 8 am - 8 pm GMT</P>
         <P>Saturdays: 11 am - 4 pm GMT</P>
-        <p>Call Us: <span>+234 70 659 9246</span> </p>
+        <p>Call Us: <span style="color: red !important;">+234 70 659 9246</span> </p>
         <p>Email Us: <span>assistant@ojuafrica.com</span></p>
 
       </div>
