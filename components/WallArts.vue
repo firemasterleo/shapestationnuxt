@@ -61,10 +61,13 @@
         </div>
         <div class="filter-sort">
           <div class="filter">
-            <p>filter</p>
+            <p>Filter</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#4b4b4b" viewBox="0 0 256 256"><path d="M40,88H73a32,32,0,0,0,62,0h81a8,8,0,0,0,0-16H135a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16Zm64-24A16,16,0,1,1,88,80,16,16,0,0,1,104,64ZM216,168H199a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16h97a32,32,0,0,0,62,0h17a8,8,0,0,0,0-16Zm-48,24a16,16,0,1,1,16-16A16,16,0,0,1,168,192Z"></path></svg>
           </div>
           <div class="sort">
             <p>Sort By</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
+
           </div>
         </div>
         <div class="category-descr">
@@ -173,7 +176,7 @@ background-color: $bg-white; /* Solid black background */
 
                 .image {
                     width: 100%;
-                    height: 13rem;
+                    height: 16rem;
 
                     img {
                         width: 100%;
@@ -192,7 +195,7 @@ background-color: $bg-white; /* Solid black background */
                     // padding-inline: 1rem;
                     p{
                       color: $text-dark;
-                      font-weight: 700;
+                      font-weight: 600;
                       letter-spacing: 2px;
                       font-size: 13px;
 
@@ -213,6 +216,41 @@ background-color: $bg-white; /* Solid black background */
         height: 3rem;
         background-color: $bg-offwhite;
         margin-bottom: 2rem;
+        .filter {
+          display: flex;
+          gap: 4px;
+          justify-content: center;
+          align-items: center;
+          // border: solid red;
+
+          p {
+            color: $text-dark;
+          }
+          svg {
+            height: 24px;
+            width: 24px;
+            fill: $text-dark;
+
+          }
+        }
+        .sort {
+          display: flex;
+          gap: 4px;
+          justify-content: center;
+          align-items: center;
+          // border: solid red;
+
+          p {
+            color: $text-dark;
+          }
+          svg {
+            height: 24px;
+            width: 24px;
+            fill: $text-dark;
+
+          }
+        }
+
       }
       .category-descr {
         background-color: $bg-white;
@@ -246,7 +284,7 @@ background-color: $bg-white; /* Solid black background */
 
               .image {
                   width: 100%;
-                  height: 10rem;
+                  height: 12rem;
                   // border: solid red;
                   img {
                       width: 100%;
@@ -304,6 +342,6 @@ Set the color of the icon
 */
 svg path,
 svg rect{
-fill: #FF6700;
+// fill: #FF6700;
 }
 </style>
