@@ -62,16 +62,7 @@
     // @use "@/assets/sass/variables" as *; // Import variables
 
 
-  .fade-enter-active,
-  .fade-leave-active {
-    opacity: 1;
-    transition: all 300ms ease-out;
-  }
-  .fade-enter-from,
-  .fade-leave-to {
-    opacity: 0;
-  }
-  
+
   .sidepanel {
     display: none;
   }
