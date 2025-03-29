@@ -26,14 +26,14 @@ export default defineNuxtConfig({
     ],
     provider: "ipx", // Ensures Nuxt optimizes images
   },
-  app: {
-    head: {
-      link: [
-        // { rel: "preload", href: "/ori-olokun.png", as: "image", type: "image/png" },
-        { rel: "preload", href: "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap", as: "style" },
-      ],
-    },
-  },
+  // app: {
+  //   head: {
+  //     link: [
+  //       { rel: "preload", href: "/ori-olokun.png", as: "image", type: "image/png" },
+  //       { rel: "preload", href: "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap", as: "style" },
+  //     ],
+  //   },
+  // },
 
 })
 
