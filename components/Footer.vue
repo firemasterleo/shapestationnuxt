@@ -405,12 +405,12 @@ onMounted(() => {
         justify-content: center;
         color: $text-dark;
         h2 {
-          font-size: 18px;
+          font-size: 16px;
         }
         p {
-          font-size: 16px;
+          font-size: 14px;
           span {
-            color: $text-accent;
+            color: $text-accent !important;
           }
 
         }

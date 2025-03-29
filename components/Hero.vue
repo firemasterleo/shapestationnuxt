@@ -77,7 +77,7 @@ display: flex;
                 width: 100vw;
                 // width: 100%;
                 // margin-inline: auto;
-                // height: auto;
+                height: auto;
                 object-fit: cover;
                 // border: solid blue;
                 // transform: translateX(-30px);
