@@ -9,7 +9,7 @@ export default <RouterConfig>{
         } else {
           resolve({ top: 0, left: 0, behavior: "instant" }); // Start new page at top
         }
-      }, 390); // Small delay to avoid flicker
+      }, 0); // Small delay to avoid flicker
     });
   },
 };
