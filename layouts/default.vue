@@ -1,31 +1,25 @@
 <template>
 
   <Header />
+  <!-- Page Transition -->
+  <NuxtPage />
+  <Footer/>
   
-  <!-- <InfoHeader /> -->
   
-  <!-- Side Panel -->
-  <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
-    <SidePanel2 />
-  </div>
-  
-  <!-- Overlay (closes menu when clicked) -->
-  <div class="sidepanel-overlay"
-  :class="{ 'is-expanded': isMenuOpen }"
-  @click="closeMenu"
-  >
+<!-- Side Panel -->
+<div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
+  <SidePanel2 />
 </div>
 
+<!-- Overlay (closes menu when clicked) -->
+<div class="sidepanel-overlay"
+:class="{ 'is-expanded': isMenuOpen }"
+@click="closeMenu"
+>
+</div>
 
-      <!-- Page Transition -->
-      <NuxtPage />
-  
-    
-    <!-- <Footer/> -->
- 
+</template>
 
-  </template>
-  
   <script setup>
   import { ref, onMounted, onBeforeUnmount } from "vue";
   import Header from '@/components/Header.vue';

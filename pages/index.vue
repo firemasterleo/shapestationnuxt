@@ -5,7 +5,7 @@
       <main>
         <Hero />
         <Highlights />
-    <Footer/>
+    <!-- <Footer/> -->
 
         <!-- <Highlights /> -->
       </main>
