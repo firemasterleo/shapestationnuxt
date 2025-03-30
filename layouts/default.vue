@@ -1,24 +1,23 @@
 <template>
-  <main>
+  <div> <!-- Main Layout Wrapper -->
     <Header />
 
-    <!-- <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
+    <!-- Side Panel -->
+    <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
       <SidePanel2 />
     </div>
     
-    <div class="sidepanel-overlay"
-    :class="{ 'is-expanded': isMenuOpen }"
-    @click="closeMenu"
-    >
-  </div> -->
+    <!-- Overlay to close menu -->
+    <div class="sidepanel-overlay" :class="{ 'is-expanded': isMenuOpen }" @click="closeMenu"></div>
 
+    <!-- Main Content Area -->
+    <main>
+      <NuxtPage />
+    </main>
 
-  <NuxtPage />
-
-
-  </main>
-
-  </template>
+    <!-- <Footer /> -->
+  </div>
+</template>
   
   <script setup>
   import { ref, onMounted, onBeforeUnmount } from "vue";

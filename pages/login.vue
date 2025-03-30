@@ -1,4 +1,5 @@
 <template>
+  <main>
     <div>
       <h2>Login</h2>
       <form @submit.prevent="handleLogin">
@@ -8,6 +9,9 @@
         <p v-if="errorMsg" class="error">{{ errorMsg }}</p>
       </form>
     </div>
+    <Footer/>
+
+  </main>
 
   </template>
 

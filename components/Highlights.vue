@@ -2,7 +2,7 @@
     <div class="sectioncontainer">
       <div class="section">
         <div class="Featured Collection">
-          <div class="slide">
+          <div ref="sliderContainer" class="slide">
             <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
               
               <div class="image">
@@ -161,6 +161,8 @@
     targetX.value = 0;
     targetY.value = 0;
   };
+
+  const sliderContainer = ref(null);
   
   // Clean up on component unmount
   onUnmounted(() => {
@@ -169,11 +171,12 @@
 
 
   onMounted(() => {
-  const slider = document.querySelector(".slide");
-  slider.scrollTo({
-    left: slider.children[1].offsetLeft - (slider.offsetWidth / 2) + (slider.children[1].offsetWidth / 2),
-    behavior: "smooth"
-  });
+  if (sliderContainer.value) {
+    sliderContainer.value.scrollTo({
+      left: sliderContainer.value.children[1].offsetLeft - (sliderContainer.value.offsetWidth / 2) + (sliderContainer.value.children[1].offsetWidth / 2),
+      behavior: "smooth"
+    });
+  }
 });
   </script>
   

@@ -1,16 +1,8 @@
 <template>
-    <div>
-      <!-- <Header /> -->
-      
       <main>
-        <!-- <HeroSection /> -->
         <WallArts />
-        <!-- <Reel /> -->
-
+        <Footer/>
       </main>
-      
- 
-    </div>
   </template>
   
   <script setup>

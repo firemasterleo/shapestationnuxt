@@ -66,8 +66,8 @@
   
       </div>
     </div>
+    
     <Footer/>
-
   </main>
 </template>
   
