@@ -57,7 +57,7 @@ const handleLogin = async () => {
 
 div {
   color: $text-dark;
-  height: 100vh;
+  height: 100dvh;
 }
 button {
   margin: 5px;
