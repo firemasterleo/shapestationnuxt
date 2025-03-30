@@ -296,6 +296,17 @@ background-color: $bg-white; /* Solid black background */
                 font-size: 12px;
                 font-weight: 500;
               }
+              button {
+                width: 6rem;
+                background-color: $bg-primary;
+                color: $text-highlight;
+                border: none;
+                padding-block: 6px;
+                border-radius: 10px;
+              }
+              button:active {
+                transform: scale(1.05);
+              }
 
           }
       }

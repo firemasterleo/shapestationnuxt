@@ -259,7 +259,8 @@ display: flex;
               }
               .bottom {
                 display: flex;
-                gap: 1.5rem;
+                justify-content: space-between;
+                // gap: 1.5rem;
                 
                 .quantitycontrols {
                   width: 7rem;

@@ -21,7 +21,7 @@
       <NuxtPage />
   
     
-    <Footer/>
+    <!-- <Footer/> -->
  
 
   </template>
