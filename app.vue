@@ -24,10 +24,10 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <main>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </div>
+  </main>
 </template>
 

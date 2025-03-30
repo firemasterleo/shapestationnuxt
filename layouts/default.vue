@@ -2,7 +2,7 @@
   <main>
     <Header />
 
-    <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
+    <!-- <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
       <SidePanel2 />
     </div>
     
@@ -10,7 +10,7 @@
     :class="{ 'is-expanded': isMenuOpen }"
     @click="closeMenu"
     >
-  </div>
+  </div> -->
 
 
   <NuxtPage />
