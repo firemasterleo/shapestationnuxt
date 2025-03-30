@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   // },
 
   app: {
-    // pageTransition: { name: 'fade', mode: 'out-in', },
+    pageTransition: { name: 'fade', mode: 'out-in', },
     head: {
       link: [
         { rel: "preload", href: "@/assets/sass/main.css", as: "style" }
