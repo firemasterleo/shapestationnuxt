@@ -13,7 +13,7 @@
     <!-- Main Content Area -->
  <main class="main">
 
-   <slot />
+   <NuxtPage />
  </main>
 
 
@@ -58,7 +58,11 @@
     // @use "@/assets/sass/variables" as *; // Import variables
 
 .main {
-  overflow: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+  border: solid red;
+  position: fixed;
+
 }
 
   .sidepanel {
