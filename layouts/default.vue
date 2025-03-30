@@ -11,8 +11,10 @@
     <div class="sidepanel-overlay" :class="{ 'is-expanded': isMenuOpen }" @click="closeMenu"></div>
 
     <!-- Main Content Area -->
- 
-  <slot />
+ <main class="main">
+
+   <slot />
+ </main>
 
 
 
@@ -55,7 +57,9 @@
     @use "@/assets/sass/main" as *; // Import variables
     // @use "@/assets/sass/variables" as *; // Import variables
 
-
+.main {
+  overflow: hidden;
+}
 
   .sidepanel {
     display: none;
