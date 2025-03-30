@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div>
+    <section>
       <h2>Login</h2>
       <form @submit.prevent="handleLogin">
         <input v-model="identifier" placeholder="Email or Username" required />
@@ -8,7 +8,7 @@
         <button type="submit">Login</button>
         <p v-if="errorMsg" class="error">{{ errorMsg }}</p>
       </form>
-    </div>
+    </section>
     <Footer/>
 
   </main>
@@ -55,9 +55,11 @@ const handleLogin = async () => {
 <style lang="scss" scoped>
     @use "@/assets/sass/variables" as *; // Import variables
 
-div {
+section {
   color: $text-dark;
-  height: 100dvh;
+  // height: 100dvh;
+  border: solid red;
+  height: 20rem;
 }
 button {
   margin: 5px;
