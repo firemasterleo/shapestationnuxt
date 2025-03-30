@@ -37,29 +37,13 @@ export default defineNuxtConfig({
   // },
 
   app: {
-    // pageTransition: { name: 'fade', mode: 'out-in', },
+    pageTransition: { name: 'fade', mode: 'out-in', },
     head: {
       link: [
         { rel: "preload", href: "@/assets/sass/main.css", as: "style" }
       ]
     }
   },
-   router: {
-    options: {
-      scrollBehavior(to, from, savedPosition) {
-        return new Promise((resolve) => {
-          setTimeout(() => {
-            if (savedPosition) {
-              resolve(savedPosition);
-            } else {
-              resolve({ top: 0, left: 0, behavior: "smooth" });
-            }
-          }, 50); // Small delay to sync with transitions
-        });
-      }
-    }
-  }
-  
   
 })
 

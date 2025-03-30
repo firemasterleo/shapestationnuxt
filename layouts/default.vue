@@ -11,9 +11,9 @@
     <div class="sidepanel-overlay" :class="{ 'is-expanded': isMenuOpen }" @click="closeMenu"></div>
 
     <!-- Main Content Area -->
-    <transition name="fade">
+
       <slot />
-    </transition>
+
 
     <!-- <Footer /> -->
   </div>
@@ -113,7 +113,6 @@ transform: translatex(0%);
       }
     }
   }
-
 
   </style>
   
