@@ -117,7 +117,10 @@ transform: translatex(0%);
       }
     }
   }
-
+  .hydrated {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
 
   </style>
   
