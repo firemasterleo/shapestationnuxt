@@ -1,9 +1,7 @@
 <template>
 
-  <!-- <Header /> -->
-  
-  <!-- <InfoHeader /> -->
-  
+  <Header />
+
   <!-- Side Panel -->
   <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
     <SidePanel2 />

@@ -1,8 +1,6 @@
 
 <template>
   <main>
-  <Header />
-
     <div class="sectioncontainer">
       <div class="section">
         <div class="back">
@@ -68,8 +66,7 @@
   
       </div>
     </div>
-  <Footer />
-
+    <Footer/>
 
   </main>
 </template>

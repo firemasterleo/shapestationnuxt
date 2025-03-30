@@ -1,8 +1,15 @@
 <template>
+  <main>
     <div>
         <h1>this is checkout </h1>
 
     </div>
+
+    <Footer/>
+
+
+  </main>
+
 </template>
 
 <style lang="scss" scoped>

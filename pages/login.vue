@@ -8,6 +8,7 @@
         <p v-if="errorMsg" class="error">{{ errorMsg }}</p>
       </form>
     </div>
+
   </template>
 
 <script setup>
