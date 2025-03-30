@@ -11,9 +11,9 @@
     <div class="sidepanel-overlay" :class="{ 'is-expanded': isMenuOpen }" @click="closeMenu"></div>
 
     <!-- Main Content Area -->
- <main class="main">
+ <main>
 
-   <NuxtPage />
+   <slot />
  </main>
 
 
@@ -57,13 +57,7 @@
     @use "@/assets/sass/main" as *; // Import variables
     // @use "@/assets/sass/variables" as *; // Import variables
 
-.main {
-  overflow-y: scroll;
-  height: 100vh;
-  border: solid red;
-  position: fixed;
 
-}
 
   .sidepanel {
     display: none;

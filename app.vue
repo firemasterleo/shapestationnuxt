@@ -24,10 +24,19 @@ useHead({
 </script>
 
 <template>
-  <main>
+  <main class="main">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
   </main>
 </template>
 
+<style lang="scss" scoped>
+.main {
+  overflow-y: scroll;
+  height: 100vh;
+  border: solid red;
+  // position: fixed;
+
+}
+</style>
