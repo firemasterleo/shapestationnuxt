@@ -12,9 +12,7 @@
 
     <!-- Main Content Area -->
 
-    <div class="page-container">
-      <NuxtPage />
-    </div>
+      <slot />
 
 
     <!-- <Footer /> -->
