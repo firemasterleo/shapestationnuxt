@@ -1,8 +1,6 @@
 
 <template>
   <main>
-    <Header />
-
     <div class="sectioncontainer">
       <div class="section">
         <div class="back">
