@@ -42,7 +42,9 @@ export default defineNuxtConfig({
         { rel: "preload", href: "/assets/main.css", as: "style" }
       ]
     }
-  }
+  },
+  
+  
 
 })
 

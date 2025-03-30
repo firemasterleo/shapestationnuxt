@@ -3,6 +3,7 @@
 <template>
 
       <main>
+    <Header />
         
         <Hero />
         <Highlights />
