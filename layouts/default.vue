@@ -11,9 +11,9 @@
     <div class="sidepanel-overlay" :class="{ 'is-expanded': isMenuOpen }" @click="closeMenu"></div>
 
     <!-- Main Content Area -->
-    <main>
+    <transition name="fade" mode="out-in">
       <slot />
-    </main>
+    </transition>
 
     <!-- <Footer /> -->
   </div>
