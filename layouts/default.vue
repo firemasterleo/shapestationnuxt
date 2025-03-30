@@ -1,5 +1,5 @@
 <template>
-  <div> <!-- Main Layout Wrapper -->
+
     <Header />
 
     <!-- Side Panel -->
@@ -10,14 +10,7 @@
     <!-- Overlay to close menu -->
     <div class="sidepanel-overlay" :class="{ 'is-expanded': isMenuOpen }" @click="closeMenu"></div>
 
-    <!-- Main Content Area -->
-
-    <keep-alive>
-    <NuxtPage />
-  </keep-alive>
-
-    <!-- <Footer /> -->
-  </div>
+      <slot />
 </template>
   
   <script setup>
