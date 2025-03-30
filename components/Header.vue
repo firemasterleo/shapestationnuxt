@@ -282,7 +282,7 @@ onMounted(() => {
                 position: relative;
 
                 .top {
-                  padding-top: 1px;
+                  // padding-top: 1px;
                   
                   .info {
                     background-color: $bg-secondary; /* Solid black background */
