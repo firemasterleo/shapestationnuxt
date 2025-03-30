@@ -1,10 +1,10 @@
 <template>
 
-  <Header />
-  <!-- Page Transition -->
-  <NuxtPage />
-  <Footer/>
-  
+<div :class="{ 'hydrated': isHydrated }">
+    <Header />
+    <NuxtPage />
+    <Footer />
+  </div>
   
 <!-- Side Panel -->
 <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
@@ -43,8 +43,11 @@
     gsap.globalTimeline.clear();
   };
   
+const isHydrated = ref(false);
+
   onMounted(() => {
     console.log("Default layout mounted");
+    isHydrated.value = true;
   });
   
   onBeforeUnmount(() => {
