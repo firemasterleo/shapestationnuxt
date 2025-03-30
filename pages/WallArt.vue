@@ -1,7 +1,7 @@
 <template>
       <main>
         <WallArts />
-        <Footer/>
+        <!-- <Footer/> -->
       </main>
   </template>
   

@@ -5,7 +5,7 @@
 
     </div>
 
-    <Footer/>
+    <!-- <Footer/> -->
 
 
   </main>
