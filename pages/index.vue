@@ -6,10 +6,14 @@
         
         <Hero />
         <Highlights />
-      <!-- <Footer/> -->
+        <Footer />
 
 
       </main>
   
   </template>
   
+  <script setup>
+  import Footer from '@/components/Footer.vue';
+
+</script>
