@@ -12,8 +12,9 @@
 
     <!-- Main Content Area -->
 
-      <slot />
-
+    <div>
+    <NuxtPage :key="$route.fullPath" />
+  </div>
 
     <!-- <Footer /> -->
   </div>
