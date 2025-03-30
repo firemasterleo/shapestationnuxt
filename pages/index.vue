@@ -6,7 +6,7 @@
         
         <Hero />
         <Highlights />
-    <Footer/>
+        <Footer/>
 
 
       </main>
