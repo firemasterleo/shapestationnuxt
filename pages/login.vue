@@ -58,8 +58,8 @@ const handleLogin = async () => {
 section {
   color: $text-dark;
   // height: 100dvh;
-  border: solid red;
-  height: 20rem;
+  // border: solid red;
+  // height: 20rem;
 }
 button {
   margin: 5px;
