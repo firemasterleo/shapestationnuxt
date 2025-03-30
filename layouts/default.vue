@@ -1,25 +1,31 @@
 <template>
 
-<div :class="{ 'hydrated': isHydrated }">
-    <Header />
-    <NuxtPage />
-    <Footer />
+  <!-- <Header /> -->
+  
+  <!-- <InfoHeader /> -->
+  
+  <!-- Side Panel -->
+  <div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
+    <SidePanel2 />
   </div>
   
-<!-- Side Panel -->
-<div class="sidepanel" :class="{ 'is-expanded': isMenuOpen }">
-  <SidePanel2 />
+  <!-- Overlay (closes menu when clicked) -->
+  <div class="sidepanel-overlay"
+  :class="{ 'is-expanded': isMenuOpen }"
+  @click="closeMenu"
+  >
 </div>
 
-<!-- Overlay (closes menu when clicked) -->
-<div class="sidepanel-overlay"
-:class="{ 'is-expanded': isMenuOpen }"
-@click="closeMenu"
->
-</div>
 
-</template>
+      <!-- Page Transition -->
+      <NuxtPage />
+  
+    
+    <!-- <Footer/> -->
+ 
 
+  </template>
+  
   <script setup>
   import { ref, onMounted, onBeforeUnmount } from "vue";
   import Header from '@/components/Header.vue';
@@ -43,11 +49,8 @@
     gsap.globalTimeline.clear();
   };
   
-const isHydrated = ref(false);
-
   onMounted(() => {
     console.log("Default layout mounted");
-    isHydrated.value = true;
   });
   
   onBeforeUnmount(() => {
@@ -117,10 +120,7 @@ transform: translatex(0%);
       }
     }
   }
-  .hydrated {
-  opacity: 1;
-  transition: opacity 0.3s ease-in;
-}
+
 
   </style>
   

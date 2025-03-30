@@ -3,9 +3,11 @@
 <template>
 
       <main>
+  <Header />
+
         <Hero />
         <Highlights />
-    <!-- <Footer/> -->
+    <Footer/>
 
         <!-- <Highlights /> -->
       </main>
