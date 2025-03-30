@@ -5,11 +5,11 @@ export default <RouterConfig>{
     return new Promise((resolve) => {
       setTimeout(() => {
         if (savedPosition) {
-          resolve(savedPosition); // Keep scroll position when using browser back/forward
+          resolve(savedPosition); // Keep position when using browser back/forward
         } else {
-          resolve({ top: 0, left: 0, behavior: "instant" }); // Scroll to top on new navigation
+          resolve({ top: 0, left: 0, behavior: "instant" }); // Start new page at top
         }
-      }, 300); // Small delay to prevent flicker
+      }, 390); // Small delay to avoid flicker
     });
   },
 };
