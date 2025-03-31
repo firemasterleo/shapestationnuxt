@@ -259,7 +259,7 @@ onMounted(() => {
 
 @media (max-width: 800px) {
     .presection {
-      position: sticky;
+      position: fixed;
       top: 0;
       z-index: 1000;
       border-bottom: 1px solid $line-grey;

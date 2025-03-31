@@ -9,7 +9,7 @@
         <p v-if="errorMsg" class="error">{{ errorMsg }}</p>
       </form>
     </div>
-    <!-- <Footer/> -->
+    <Footer/>
 
   </main>
 
