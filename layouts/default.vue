@@ -11,11 +11,7 @@
     <div class="sidepanel-overlay" :class="{ 'is-expanded': isMenuOpen }" @click="closeMenu"></div>
 
     <!-- Main Content Area -->
- <main>
-
-   <slot />
- </main>
-
+      <slot />
 
 
     <!-- <Footer /> -->

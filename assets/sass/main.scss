@@ -17,7 +17,8 @@
 :root {
   // width: 100%;
   background-color: #ffffff !important; /* Solid black background */
-  height: 100%;
+  height: 100vh;
+  overflow: scroll;
 
   // font-size: 100px;
   // background-color: #004c80; /* Solid black background */
