@@ -17,8 +17,10 @@
 :root {
   // width: 100%;
   background-color: #ffffff !important; /* Solid black background */
-  height: 100vh;
-  overflow: scroll;
+  // height: 90vh;
+  // overflow-y: hidden;
+  // border: solid red;
+  // overflow-y: scroll;
 
   // font-size: 100px;
   // background-color: #004c80; /* Solid black background */
@@ -43,6 +45,7 @@
 body.no-scroll {
   overflow: hidden !important;
   height: 100vh;
+  // border: solid red;
   touch-action: none; /* Prevents touch scrolling */
 
 }
