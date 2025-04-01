@@ -18,7 +18,7 @@
       </div> -->
                 
               </div>
-            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+            <div class="highlight">
               <div class="image">
                 <img src="../assets/textile.jpg" alt="">
               </div>
@@ -31,7 +31,7 @@
   
             </div>
 
-              <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="highlight">
               <div class="image">
                 <img src="../assets/ori-olokun.jpg" alt="">
               </div >
@@ -44,7 +44,7 @@
               </div> -->
               
             </div>
-              <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="highlight">
               <div class="image">
                 <img src="../assets/ori-olokun.jpg" alt="">
               </div >
