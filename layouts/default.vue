@@ -22,7 +22,7 @@
 </template>
   
   <script setup>
-  import { ref, onMounted, onBeforeUnmount } from "vue";
+  import { ref, watch, onMounted, onBeforeUnmount } from "vue";
   import Header from '@/components/Header.vue';
   import Footer from '@/components/Footer.vue';
 
@@ -45,12 +45,27 @@
   };
   
   onMounted(() => {
-    console.log("Default layout mounted");
-  });
+  console.log("Default layout mounted");
+  // Disable body scroll when menu is open
+  if (isMenuOpen.value) {
+    document.body.style.overflow = 'hidden';
+  }
+});
   
-  onBeforeUnmount(() => {
-    cleanupAnimations();
-  });
+onBeforeUnmount(() => {
+  cleanupAnimations();
+  // Ensure body scroll is restored when component is destroyed
+  document.body.style.overflow = 'auto';
+});
+
+watch(isMenuOpen, (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+  } else {
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  }
+});
+
   </script>
   <style lang="scss">
     @use "@/assets/sass/main" as *; // Import variables

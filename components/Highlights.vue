@@ -4,6 +4,19 @@
         <div class="Featured Collection">
           <div ref="sliderContainer" class="slide">
             <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
+              <div class="image">
+                <img src="../assets/textile.jpg" alt="">
+              </div>
+              <div class="text">
+                <p>TEXTILE & FABRICS</p>
+              </div>
+              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
+        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
+      </div> -->
+  
+            </div>
+
+            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
               
               <div class="image">
                   <img src="../assets/tradartifacts.jpg" alt="">
@@ -17,18 +30,6 @@
       </div> -->
                 
               </div>
-            <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
-              <div class="image">
-                <img src="../assets/textile.jpg" alt="">
-              </div>
-              <div class="text">
-                <p>TEXTILE & FABRICS</p>
-              </div>
-              <!-- <div v-if="isVideoVisible" ref="videoPopup" class="video-popup">
-        <video ref="videoElement" src="../assets/shapestationstudio2.mp4" autoplay loop muted></video>
-      </div> -->
-  
-            </div>
 
               <div class="highlight" @mousemove="updateMousePosition" @mouseenter="showVideo" @mouseleave="hideVideo">
               <div class="image">
@@ -170,14 +171,7 @@
   });
 
 
-  onMounted(() => {
-  if (sliderContainer.value) {
-    sliderContainer.value.scrollTo({
-      left: sliderContainer.value.children[1].offsetLeft - (sliderContainer.value.offsetWidth / 2) + (sliderContainer.value.children[1].offsetWidth / 2),
-      behavior: "smooth"
-    });
-  }
-});
+
   </script>
   
 

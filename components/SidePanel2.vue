@@ -59,13 +59,16 @@ const handleItemClick = () => {
 
 .content {
   // border: solid green ;
-  // overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
   
   .sidebarcontainer {
-      // border: solid red;
+    // overflow: scroll;
+      // border: solid yellow;
       background-color: $bg-white; /* Solid black background */
       width: 21rem;
-      height: 40rem;
+      height: 130vh;
       // padding-inline: 1rem;
       outline: none; /* Remove the default outline */
       box-shadow: 0 0 0 0.1px ;   //remove outline and use box shadow for thinnest line 
@@ -75,7 +78,7 @@ const handleItemClick = () => {
   .sidebarsection {
       // height: 50rem;
       width: 100%;
-      // border: solid red;
+      // border: solid blue;
       
       .sidebar {
         display: flex;
@@ -219,7 +222,7 @@ const handleItemClick = () => {
 
       .sidebarcontainer {
           // width: fit-content;
-          height: 100vh;
+          // height: 100vh;
       }
   }
 
